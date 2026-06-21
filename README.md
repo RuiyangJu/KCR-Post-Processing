@@ -48,7 +48,7 @@
 ```
 
 ## 🌸 LLM-jp
-### ① [LLM-jp-4-8B-Thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
+### ① [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct)
 #### Download
 ```
   cd ./LLM-jp-4-8B-Instruct
