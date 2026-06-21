@@ -1,5 +1,6 @@
 import glob
 import os
+import re
 import time
 
 import torch
@@ -31,29 +32,39 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype="auto",
     device_map={"": "cuda:0"},
     attn_implementation="sdpa",
+    trust_remote_code=True,
 )
 model.eval()
 
 print("Model loaded.")
 
 
+def remove_think(text: str) -> str:
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<think>.*", "", text, flags=re.DOTALL)
+
+    return text.strip()
+
+
 def correct_ocr_text(ocr_text: str) -> tuple[str, float]:
     messages = [
-        {
-            "role": "system",
-            "content": DEFAULT_SYSTEM_PROMPT,
-        },
-        {
-            "role": "user",
-            "content": ocr_text,
-        },
+        {"role": "system", "content": DEFAULT_SYSTEM_PROMPT},
+        {"role": "user", "content": ocr_text},
     ]
 
-    prompt = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True,
-    )
+    try:
+        prompt = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False, 
+        )
+    except TypeError:
+        prompt = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+        )
 
     token_ids = tokenizer.encode(
         prompt,
@@ -70,19 +81,24 @@ def correct_ocr_text(ocr_text: str) -> tuple[str, float]:
             token_ids,
             max_new_tokens=1024,
             do_sample=False,
+            temperature=None,
+            top_p=None,
             pad_token_id=tokenizer.eos_token_id,
+            eos_token_id=tokenizer.eos_token_id,
         )
 
     if torch.cuda.is_available():
         torch.cuda.synchronize()
     inference_time = time.perf_counter() - start_time
 
-    corrected_text = tokenizer.decode(
-        output_ids[0][token_ids.size(1) :],
+    output_text = tokenizer.decode(
+        output_ids[0][token_ids.size(1):],
         skip_special_tokens=True,
     )
 
-    return corrected_text.strip(), inference_time
+    corrected_text = remove_think(output_text)
+
+    return corrected_text, inference_time
 
 
 txt_files = sorted(glob.glob(os.path.join(INPUT_DIR, "*.txt")))
