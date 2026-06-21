@@ -46,3 +46,5 @@
 ```
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
+
+## [Llama-3-Youko-8B](https://huggingface.co/rinna/llama-3-youko-8b)
