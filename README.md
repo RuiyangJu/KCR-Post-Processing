@@ -1,6 +1,5 @@
 # KCR-Post-Processing
-## Llama
-![](./images/ollama.png)
+## ![](./images/ollama.png) Llama
 ### ① [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B)
 #### Download
 ```
