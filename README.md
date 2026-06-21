@@ -7,5 +7,5 @@
 ```
 
 ```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ../dataset/input --out_csv ./output_csv
+  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
