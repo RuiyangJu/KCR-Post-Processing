@@ -34,7 +34,7 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-## LLM-jp
+## 🌸 LLM-jp
 ### ① [LLM-jp-4-8B-thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
 #### Download
 ```
