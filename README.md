@@ -5,3 +5,7 @@
   cd ./Llama-3-ELYZA-JP-8B
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./model
 ```
+
+```
+  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ../dataset/input --out_csv ./output_csv
+```
