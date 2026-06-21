@@ -32,3 +32,17 @@
 ```
 
 ## [llm-jp-4-8b-thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
+### Download
+```
+  cd ./llm-jp-4-8b-thinking
+  hf download llm-jp/llm-jp-4-8b-thinking --local-dir ./model
+```
+### Run
+```
+  python ./run.py
+```
+
+### Evaluate
+```
+  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+```
