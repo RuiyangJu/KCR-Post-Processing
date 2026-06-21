@@ -17,7 +17,7 @@
 
 ### ② [Llama-3-Youko-8B](https://huggingface.co/rinna/llama-3-youko-8b)
 
-## Qwen
+## 🔍 Qwen
 ### ① [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2)
 #### Download
 ```
