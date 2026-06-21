@@ -18,6 +18,7 @@
 ```
 
 ## [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2)
+### Download Model
 ```
   cd ./Qwen3-Swallow-8B-RL-v0.2
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model
