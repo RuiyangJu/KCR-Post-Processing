@@ -48,10 +48,10 @@
 ```
 
 ## 🌸 LLM-jp
-### ① [LLM-jp-4-8B-thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
+### ① [LLM-jp-4-8B-Thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
 #### Download
 ```
-  cd ./llm-jp-4-8b-thinking
+  cd ./LLM-jp-4-8B-Thinking
   hf download llm-jp/llm-jp-4-8b-thinking --local-dir ./model
 ```
 #### Run
