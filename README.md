@@ -1,7 +1,7 @@
 # KCR-Post-Processing
 
 ## [elyza/Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B)
-### Download Model
+### Download
 ```
   cd ./Llama-3-ELYZA-JP-8B
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./model
@@ -16,7 +16,7 @@
 ```
 
 ## [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2)
-### Download Model
+### Download
 ```
   cd ./Qwen3-Swallow-8B-RL-v0.2
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model
