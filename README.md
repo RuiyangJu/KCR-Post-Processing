@@ -51,8 +51,8 @@
 ### ① [LLM-jp-4-8B-Thinking](https://huggingface.co/llm-jp/llm-jp-4-8b-thinking)
 #### Download
 ```
-  cd ./LLM-jp-4-8B-Thinking
-  hf download llm-jp/llm-jp-4-8b-thinking --local-dir ./model
+  cd ./LLM-jp-4-8B-Instruct
+  hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./model
 ```
 #### Run
 ```
