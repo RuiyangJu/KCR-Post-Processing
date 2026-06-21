@@ -16,3 +16,9 @@
 ```
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
+
+
+```
+  CD ./Qwen3-Swallow-8B-RL-v0.2
+  hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model
+```
