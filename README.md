@@ -12,6 +12,26 @@
 | Qwen3-Swallow-8B-RL-v0.2 | 東京科学大学 | 2026.02.20 | Qwen3-8B | 16.4GB | 2.599 | 14.12 |
 | LLM-jp-4-8B-Instruct | 國立情報學研究所 | 2026.04.03 | Llama 2 architecture | 17.2GB | 1.875 | 15.31 |
 
+### Parameter
+| Parameter | Setting |
+|:--:|:--:|
+| `max_new_tokens` | `1024` |
+| `do_sample` | `False` |
+| `temperature` | `None` |
+| `top_p` | `None` |
+| `num_beams` | `1`（默认值） |
+| `repetition_penalty` | `1.0`（默认值） |
+| Batch size | `1` |
+| `torch_dtype` | `auto`（所有模型配置均为 BF16） |
+| Device | `cuda:0` |
+| `device_map` | `{"": "cuda:0"}` |
+| Attention implementation | `sdpa` |
+| `add_special_tokens` | `False` |
+| `add_generation_prompt` | `True` |
+| Gradient calculation | Disabled with `torch.inference_mode()` |
+| Padding token | 模型原生 `pad_token_id`；若不存在则使用 `eos_token_id` |
+| Stopping condition | 模型原生 EOS，或达到 1024 个新 tokens |
+
 ### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download & Run & Evaluate
 ```
