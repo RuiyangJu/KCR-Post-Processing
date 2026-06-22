@@ -38,67 +38,63 @@
 ```
 #### Evaluate
 ```
-  python ./Llama-3.1-Swallow-8B-Instruct-v0.3/evaluate.py --gt_dir ./dataset/gt --pred_dir ./output --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_csv
+  python ./Llama-3.1-Swallow-8B-Instruct-v0.3/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_csv
 ```
 
 ### 4. [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03/21)
 #### Download
 ```
-  cd ./RakutenAI-7B-Instruct
-  hf download Rakuten/RakutenAI-7B-instruct --local-dir ./model
+  hf download Rakuten/RakutenAI-7B-instruct --local-dir ./RakutenAI-7B-Instruct/model
 ```
 #### Run
 ```
-  python ./run.py
+  python ./RakutenAI-7B-Instruct/run.py
 ```
 #### Evaluate
 ```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+  python ./RakutenAI-7B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./RakutenAI-7B-Instruct/output --out_csv ./RakutenAI-7B-Instruct/output_csv
 ```
 
 ### 5. [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025/05/19)
 #### Download
 ```
-  cd ./Gemma-2-Llama-Swallow-9b-it-v0.1
-  hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./model
+  hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/model
 ```
 #### Run
 ```
-  python ./run.py
+  python ./Gemma-2-Llama-Swallow-9b-it-v0.1/run.py
 ```
 #### Evaluate
 ```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+  python ./Gemma-2-Llama-Swallow-9b-it-v0.1/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output --out_csv ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_csv
 ```
 
 ### 6. [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
 #### Download
 ```
-  cd ./Qwen3-Swallow-8B-RL-v0.2
-  hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model
+  hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./Qwen3-Swallow-8B-RL-v0.2/model
 ```
 #### Run
 ```
-  python ./run.py
+  python ./Qwen3-Swallow-8B-RL-v0.2/run.py
 ```
 
 #### Evaluate
 ```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+  python ./Qwen3-Swallow-8B-RL-v0.2/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_csv
 ```
 
 ### 7. [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04/03)
 #### Download
 ```
-  cd ./LLM-jp-4-8B-Instruct
-  hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./model
+  hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./LLM-jp-4-8B-Instruct/model
 ```
 #### Run
 ```
-  python ./run.py
+  python ./LLM-jp-4-8B-Instruct/run.py
 ```
 
 #### Evaluate
 ```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+  python ./LLM-jp-4-8B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./LLM-jp-4-8B-Instruct/output --out_csv ./LLM-jp-4-8B-Instruct/output_csv
 ```
