@@ -1,5 +1,5 @@
 # KCR-Post-Processing
-### 1. [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B)
+### 1. [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download
 ```
   cd ./Llama-3-ELYZA-JP-8B
