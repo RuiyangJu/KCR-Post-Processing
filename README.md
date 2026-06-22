@@ -3,7 +3,7 @@
 ### Overview
 | Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | CER (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| / | / | / | / | / | / | 13.68 |
+| Baseline | / | / | / | / | / | 13.68 |
 | Llama-3-ELYZA-JP-8B | 株式会社ELYZA | 2024.06.26 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.329 | 15.19 |
 | Llama3-Youko-8B-Instruct | rinna株式会社 | 2024.07.25 | Meta-Llama-3-8B | 16.1GB | 2.350 | 28.23 |
 | Llama-3.1-Swallow-8B-Instruct-v0.3 | 東京科学大学 | 2024.12.23 | Meta-Llama-3.1-8B-Instruct | 16.1GB | 2.361 | 13.93 |
