@@ -15,11 +15,11 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-### ② [Llama-3-Youko-8B](https://huggingface.co/rinna/llama-3-youko-8b)
+### ② [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct)
 #### Download
 ```
-  cd ./Llama-3-Youko-8B
-  hf download rinna/llama-3-youko-8b --local-dir ./model
+  cd ./Llama-3-Youko-8B-Instruct
+  hf download rinna/llama-3-youko-8b-instruct --local-dir ./model
 ```
 #### Run
 ```
@@ -51,22 +51,6 @@
 ```
   cd ./Qwen3-Swallow-8B-RL-v0.2
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model
-```
-#### Run
-```
-  python ./run.py
-```
-
-#### Evaluate
-```
-  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
-```
-
-### ② [Nekomata-7B-Instruction](https://huggingface.co/rinna/nekomata-7b-instruction)
-#### Download
-```
-  cd ./Nekomata-7B-Instruction
-  hf download rinna/nekomata-7b-instruction --local-dir ./model
 ```
 #### Run
 ```
