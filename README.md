@@ -43,6 +43,12 @@ All models use the same OCR correction instruction:
   修正後の本文のみを出力してください。
 ```
 
+Each model uses its native chat template. The following adaptations are required due to differences between model templates:
+* RakutenAI-7B-Instruct: Uses its official USER: ... ASSISTANT: format.
+* Gemma-2-Llama-Swallow-9b-it-v0.1: Does not support the system role, so the system prompt and OCR input are combined into a single user message.
+* Qwen3-Swallow-8B-RL-v0.2: Uses enable_thinking=False and explicitly receives an attention mask and the tokenizer EOS token.
+* LLM-jp-4-8B-Instruct: Extracts the content of the native final output channel.
+
 ### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download & Run & Evaluate
 ```
