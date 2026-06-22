@@ -44,11 +44,26 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-### 4. [RakutenAI-7B-instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03/21)
+### 4. [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03/21)
 #### Download
 ```
-  cd ./RakutenAI-7B-instruct
+  cd ./RakutenAI-7B-Instruct
   hf download Rakuten/RakutenAI-7B-instruct --local-dir ./model
+```
+#### Run
+```
+  python ./run.py
+```
+#### Evaluate
+```
+  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+```
+
+### 5. [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025.05.19)
+#### Download
+```
+  cd ./Gemma-2-Llama-Swallow-9b-it-v0.1
+  hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./model
 ```
 #### Run
 ```
