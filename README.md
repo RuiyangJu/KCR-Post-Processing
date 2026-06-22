@@ -29,8 +29,8 @@
 | `add_special_tokens` | `False` |
 | `add_generation_prompt` | `True` |
 | Gradient calculation | Disabled with `torch.inference_mode()` |
-| Padding token | 模型原生 `pad_token_id`；若不存在则使用 `eos_token_id` |
-| Stopping condition | 模型原生 EOS，或达到 1024 个新 tokens |
+| Padding token | Native `pad_token_id`; falls back to `eos_token_id` if unavailable |
+| Stopping condition | Native model EOS or 1,024 newly generated tokens |
 
 ### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download & Run & Evaluate
