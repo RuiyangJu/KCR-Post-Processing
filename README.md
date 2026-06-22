@@ -44,6 +44,21 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
+### 4. [RakutenAI-7B-instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03/21)
+#### Download
+```
+  cd ./RakutenAI-7B-instruct
+  hf download Rakuten/RakutenAI-7B-instruct --local-dir ./model
+```
+#### Run
+```
+  python ./run.py
+```
+#### Evaluate
+```
+  python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
+```
+
 ### 6. [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
 #### Download
 ```
