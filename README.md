@@ -62,6 +62,9 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
+### [Nekomata-7B-Instruction](https://huggingface.co/rinna/nekomata-7b-instruction)
+
+
 ## 🌸 LLM-jp
 ### ① [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct)
 #### Download
