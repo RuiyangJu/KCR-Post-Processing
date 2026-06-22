@@ -44,7 +44,7 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-### 4. [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
+### 6. [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
 #### Download
 ```
   cd ./Qwen3-Swallow-8B-RL-v0.2
@@ -60,8 +60,7 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-## 🌸 LLM-jp
-### ① [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct)
+### 7. [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04/03)
 #### Download
 ```
   cd ./LLM-jp-4-8B-Instruct
@@ -76,5 +75,3 @@
 ```
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
-
-## 💎 Gemma
