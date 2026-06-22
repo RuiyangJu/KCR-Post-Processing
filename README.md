@@ -1,7 +1,16 @@
 # KCR-Post-Processing
 ## Zero-shot LLM Post-processing
 ### Overview
-
+| Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | CER (%) |
+|---|---|---:|---|---:|---:|---:|
+| / | / | / | / | / | / | 13.68 |
+| Llama-3-ELYZA-JP-8B | 株式会社ELYZA | 2024.06.26 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.329 | 15.19 |
+| Llama3-Youko-8B-Instruct | rinna株式会社 | 2024.07.25 | Meta-Llama-3-8B | 16.1GB | 2.350 | 28.23 |
+| Llama-3.1-Swallow-8B-Instruct-v0.3 | 東京科学大学 | 2024.12.23 | Meta-Llama-3.1-8B-Instruct | 16.1GB | 2.361 | 13.93 |
+| RakutenAI-7B-Instruct | 楽天グループ株式会社 | 2024.03.21 | Mistral-7B-v0.1 | 29.5GB | 2.026 | 18.07 |
+| Gemma-2-Llama-Swallow-9b-it-v0.1 | 東京科学大学 | 2025.05.19 | Gemma-2-9B | 18.5GB | 3.434 | 21.23 |
+| Qwen3-Swallow-8B-RL-v0.2 | 東京科学大学 | 2026.02.20 | Qwen3-8B | 16.4GB | 2.599 | 14.12 |
+| LLM-jp-4-8B-Instruct | 國立情報學研究所 | 2026.04.03 | Llama 2 architecture | 17.2GB | 1.870 | 15.28 |
 
 ### 1. [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download & Run & Evaluate
