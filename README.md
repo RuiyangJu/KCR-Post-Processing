@@ -15,13 +15,7 @@
 #### Download & Run & Evaluate
 ```
   hf download rinna/llama-3-youko-8b-instruct --local-dir ./Llama-3-Youko-8B-Instruct/model
-```
-#### Run
-```
   python ./Llama-3-Youko-8B-Instruct/run.py
-```
-#### Evaluate
-```
   python ./Llama-3-Youko-8B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Llama-3-Youko-8B-Instruct/output --out_csv ./Llama-3-Youko-8B-Instruct/output_csv
 ```
 
@@ -29,13 +23,7 @@
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3 --local-dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/model
-```
-#### Run
-```
   python ./Llama-3.1-Swallow-8B-Instruct-v0.3/run.py
-```
-#### Evaluate
-```
   python ./Llama-3.1-Swallow-8B-Instruct-v0.3/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_csv
 ```
 
@@ -43,13 +31,7 @@
 #### Download & Run & Evaluate
 ```
   hf download Rakuten/RakutenAI-7B-instruct --local-dir ./RakutenAI-7B-Instruct/model
-```
-#### Run
-```
   python ./RakutenAI-7B-Instruct/run.py
-```
-#### Evaluate
-```
   python ./RakutenAI-7B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./RakutenAI-7B-Instruct/output --out_csv ./RakutenAI-7B-Instruct/output_csv
 ```
 
@@ -57,13 +39,7 @@
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/model
-```
-#### Run
-```
   python ./Gemma-2-Llama-Swallow-9b-it-v0.1/run.py
-```
-#### Evaluate
-```
   python ./Gemma-2-Llama-Swallow-9b-it-v0.1/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output --out_csv ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_csv
 ```
 
@@ -71,13 +47,7 @@
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./Qwen3-Swallow-8B-RL-v0.2/model
-```
-#### Run
-```
   python ./Qwen3-Swallow-8B-RL-v0.2/run.py
-```
-#### Evaluate
-```
   python ./Qwen3-Swallow-8B-RL-v0.2/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_csv
 ```
 
@@ -85,13 +55,7 @@
 #### Download & Run & Evaluate
 ```
   hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./LLM-jp-4-8B-Instruct/model
-```
-#### Run
-```
   python ./LLM-jp-4-8B-Instruct/run.py
-```
-#### Evaluate
-```
   python ./LLM-jp-4-8B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./LLM-jp-4-8B-Instruct/output --out_csv ./LLM-jp-4-8B-Instruct/output_csv
 ```
 
