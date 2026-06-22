@@ -44,8 +44,7 @@
   python ./evaluate.py --gt_dir ../dataset/gt --pred_dir ./output --out_csv ./output_csv
 ```
 
-## 🔍 Qwen
-### ① [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2)
+### 4. [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
 #### Download
 ```
   cd ./Qwen3-Swallow-8B-RL-v0.2
