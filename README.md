@@ -78,7 +78,6 @@
 ```
   python ./Qwen3-Swallow-8B-RL-v0.2/run.py
 ```
-
 #### Evaluate
 ```
   python ./Qwen3-Swallow-8B-RL-v0.2/evaluate.py --gt_dir ./dataset/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_csv
@@ -93,7 +92,6 @@
 ```
   python ./LLM-jp-4-8B-Instruct/run.py
 ```
-
 #### Evaluate
 ```
   python ./LLM-jp-4-8B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./LLM-jp-4-8B-Instruct/output --out_csv ./LLM-jp-4-8B-Instruct/output_csv
