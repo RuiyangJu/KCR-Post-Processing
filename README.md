@@ -25,7 +25,7 @@
 | `torch_dtype` | `bfloat16` |
 | `device` | `cuda:0` |
 | `device_map` | `{"": "cuda:0"}` |
-| Attention implementation | `sdpa` |
+| `attention implementation` | `sdpa` |
 | `add_special_tokens` | `False` |
 | `add_generation_prompt` | `True` |
 | Gradient calculation | Disabled with `torch.inference_mode()` |
