@@ -401,10 +401,18 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## Error Type Summary
 
+### Analysis basis
+
+The categories below are based on a three-way comparison among Input, Pred, and
+GT. Input is treated as the noisy OCR/string source, Pred as the model's
+correction attempt, and GT as the target diplomatic transcription. Therefore,
+an error is classified by how Pred changes, copies, omits, reorders, or
+modernizes the Input relative to GT, not by Pred-GT distance alone.
+
 ### 1. Modernization and explanatory rewriting
 
 The most prominent failure mode is strong modernization or explanatory
-rewriting. In `100249376_00022_2`, `100249376_00050_1`,
+rewriting from Input. In `100249376_00022_2`, `100249376_00050_1`,
 `100249416_00034_1`, and `100249476_00007_2`, the model rewrites the original
 text into modern recipe-like Japanese rather than preserving the historical
 transcription. It also converts measurements into modern forms such as `1升`,
