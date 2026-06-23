@@ -28,9 +28,6 @@
 | `attention implementation` | `sdpa` |
 | `add_special_tokens` | `False` |
 | `add_generation_prompt` | `True` |
-| Gradient calculation | Disabled with `torch.inference_mode()` |
-| Padding token | Native `pad_token_id`; falls back to `eos_token_id` if unavailable |
-| Stopping condition | Native model EOS or 1,024 newly generated tokens |
 
 ### Prompt
 All models use the same OCR correction instruction:
