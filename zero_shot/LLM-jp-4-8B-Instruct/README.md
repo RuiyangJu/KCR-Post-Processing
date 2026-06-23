@@ -409,3 +409,76 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 などいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねな
 とやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 ```
+
+## Error Type Summary
+
+### 1. Input-copying without sufficient correction
+
+The dominant error pattern is copying the noisy Input with little correction.
+This is especially clear in `100249416_00034_1`, `200015843_00110_1`,
+`200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and
+`200022050_00007_2`. Pred often matches Input almost exactly, while GT contains
+substantial corrections. This means the model preserves many OCR-like errors
+instead of reconstructing the intended transcription.
+
+### 2. Severe early stopping / truncation
+
+`200022050_00010_2` is the clearest truncation case. GT_Length is 468, but
+Pred_Length is only 49, and the prediction stops after the opening fragment.
+This is different from normal character confusion: the model fails to continue
+the transcription at all. It should be treated as a generation-length or early
+stopping failure rather than a simple OCR correction error.
+
+### 3. Long-context degradation and output-length cap behavior
+
+Several long samples have predictions around 300 characters, including
+`200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and
+`200022050_00007_2`. This suggests a length cap or truncation-like generation
+pattern. The initial part is often stable, but the later part is omitted,
+under-corrected, or copied directly from Input. Long recipe-like passages remain
+hard for the model to handle consistently.
+
+### 4. Layout/order errors in list-like text
+
+The `200021763_*` samples show strong layout and ordering issues. These texts
+contain structured lists of dishes, vessels, and serving sequences. The model
+keeps many individual tokens but fails to restore the correct group boundaries
+and reading order. `200021763_00008_2`, `200021763_00020_1`, and
+`200021763_00025_1` are representative examples where local token accuracy does
+not translate into correct list structure.
+
+### 5. Classical kana and short-text character confusions
+
+Short samples such as `200006663_00006_2`, `200021763_00002_2`, and
+`200021869_00003_1` expose fine-grained character errors. These include
+historical kana, small marks, voicing differences, and visually similar
+characters. Because the strings are short, even one or two substitutions or
+omissions can produce a high CER.
+
+### 6. Modernization and punctuation artifacts
+
+Some predictions move toward more modern Japanese or add punctuation. For
+example, `100249416_00027_1` inserts modern-looking forms such as `入れ` and
+adds punctuation at sentence boundaries. These changes may improve readability,
+but GT expects a faithful transcription, so modernization and punctuation
+normalization are counted as errors.
+
+### 7. Domain vocabulary errors
+
+Cooking and confectionery vocabulary is a repeated source of failure. Cases
+such as `100249416_00027_1`, `100249416_00034_1`, `200022050_00002_2`,
+`200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` contain
+ingredients, utensils, procedures, measurements, and recipe-specific terms. The
+model often copies noisy terminology or only partially corrects it, suggesting
+that domain adaptation is needed for classical culinary texts.
+
+### Overall
+
+LLM-jp-4-8B-Instruct mainly fails by copying noisy input, struggling with
+layout-sensitive lists, and degrading on long passages. Its most severe unique
+case is `200022050_00010_2`, where the output stops after only 49 characters.
+Compared with models that heavily paraphrase, this model is more conservative,
+but that conservatism often means under-correction. Future improvements should
+focus on stronger correction behavior, explicit long-output handling, prevention
+of early stopping, layout-aware reading-order recovery, and culinary-domain
+adaptation.
