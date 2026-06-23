@@ -1,4 +1,3 @@
-# KCR-Post-Processing
 ## Zero-shot LLM Post-processing
 ### Overview
 | Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | CER (%) |
