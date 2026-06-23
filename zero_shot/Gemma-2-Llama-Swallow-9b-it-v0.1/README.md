@@ -471,10 +471,18 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## Error Type Summary
 
+### Analysis basis
+
+The categories below are based on a three-way comparison among Input, Pred, and
+GT. Input is treated as the noisy OCR/string source, Pred as the model's
+correction attempt, and GT as the target diplomatic transcription. Therefore,
+an error is classified by how Pred changes, copies, omits, reorders, or
+modernizes the Input relative to GT, not by Pred-GT distance alone.
+
 ### 1. Repetition / runaway generation
 
 The clearest case is `100249376_00010_2`. After a mostly correct opening,
-the prediction repeatedly generates the phrase around
+Pred initially follows Input/GT, then repeatedly generates the phrase around
 `水にひやしうすくのはしはり...`, which expands Pred_Length from the GT length
 of 114 to 1223 and raises CER to 9.76. This is not a normal OCR character error;
 it is a decoding failure where the model falls into a generation loop.
