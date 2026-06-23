@@ -409,3 +409,74 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 などいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねな
 とやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 ```
+
+## Error Type Summary
+
+### 1. Input-copying without sufficient correction
+
+The dominant failure mode is copying the noisy Input almost verbatim. This is
+visible in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`,
+`200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and
+`200022050_00010_2`. In these cases, Pred preserves much of the input string,
+including OCR-like corruptions, while GT contains many corrections. This keeps
+the prediction length close to the input or to a fixed output limit, but the CER
+remains high because the model is not actively reconstructing the target text.
+
+### 2. Layout/order errors in list-like text
+
+The `200021763_*` samples show strong layout and ordering problems. These texts
+contain menu items, vessels, dish names, and repeated ordered sets. The model
+often retains local tokens but fails to restore the intended grouping and
+reading order. For example, `200021763_00008_2` keeps the duplicated local
+pattern, while GT is two ordered sequences. `200021763_00020_1` and
+`200021763_00025_1` also show that preserving individual words is not enough
+when the task requires reconstructing list structure from a complex layout.
+
+### 3. Long-context degradation and length-limit behavior
+
+Several high-error cases are long passages: `200017458_00008_1`,
+`200017458_00037_2`, `200022050_00002_2`, `200022050_00006_1`,
+`200022050_00007_2`, and `200022050_00010_2`. The model frequently outputs
+around 299-300 characters for long samples, suggesting a generation or
+post-processing length cap. The beginning is often relatively stable, while
+later content is copied, compressed, omitted, or left under-corrected. This
+creates a truncation-like error pattern even when the output is fluent locally.
+
+### 4. Classical kana and small-character confusions
+
+Short samples make fine-grained character errors especially visible.
+`200006663_00006_2`, `200021869_00003_1`, `200021869_00007_1`, and
+`200021869_00012_1` include confusions involving kana, small marks, voicing,
+and functional characters. In `200021869_00003_1`, for instance, the target
+`右一水` is predicted as a different short form. Because these samples are very
+short, one or two character-level errors can produce a large CER.
+
+### 5. Modernization and semantic normalization
+
+The model sometimes rewrites the source into more modern or semantically
+interpreted Japanese instead of preserving the diplomatic transcription target.
+This is visible in `200017458_00003_1`, where historical kana and phrase forms
+are partially converted into more familiar modern-looking expressions. Such
+normalization may improve readability, but it is counted as an error because GT
+expects faithful transcription rather than modernization.
+
+### 6. Domain vocabulary errors
+
+Cooking and confectionery terminology remains difficult. Cases such as
+`100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`,
+`200022050_00007_2`, and `200022050_00010_2` contain ingredients, vessels,
+preparation steps, measurements, and recipe-specific expressions. The model
+often copies noisy terms or fails to restore the correct specialized wording.
+This suggests that general language knowledge is not enough for stable
+correction in classical culinary texts.
+
+### Overall
+
+Llama-3.1-Swallow-8B-Instruct-v0.3 performs better than models with severe
+runaway repetition, but its remaining errors are concentrated in three areas:
+it often copies noisy input instead of correcting it, it struggles with
+layout-sensitive list structures, and it degrades on long recipe-like passages
+where outputs cluster near 300 characters. Improvements should focus on
+stronger correction behavior, layout-aware reading-order recovery, explicit
+length handling for long samples, and domain adaptation for classical cooking
+and menu vocabulary.
