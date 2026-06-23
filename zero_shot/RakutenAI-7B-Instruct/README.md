@@ -398,3 +398,78 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 などいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねな
 とやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 ```
+
+## Error Type Summary
+
+### 1. Modernization and explanatory rewriting
+
+The most prominent failure mode is strong modernization or explanatory
+rewriting. In `100249376_00022_2`, `100249376_00050_1`,
+`100249416_00034_1`, and `100249476_00007_2`, the model rewrites the original
+text into modern recipe-like Japanese rather than preserving the historical
+transcription. It also converts measurements into modern forms such as `1升`,
+`2合`, and `4分の1`, adds punctuation, and inserts explanatory phrasing. These
+outputs may be readable, but they are far from the GT transcription target.
+
+### 2. Semantic hallucination and over-interpretation
+
+Several predictions introduce content that is not supported by the source. For
+example, `100249376_00022_2` turns a noisy confectionery procedure into a
+modernized recipe with inferred ingredients and preparation steps. Similar
+over-interpretation appears in `100249476_00007_2`, where the model summarizes
+the cooking method in modern terms. This indicates that the model sometimes
+treats the task as explanation or translation instead of OCR correction.
+
+### 3. Input-copying mixed with partial normalization
+
+Other samples show the opposite behavior: the model copies noisy Input while
+making small local normalizations. This appears in `200015843_00110_1`,
+`200022050_00002_2`, `200022050_00006_1`, and `200022050_00010_2`. The result
+is a hybrid output: long spans remain corrupted, but individual words are
+modernized or replaced. This neither preserves the source faithfully nor
+recovers the GT.
+
+### 4. Layout/order errors in list-like text
+
+The `200021763_*` samples reveal persistent problems with structured lists.
+These texts contain menu items, vessels, and serving sequences. The model often
+keeps recognizable tokens, but the grouping and reading order remain wrong.
+`200021763_00006_2`, `200021763_00008_2`, `200021763_00020_1`, and
+`200021763_00042_1` are representative layout-sensitive failures.
+
+### 5. Length instability on long passages
+
+Long samples show both expansion and compression. `200021086_00005_1` expands
+from GT_Length 267 to Pred_Length 340, while `200022050_00006_1` and
+`200022050_00010_2` are closer to the 300-character range and still miss large
+parts of the GT. The model is therefore not simply capped; it is unstable,
+sometimes explaining too much and sometimes copying or truncating long
+recipe-like text.
+
+### 6. Classical kana and short-text character confusions
+
+Short samples such as `200006663_00006_2`, `200021763_00002_2`,
+`200021869_00003_1`, and `200021869_00012_1` show fine-grained errors in
+historical kana, small marks, voicing, and visually similar characters. Because
+these texts are short, a few substitutions or omissions create a high CER.
+
+### 7. Domain vocabulary errors
+
+Cooking, confectionery, menu, and vessel terminology is a major source of
+mistakes. The model often replaces specialized historical terms with modern
+recipe vocabulary or guesses plausible ingredients and procedures. This is
+visible in `100249376_00022_2`, `100249376_00050_1`, `100249416_00034_1`,
+`100249476_00007_2`, `200022050_00002_2`, `200022050_00006_1`, and
+`200022050_00010_2`. Domain-specific adaptation is likely necessary.
+
+### Overall
+
+RakutenAI-7B-Instruct has a strongly interpretive error profile. Its main
+weakness is not only copying noisy input, but also rewriting historical
+culinary text into modern explanatory Japanese. This causes high CER because
+the target is faithful transcription, not translation or summarization. The
+model also struggles with list layouts, long passages, short historical-kana
+fragments, and specialized cooking vocabulary. Future improvements should
+emphasize strict transcription constraints, suppression of paraphrasing and
+measurement normalization, layout-aware reading-order recovery, and stronger
+domain adaptation for classical recipe and confectionery texts.
