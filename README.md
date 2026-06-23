@@ -19,10 +19,10 @@
 | `do_sample` | `False` |
 | `temperature` | `None` |
 | `top_p` | `None` |
-| `num_beams` | `1`（default） |
-| `repetition_penalty` | `1.0`（default） |
+| `num_beams` | `1` |
+| `repetition_penalty` | `1.0` |
 | Batch size | `1` |
-| `torch_dtype` | `auto` (all model configurations use BF16) |
+| `torch_dtype` | `bfloat16` |
 | Device | `cuda:0` |
 | `device_map` | `{"": "cuda:0"}` |
 | Attention implementation | `sdpa` |
