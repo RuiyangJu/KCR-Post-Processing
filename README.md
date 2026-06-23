@@ -22,7 +22,7 @@
 | `num_beams` | `1` |
 | `repetition_penalty` | `1.0` |
 | `batch_size` | `1` |
-| `torch_dtype` | `bfloat16` |
+| `torch_dtype` | `auto` |
 | `device` | `cuda:0` |
 | `device_map` | `{"": "cuda:0"}` |
 | `attention implementation` | `sdpa` |
