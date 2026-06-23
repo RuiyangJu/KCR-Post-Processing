@@ -45,7 +45,7 @@ Each model uses its native chat template. The following adaptations are required
 * Qwen3-Swallow-8B-RL-v0.2: Uses `enable_thinking=False` and explicitly receives an attention mask and the tokenizer EOS token.
 * LLM-jp-4-8B-Instruct: Extracts the content of the native `final` output channel.
 
-### Path
+### Root
 ```
   cd zero_shot
 ```
