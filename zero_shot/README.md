@@ -1,5 +1,5 @@
 # KCR-Post-Processing
-## 1. Zero-shot LLM Post-processing
+## Zero-shot LLM Post-processing
 ### Overview
 | Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | CER (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -101,5 +101,3 @@ Each model uses its native chat template. The following adaptations are required
   python ./LLM-jp-4-8B-Instruct/run.py
   python ./LLM-jp-4-8B-Instruct/evaluate.py --gt_dir ./dataset/gt --pred_dir ./LLM-jp-4-8B-Instruct/output --out_csv ./LLM-jp-4-8B-Instruct/output_csv
 ```
-
-## Base-LLM Refiner
