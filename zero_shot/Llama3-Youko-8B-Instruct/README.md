@@ -1,2 +1,2 @@
 # Llama3-Youko-8B-Instruct
-## Error Case Analysis on Synthetic Test Set
+## Error Case Analysis on Synthetic Test Set (CER: 28.23%)
