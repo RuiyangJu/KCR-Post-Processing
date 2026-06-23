@@ -1,6 +1,6 @@
 ## Zero-shot LLM Post-processing
 ### Overview
-| Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | Syn. CER (%) |
+| Model | Affiliation | Release Date | Base | Model Size | Inference (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Baseline | / | / | / | / | / | 13.68 |
 | Llama-3-ELYZA-JP-8B | 株式会社ELYZA | 2024.06.26 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.329 | 15.19 |
