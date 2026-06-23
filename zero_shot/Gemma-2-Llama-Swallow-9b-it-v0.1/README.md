@@ -1,5 +1,5 @@
 # Gemma-2-Llama-Swallow-9b-it-v0.1
-## Error Case Analysis on Synthetic Test Set
+## Error Case Analysis on Synthetic Test Set （CER: 21.23%)
 ```
 File,GT_Length,Pred_Length,Edit_Distance,CER
 100249376_00010_2.txt,114,1223,1113,9.763157894736842
