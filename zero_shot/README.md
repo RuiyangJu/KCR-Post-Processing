@@ -49,7 +49,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
-  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir /dataset/synthetic/input/ 
+  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/synthetic/input/ 
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn_csv
 ```
 
@@ -57,7 +57,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download rinna/llama-3-youko-8b-instruct --local-dir ./Llama-3-Youko-8B-Instruct/model
-  python ./Llama-3-Youko-8B-Instruct/run.py --input-dir /dataset/synthetic/input/ 
+  python ./Llama-3-Youko-8B-Instruct/run.py --input-dir ../dataset/synthetic/input/ 
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Llama-3-Youko-8B-Instruct/output_synthetic --out_csv ./Llama-3-Youko-8B-Instruct/output_syn_csv
 ```
 
@@ -65,7 +65,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3 --local-dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/model
-  python ./Llama-3.1-Swallow-8B-Instruct-v0.3/run.py --input-dir /dataset/synthetic/input/
+  python ./Llama-3.1-Swallow-8B-Instruct-v0.3/run.py --input-dir ../dataset/synthetic/input/
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_synthetic --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_syn_csv
 ```
 
@@ -73,7 +73,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download Rakuten/RakutenAI-7B-instruct --local-dir ./RakutenAI-7B-Instruct/model
-  python ./RakutenAI-7B-Instruct/run.py --input-dir /dataset/synthetic/input/
+  python ./RakutenAI-7B-Instruct/run.py --input-dir ../dataset/synthetic/input/
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./RakutenAI-7B-Instruct/output_synthetic --out_csv ./RakutenAI-7B-Instruct/output_syn_csv
 ```
 
@@ -81,7 +81,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/model
-  python ./Gemma-2-Llama-Swallow-9b-it-v0.1/run.py --input-dir /dataset/synthetic/input/
+  python ./Gemma-2-Llama-Swallow-9b-it-v0.1/run.py --input-dir ../dataset/synthetic/input/
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_synthetic --out_csv ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_syn_csv
 ```
 
@@ -89,7 +89,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./Qwen3-Swallow-8B-RL-v0.2/model
-  python ./Qwen3-Swallow-8B-RL-v0.2/run.py --input-dir /dataset/synthetic/input/
+  python ./Qwen3-Swallow-8B-RL-v0.2/run.py --input-dir ../dataset/synthetic/input/
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output_synthetic --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_syn_csv
 ```
 
@@ -97,6 +97,6 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./LLM-jp-4-8B-Instruct/model
-  python ./LLM-jp-4-8B-Instruct/run.py --input-dir /dataset/synthetic/input/
+  python ./LLM-jp-4-8B-Instruct/run.py --input-dir ../dataset/synthetic/input/
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./LLM-jp-4-8B-Instruct/output_synthetic --out_csv ./LLM-jp-4-8B-Instruct/output_syn_csv
 ```
