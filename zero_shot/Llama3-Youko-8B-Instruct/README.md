@@ -570,10 +570,18 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## Error Type Summary
 
+### Analysis basis
+
+The categories below are based on a three-way comparison among Input, Pred, and
+GT. Input is treated as the noisy OCR/string source, Pred as the model's
+correction attempt, and GT as the target diplomatic transcription. Therefore,
+an error is classified by how Pred changes, copies, omits, reorders, or
+modernizes the Input relative to GT, not by Pred-GT distance alone.
+
 ### 1. Modernization and explanatory rewriting
 
 The most distinctive failure mode is that the model often rewrites the source
-into modern or explanatory Japanese instead of preserving a faithful
+from Input into modern or explanatory Japanese instead of preserving a faithful
 transcription. This appears in `100241706_00020_1`, `100241706_00028_1`,
 `100249376_00017_2`, `100249376_00018_1`, `100249476_00007_2`,
 `200022050_00006_1`, and `200022050_00010_2`. Pred frequently adds punctuation,
