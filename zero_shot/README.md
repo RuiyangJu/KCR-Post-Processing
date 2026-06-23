@@ -49,7 +49,7 @@ Each model uses its native chat template. The following adaptations are required
 #### Download & Run & Evaluate
 ```
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
-  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/synthetic/input/ ./Llama-3-ELYZA-JP-8B/output_synthetic
+  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Llama-3-ELYZA-JP-8B/output_synthetic
   python ./evaluate.py --gt_dir ./dataset/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn_csv
 ```
 
