@@ -275,18 +275,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 も有そうべつなますのかげんハなますをミなもりてあとにすのおほくあまり候ハぬかよく候このしろ鱠ふなのくやまぶきあへハふななますをからし入すにあへ申事也ひてり鱠あめのうを三まいにおろし身ハすきてつくり両のかハを打合かハめよりやきてきざミ入たうのいものくきをさゝがき入すしほかげんしてあへ候をいふ也かハもしらやき也かばやき鱠あゆにてもあめのうをのく仕候事也これも身ハすきてつくり候かハしらやきぬたなますからしをよくすりてさけのかすをよくすりあゆにてもいわしにてもなよしにてもまづすにていためそのすをすてのちにぬたをすにてのべすかげんしてあへ候也後のすおほきハ悪候たゞしあゆにてハあをまめのぬたにゆのはきざミ入あへ申事も有太郎助鱠一しほのたいあわひなどいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねなとやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 
 ## Error Type Summary
-The categories below are based on a three-way comparison among Input, Pred, and
-GT. Input is treated as the noisy OCR source, Pred as the model's correction 
-attempt, and GT as the target correct transcription.
+The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
 
 ### 1. Input-copying without sufficient correction
-
-The dominant pattern is conservative copying of the noisy Input. This is visible
-in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`,
-`200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and
-`200022050_00010_2`. Pred often preserves almost the entire input string,
-including OCR-like corruptions, while GT makes substantial corrections. The
-model therefore avoids severe hallucination, but it also under-corrects.
+The dominant pattern is conservative copying of the noisy Input. This is visible in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. Pred often **preserves almost the entire input string**, including OCR-like corruptions, while GT makes substantial corrections. The model therefore avoids severe hallucination, but it also under-corrects.
 
 ### 2. Long-context degradation and output-length cap behavior
 
