@@ -23,6 +23,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100241706_00028_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 すもの干ぐわしといふへ仕んぢう又饅頭いづれの御代の御事なりか止事なき御かた米の御ことぶきを祝奉てあたらげをせいあぐへきよしを仰せ出されけりいりゞ致申べくと伺ひけ
@@ -43,6 +47,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249416_00034_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 糀を少入れおけば風味よき甘酒とゐなる也○上飴鍋心一歯餅米一升一糀た升七合一水七合此此水にて糀をあらひはあふのばり取かすを去は段米どあま酒につくりなれたる時布にて
@@ -62,6 +70,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200006663_00006_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 夜番たゞ出のぶツれえりレけかまさゞゑびす廻国ま重お
@@ -78,6 +90,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200015843_00110_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 着物はももより内多ろ葉も敷きもしらずてし也がししがは置吉といつる家は蔵ん長九つ持て其もぐに代すへ正のかさりぞか万屋はひそかなる手ざて独りにに吉太郎とて有しが十三
@@ -103,6 +119,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200017458_00008_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやら
@@ -129,6 +149,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200017458_00037_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ばへんるろにや五郎ひなくつつきちらたをいてはなしろにおすたりいきほひたたきぐちあへなくまけしばしばらすまふなりけるや五郎はげんしつたきぐちにかちて百干ばんのまけ
@@ -155,6 +179,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00002_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 七詰膳並据様五詰膳並据様く
@@ -171,6 +199,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00006_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 平皿飯鉢七ツ目蓋台中合サ汁再進煎物島台土器飯鉢押肴二種蓋台箸汁再進銚子島台土器提子押肴二種箸杯台銚子平銚子台提子
@@ -187,6 +219,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00008_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 飯鉢飯鉢蓋台蓋台汁再進汁再進置杯置杯平銚子平銚子吸物吸物肴二種肴二種湯水湯水茶菓子茶菓子
@@ -203,6 +239,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00009_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 濃茶濃茶後菓子後菓子薄茶薄茶以上七詰五詰に次たる尊る々の御方の饗応御料理なり二汁七菜二汁五菜本膳本膳膾直汁膾汁黍香物箸煎物香物箸坪皿飯坪以皿飯
@@ -219,6 +259,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00020_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 引向おま半鯛二玉子ふわ〱長皿ふた物薄鳥平皿御所麩猪口薄モ雪主花かつ尾ふくる之焼物一しほかれゐ懸下け肴一鳥鴨銚子すれんこん吸物花以かぜらかしこせ銚子肴湯鯖粧漬湯石
@@ -238,6 +282,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00025_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 七詰五詰の組合花積立ミ略図本膳鯛作り身も錦鱠細作り魚汁小かふく大根しい茸せか皮牛房房風青な杉小金角此かんなら漬瓜香物ミそ漬大根之もり口漬花塩山升杉曲物焼魚煮物花
@@ -257,6 +305,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00003_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ゝ右一は
@@ -273,6 +325,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00012_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 かまほこ拵方し事玉子そふめんの如にそれをほ竹のれ同比ほ二ツ割し両方て更ふししを付其中へ入さしそをうすてそきもよふなるにふに入へしそれをふゝかし外へ玉子をぬるへへ
@@ -291,6 +347,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00002_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ▲祝言引渡之次第一歌栗ほそきかたをむに也んレ一三ツかわらけ成やうに三かくにおゝ也也一のし二本寸すまひろきかたをきやくのひだりのぶかたへしておきてこかし昆布切かぶ
@@ -313,6 +373,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00006_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきてはおもミをも人入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの斗に
@@ -341,6 +405,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00007_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ほをつけうち書べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほかぬにして吉りきを
@@ -368,6 +436,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00010_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-ELYZA-JP-8B/imgs/100249416_00027_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな〱まふきふななすを入すにあひり鱠あめのを三まおろ身ハすきてつ両のを打合かハめやききざ入たのい
