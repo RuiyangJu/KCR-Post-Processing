@@ -281,52 +281,19 @@ The categories below are based on a three-way comparison among Input, Pred, and 
 The dominant pattern is conservative copying of the noisy Input. This is visible in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. Pred often **preserves almost the entire input string**, including OCR-like corruptions, while GT makes substantial corrections. The model therefore avoids severe hallucination, but it also under-corrects.
 
 ### 2. Long-context degradation and output-length cap behavior
-
-Several long cases have Pred_Length around 300 characters, including
-`200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`,
-`200022050_00007_2`, and `200022050_00010_2`. This suggests a length cap or
-truncation-like generation pattern. The beginning of the output is often a
-direct copy of Input, and the later content is either missing or insufficiently
-corrected. Long culinary passages remain especially difficult.
+Several long cases have Pred_Length around 300 characters, including `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. This suggests **a length cap or truncation-like generation pattern**. The beginning of the output is often a direct copy of Input, and the later content is either missing or insufficiently corrected. Long culinary passages remain especially difficult.
 
 ### 3. Layout/order errors in list-like text
-
-The `200021763_*` samples show persistent list-structure errors. These examples
-contain ordered sets of dishes, vessels, serving sequences, and repeated menu
-items. The model retains local tokens but fails to recover the correct grouping
-and reading order. `200021763_00008_2`, `200021763_00020_1`, and
-`200021763_00025_1` are representative cases where local copying does not
-produce the correct structured transcription.
+The `200021763_*` samples show **persistent list-structure errors**. These examples contain ordered sets of dishes, vessels, serving sequences, and repeated menu items. The model retains local tokens but fails to recover the correct grouping and reading order. `200021763_00008_2`, `200021763_00020_1`, and `200021763_00025_1` are representative cases where local copying does not produce the correct structured transcription.
 
 ### 4. Classical kana and short-text character confusions
-
-Short samples such as `200006663_00006_2`, `200021763_00002_2`,
-`200021869_00003_1`, and `200021869_00012_1` reveal fine-grained character
-errors. These include historical kana, small marks, voicing differences, and
-visually similar characters. Because the strings are short, a small number of
-character-level mistakes can lead to a high CER.
+Short samples such as `200006663_00006_2`, `200021763_00002_2`, `200021869_00003_1`, and `200021869_00012_1` reveal fine-grained character errors. These include **historical kana, small marks, voicing differences, and visually similar characters**. Because the strings are short, a small number of character-level mistakes can lead to a high CER.
 
 ### 5. Limited modernization compared with other models
-
-Unlike Youko or some instruction-tuned models, Qwen3-Swallow-8B-RL-v0.2 shows
-less aggressive modernization or paraphrasing. This reduces semantic
-hallucination, but it also means that noisy input is often left unchanged. The
-model is safer in style but weaker as a corrector.
+Unlike Youko or some instruction-tuned models, Qwen3-Swallow-8B-RL-v0.2 shows less aggressive modernization or paraphrasing. This reduces semantic hallucination, but it also means that **noisy input is often left unchanged**. The model is safer in style but weaker as a corrector.
 
 ### 6. Domain vocabulary errors
-
-Cooking, menu, vessel, and recipe terminology remains a repeated problem.
-Examples include `100249416_00034_1`, `200022050_00002_2`,
-`200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. The model
-often copies corrupted ingredient names, cooking steps, measurements, and
-technical terms rather than recovering the specialized wording expected in GT.
+Cooking, menu, vessel, and recipe terminology remains a repeated problem. Examples include `100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. The model often **copies corrupted ingredient names, cooking steps, measurements, and technical terms** rather than recovering the specialized wording expected in GT.
 
 ### Overall
-
-Qwen3-Swallow-8B-RL-v0.2 is mainly a conservative under-correction model on
-these cases. It rarely produces extreme paraphrasing or runaway repetition, but
-it frequently copies noisy input, struggles with layout-sensitive lists, and
-degrades on long passages near the 300-character range. Future improvements
-should focus on encouraging active correction, handling long outputs explicitly,
-recovering reading order in structured lists, and adapting to classical
-culinary vocabulary.
+Qwen3-Swallow-8B-RL-v0.2 is mainly a conservative under-correction model on these cases. It rarely produces extreme paraphrasing or runaway repetition, **but it frequently copies noisy input, struggles with layout-sensitive lists, and degrades on long passages near the 300-character range**. Future improvements should focus on encouraging active correction, handling long outputs explicitly, recovering reading order in structured lists, and adapting to classical culinary vocabulary.
