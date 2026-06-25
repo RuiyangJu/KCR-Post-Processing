@@ -25,7 +25,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249376_00022_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -48,7 +48,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249376_00050_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -70,7 +70,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249416_00034_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -95,7 +95,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249476_00007_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -118,7 +118,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200006663_00006_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -138,7 +138,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200015843_00110_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -167,7 +167,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021086_00005_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -197,7 +197,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00002_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -217,7 +217,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00006_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -237,7 +237,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00008_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -257,7 +257,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00009_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -277,7 +277,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00020_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -300,7 +300,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00025_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -323,7 +323,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00042_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -347,7 +347,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00003_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -367,7 +367,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00012_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -388,7 +388,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00002_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -414,7 +414,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00006_1
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -446,7 +446,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00010_2
   <p align="left">
-    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+    <img src="/zero_shot/RakutenAI-7B-Instruct/imgs/100249416_00034_.jpg" width="512" title="details">
   </p>
   
 ### Input
