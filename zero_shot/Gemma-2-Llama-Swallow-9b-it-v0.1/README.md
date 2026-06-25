@@ -470,9 +470,6 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## Error Type Summary
-
-### Analysis basis
-
 The categories below are based on a three-way comparison among Input, Pred, and
 GT. Input is treated as the noisy OCR source, Pred as the model's correction 
 attempt, and GT as the target correct transcription.
