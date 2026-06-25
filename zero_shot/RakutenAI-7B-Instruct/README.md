@@ -24,6 +24,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00022_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 のくろみにはあん壱升にくすの粉弐合いれあつさ四分程にのそへこきにてむ二時程さまし形は色らに切申候ン十いもまき上白の米を一粒つた見り粉にして絹ふるひにかけ粉一升に
@@ -43,6 +47,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00050_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 左七かや餅の方いりや壱升能ミた記有馬とをにてかすの残らさる様にふるひもち米の粉五合白沙う糖五合右のかやの粉と一つに合せいろうにうすくひろけむし申候能むせ候はたあ
@@ -61,6 +69,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249416_00034_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 糀を少入れおけば風味よき甘酒とゐなる也○上飴鍋心一歯餅米一升一糀た升七合一水七合此此水にて糀をあらひはあふのばり取かすを去は段米どあま酒につくりなれたる時布にて
@@ -82,6 +94,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249476_00007_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 し○大根飯大根飯は常たく組た中又は麦飯の中にても大根を鱠のごくきざきをの吹あがる時蓋をとり飯の上へ入塩をも程よくいれ蓋をて焚あげ扨暫く熟しおきうつす時かきまぶ食
@@ -101,6 +117,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200006663_00006_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 夜番たゞ出のぶツれえりレけかまさゞゑびす廻国ま重お
@@ -117,6 +137,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200015843_00110_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 着物はももより内多ろ葉も敷きもしらずてし也がししがは置吉といつる家は蔵ん長九つ持て其もぐに代すへ正のかさりぞか万屋はひそかなる手ざて独りにに吉太郎とて有しが十三
@@ -142,6 +166,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021086_00005_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 五人として重からざる時は威勢な敵かならずれをあなごる然といへ共親しきくにはかろくやはらかにむかふべ六妻女に常に勇を可作都て女は邪路に入安能道入難七けんどんはうい
@@ -168,6 +196,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00002_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 七詰膳並据様五詰膳並据様く
@@ -184,6 +216,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00006_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 平皿飯鉢七ツ目蓋台中合サ汁再進煎物島台土器飯鉢押肴二種蓋台箸汁再進銚子島台土器提子押肴二種箸杯台銚子平銚子台提子
@@ -200,6 +236,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00008_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 飯鉢飯鉢蓋台蓋台汁再進汁再進置杯置杯平銚子平銚子吸物吸物肴二種肴二種湯水湯水茶菓子茶菓子
@@ -216,6 +256,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00009_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 濃茶濃茶後菓子後菓子薄茶薄茶以上七詰五詰に次たる尊る々の御方の饗応御料理なり二汁七菜二汁五菜本膳本膳膾直汁膾汁黍香物箸煎物香物箸坪皿飯坪以皿飯
@@ -232,6 +276,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00020_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 引向おま半鯛二玉子ふわ〱長皿ふた物薄鳥平皿御所麩猪口薄モ雪主花かつ尾ふくる之焼物一しほかれゐ懸下け肴一鳥鴨銚子すれんこん吸物花以かぜらかしこせ銚子肴湯鯖粧漬湯石
@@ -251,6 +299,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00025_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 七詰五詰の組合花積立ミ略図本膳鯛作り身も錦鱠細作り魚汁小かふく大根しい茸せか皮牛房房風青な杉小金角此かんなら漬瓜香物ミそ漬大根之もり口漬花塩山升杉曲物焼魚煮物花
@@ -270,6 +322,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00042_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 柿ゑた柿楊栗かや棹子橙柑くるみこんふ右の類なり此外色々あるへし一汁なとには一通り菓子出る時は茶菓子色と此菓子と交て盛合する事もあり向略儀にて餅菓子蒸菓ふを盛合す
@@ -290,6 +346,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00003_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ゝ右一は
@@ -306,6 +366,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00012_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 かまほこ拵方し事玉子そふめんの如にそれをほ竹のれ同比ほ二ツ割し両方て更ふししを付其中へ入さしそをうすてそきもよふなるにふに入へしそれをふゝかし外へ玉子をぬるへへ
@@ -323,6 +387,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00002_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ▲祝言引渡之次第一歌栗ほそきかたをむに也んレ一三ツかわらけ成やうに三かくにおゝ也也一のし二本寸すまひろきかたをきやくのひだりのぶかたへしておきてこかし昆布切かぶ
@@ -345,6 +413,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00006_1
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきてはおもミをも人入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの斗に
@@ -373,6 +445,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00010_2
+  <p align="left">
+    <img src="/zero_shot/Qwen3-Swallow-8B-RL-v0.2/imgs/100249416_00034_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな〱まふきふななすを入すにあひり鱠あめのを三まおろ身ハすきてつ両のを打合かハめやききざ入たのい
