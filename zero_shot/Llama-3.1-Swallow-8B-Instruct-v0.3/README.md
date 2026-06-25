@@ -400,79 +400,26 @@ GT. Input is treated as the noisy OCR source, Pred as the model's correction
 attempt, and GT as the target correct transcription.
 
 ### 1. Modernization and explanatory rewriting
-
-The most distinctive failure mode is that the model often rewrites the source
-from Input into modern or explanatory Japanese instead of preserving a faithful
-transcription. This appears in `100241706_00020_1`, `100241706_00028_1`,
-`100249376_00017_2`, `100249376_00018_1`, `100249476_00007_2`,
-`200022050_00006_1`, and `200022050_00010_2`. Pred frequently adds punctuation,
-uses modern kanji, inserts particles, or paraphrases the content into a more
-readable form. These outputs can be semantically plausible, but they diverge
-from the GT transcription target and therefore produce high CER.
+The most distinctive failure mode is that the model often **rewrites the source from Input into modern or explanatory Japanese** instead of preserving a faithful
+transcription. This appears in `100241706_00020_1`, `100241706_00028_1`, `100249376_00017_2`, `100249376_00018_1`, `100249476_00007_2`, `200022050_00006_1`, and `200022050_00010_2`. Pred frequently adds punctuation, uses modern kanji, inserts particles, or paraphrases the content into a more readable form. These outputs can be semantically plausible, but they diverge from the GT transcription target and therefore produce high CER.
 
 ### 2. Semantic hallucination and over-interpretation
-
-Several predictions go beyond modernization and introduce content that is not
-supported by the input. For example, `100241706_00028_1` turns the historical
-text into a more polished explanatory passage, and `100249376_00017_2` rewrites
-the preparation procedure with invented or normalized phrasing. This indicates
-that the model is sometimes solving the task as interpretation or translation
-rather than OCR correction.
+Several predictions go beyond modernization and introduce content that is not supported by the input. For example, `100241706_00028_1` turns the historical text into a more polished explanatory passage, and `100249376_00017_2` rewrites the preparation procedure with invented or normalized phrasing. This indicates that the model is sometimes **solving the task as interpretation or translation rather than OCR correction**.
 
 ### 3. Input-copying mixed with partial correction
-
-Some long samples combine copied noisy input with selective normalization.
-`200020019_00034_2`, `200020019_00057_1`, `200020019_00070_2`,
-`200020019_00077_1`, `200020019_00082_2`, `200022050_00002_2`,
-`200022050_00006_1`, and `200022050_00010_2` show this pattern. The model keeps
-large spans of the noisy input, then locally changes some words into common
-kanji or modern expressions. The result is neither a faithful copy nor a
-correct transcription.
+Some long samples combine copied noisy input with selective normalization. `200020019_00034_2`, `200020019_00057_1`, `200020019_00070_2`, `200020019_00077_1`, `200020019_00082_2`, `200022050_00002_2`, `200022050_00006_1`, and `200022050_00010_2` show this pattern. The model **keeps large spans of the noisy input, then locally changes some words into common kanji or modern expressions**. The result is neither a faithful copy nor a correct transcription.
 
 ### 4. Layout/order errors in list-like text
-
-The `200021763_*` samples still show ordering and grouping problems, especially
-`200021763_00006_2`, `200021763_00008_2`, `200021763_00009_1`, and
-`200021763_00042_2`. These are structured lists of menu items, vessels, or dish
-names. The model retains many recognizable tokens but fails to reconstruct the
-correct list sequence and group boundaries. This suggests limited robustness to
-layout-dependent reading order.
+The `200021763_*` samples still show ordering and grouping problems, especially `200021763_00006_2`, `200021763_00008_2`, `200021763_00009_1`, and `200021763_00042_2`. These are structured lists of menu items, vessels, or dish names. The model retains many recognizable texts but **fails to reconstruct the correct list sequence and group boundaries**. This suggests limited robustness to layout-dependent reading order.
 
 ### 5. Length expansion and unstable long-output behavior
-
-Unlike models that mainly truncate near 300 characters, Youko sometimes expands
-the output substantially. `200021086_00025_2` is the clearest case: Pred_Length
-is 448 while GT_Length is 288, producing CER above 1.0. This expansion is
-mostly caused by over-generation and explanatory rewriting. Other long samples
-also show compression, omission, or semantic drift, so the model is unstable on
-long passages rather than simply capped at a fixed length.
+Unlike models that mainly truncate near 300 characters, Youko sometimes expands the output substantially. `200021086_00025_2` is the clearest case: Pred_Length is 448 while GT_Length is 288, producing CER above 1.0. This expansion is mostly caused by **over-generation and explanatory rewriting**. Other long samples also show compression, omission, or semantic drift, so the model is unstable on long passages rather than simply capped at a fixed length.
 
 ### 6. Classical kana and short-text character confusions
-
-Short samples such as `200006663_00006_2`, `200017458_00003_1`,
-`200021869_00003_1`, and `200021869_00012_1` reveal fine-grained errors in
-historical kana, voicing, small marks, and visually similar characters. Because
-these samples are short, a few substitutions or omissions can create a high CER.
-The model also tends to normalize historical forms into familiar modern-looking
-forms, which compounds the character-level errors.
+Short samples such as `200006663_00006_2`, `200017458_00003_1`, `200021869_00003_1`, and `200021869_00012_1` reveal **fine-grained errors in historical kana, voicing, small marks, and visually similar characters**. Because these samples are short, a few substitutions or omissions can create a high CER. The model also tends to normalize historical forms into familiar modern-looking forms, which compounds the character-level errors.
 
 ### 7. Domain vocabulary errors
-
-Cooking, confectionery, menu, and recipe vocabulary is a major source of
-mistakes. Examples include `100249376_00017_2`, `100249376_00018_1`,
-`100249416_00034_1`, `100249476_00007_2`, `200022050_00002_2`,
-`200022050_00006_1`, and `200022050_00010_2`. The model often turns specialized
-terms, ingredients, measurements, and preparation steps into more common
-modern expressions. This makes the text easier to read but less faithful to the
-source.
+Cooking, confectionery, menu, and recipe vocabulary is a major source of mistakes. Examples include `100249376_00017_2`, `100249376_00018_1`, `100249416_00034_1`, `100249476_00007_2`, `200022050_00002_2`, `200022050_00006_1`, and `200022050_00010_2`. The model often **turns specialized terms, ingredients, measurements, and preparation steps into more common modern expressions**. This makes the text easier to read but less faithful to the source.
 
 ### Overall
-
-Llama-3-Youko-8B-Instruct has a different error profile from the more
-copy-oriented models. Its main weakness is over-normalization: it often rewrites
-or explains the text instead of transcribing it. This creates high CER even when
-the output is fluent. The model also struggles with list layouts, long passages,
-short historical-kana fragments, and specialized culinary vocabulary. Future
-improvements should emphasize strict transcription instructions, suppression of
-paraphrasing and modernization, layout-aware ordering, and domain adaptation for
-classical cooking and confectionery texts.
+Llama-3-Youko-8B-Instruct has a different error profile from the more copy-oriented models. Its main weakness is over-normalization: **it often rewrites or explains the text instead of transcribing it**. This creates high CER even when the output is fluent. The model also struggles with list layouts, long passages, short historical-kana fragments, and specialized culinary vocabulary. Future improvements should emphasize strict transcription instructions, suppression of paraphrasing and modernization, layout-aware ordering, and domain adaptation for classical cooking and confectionery texts.
