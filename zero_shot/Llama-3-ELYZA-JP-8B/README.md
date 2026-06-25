@@ -275,80 +275,28 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 も有そうべつなますのかげんハなますをミなもりてあとにすのおほくあまり候ハぬかよく候このしろ鱠ふなのくやまぶきあへハふななますをからし入すにあへ申事也ひてり鱠あめのうを三まいにおろし身ハすきてつくり両のかハを打合かハめよりやきてきざミ入たうのいものくきをさゝがき入すしほかげんしてあへ候をいふ也かハもしらやき也かばやき鱠あゆにてもあめのうをのく仕候事也これも身ハすきてつくり候かハしらやきぬたなますからしをよくすりてさけのかすをよくすりあゆにてもいわしにてもなよしにてもまづすにていためそのすをすてのちにぬたをすにてのべすかげんしてあへ候也後のすおほきハ悪候たゞしあゆにてハあをまめのぬたにゆのはきざミ入あへ申事も有太郎助鱠一しほのたいあわひなどいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねなとやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 
 ## Error Type Summary
-The categories below are based on a three-way comparison among Input, Pred, and
-GT. Input is treated as the noisy OCR source, Pred as the model's correction 
-attempt, and GT as the target correct transcription.
+The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
 
 ### 1. Input-copying without sufficient correction
-
-The largest group of errors comes from copying the noisy Input almost directly.
-This is visible in `100249416_00034_1`, `200015843_00110_1`,
-`200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`,
-`200022050_00007_2`, and `200022050_00010_2`. Pred often preserves the same
-OCR-like corruptions as Input, while GT contains substantial corrections. This
-behavior keeps the output superficially close to the source length, but it does
-not solve the correction task.
+The largest group of errors comes from **copying the noisy Input almost directly**. This is visible in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. Pred often preserves the same OCR-like corruptions as Input, while GT contains substantial corrections. This behavior keeps the output superficially close to the source length, but it does not solve the correction task.
 
 ### 2. Generation or cleaning artifacts
-
-`100241706_00028_1` contains an unusual artifact: the prediction includes a
-replacement character and the literal string `assistant`. This looks different
-from ordinary OCR or transcription error and suggests a generation-format,
-tokenization, or output-cleaning issue. Because the sample is also shortened
-relative to GT, the artifact combines with omission and causes a very high CER.
+`100241706_00028_1` contains an unusual artifact: the prediction includes **a replacement character and the literal string `assistant`**. This looks different from ordinary OCR or transcription error and suggests a generation-format, tokenization, or output-cleaning issue. Because the sample is also shortened relative to GT, the artifact combines with omission and causes a very high CER.
 
 ### 3. Layout/order errors in list-like text
-
-The `200021763_*` cases are dominated by list-structure problems. These samples
-contain menu items, vessels, dish names, and repeated ordered groups. The model
-often keeps recognizable local tokens, but the grouping and reading order do
-not match GT. `200021763_00008_2`, `200021763_00020_1`, and
-`200021763_00025_1` show that the model is weak at reconstructing structured
-lists from a noisy or layout-dependent input.
+The `200021763_*` cases are dominated by **list-structure problems**. These samples contain menu items, vessels, dish names, and repeated ordered groups. The model often keeps recognizable local tokens, but the grouping and reading order do not match GT. `200021763_00008_2`, `200021763_00020_1`, and `200021763_00025_1` show that the model is weak at reconstructing structured lists from a noisy or layout-dependent input.
 
 ### 4. Long-context degradation and length-limit behavior
-
-Several difficult cases are long passages: `200017458_00008_1`,
-`200017458_00037_2`, `200022050_00002_2`, `200022050_00006_1`,
-`200022050_00007_2`, and `200022050_00010_2`. Pred lengths often cluster near
-296-300 characters, which suggests an output cap or truncation-like behavior.
-The beginning of the prediction is usually more stable, while later parts are
-copied from Input, omitted, or only lightly corrected. This produces high CER
-even when the local text looks plausible.
+Several difficult cases are long passages: `200017458_00008_1`, `200017458_00037_2`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. Pred lengths often cluster near 296-300 characters, which suggests **an output cap or truncation-like behavior**. The beginning of the prediction is usually more stable, while later parts are copied from Input, omitted, or only lightly corrected. This produces high CER even when the local text looks plausible.
 
 ### 5. Classical kana and short-text character confusions
-
-Short samples such as `200006663_00006_2`, `200021763_00002_2`, and
-`200021869_00003_1` expose fine-grained character-level errors. These include
-voicing differences, small marks, historical kana, and visually similar
-characters. In very short texts, a few character substitutions or omissions can
-produce a large CER, even when the absolute number of mistakes is small.
+Short samples such as `200006663_00006_2`, `200021763_00002_2`, and `200021869_00003_1` expose fine-grained character-level errors. These include **voicing differences, small marks, historical kana, and visually similar characters**. In very short texts, a few character substitutions or omissions can produce a large CER, even when the absolute number of mistakes is small.
 
 ### 6. Modernization and semantic normalization
-
-The model sometimes shifts historical forms toward more familiar modern-looking
-Japanese. This is especially visible in cases where the predicted text uses
-cleaner or more regular forms than the diplomatic GT would allow. Such
-normalization may improve readability, but it is penalized because the target is
-faithful transcription rather than modernized interpretation.
+The model sometimes **shifts historical forms toward more familiar modern-looking Japanese**. This is especially visible in cases where the predicted text uses cleaner or more regular forms than the diplomatic GT would allow. Such normalization may improve readability, but it is penalized because the target is faithful transcription rather than modernized interpretation.
 
 ### 7. Domain vocabulary errors
-
-Recipe and culinary terminology remains a major source of errors. Cases such as
-`100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`,
-`200022050_00007_2`, and `200022050_00010_2` contain ingredients, preparation
-steps, vessels, seasonings, measurements, and dish names. The model frequently
-copies noisy domain terms or makes only partial corrections, indicating that
-general Japanese knowledge is not enough for stable recovery of specialized
-classical culinary vocabulary.
+Recipe and culinary terminology remains a major source of errors. Cases such as `100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` contain ingredients, preparation steps, vessels, seasonings, measurements, and dish names. The model frequently **copies noisy domain terms or makes only partial corrections**, indicating that general Japanese knowledge is not enough for stable recovery of specialized classical culinary vocabulary.
 
 ### Overall
-
-Llama-3-ELYZA-JP-8B shows three main weaknesses on these error cases. First, it
-often copies the noisy input instead of performing robust correction. Second, it
-struggles with layout-sensitive lists and long passages, especially when output
-length approaches the 300-character range. Third, it has some model/output
-artifact risk, as shown by `100241706_00028_1`. Future improvements should focus
-on stricter output cleaning, stronger correction behavior, layout-aware
-reading-order recovery, explicit long-output handling, and domain adaptation for
-classical culinary and menu texts.
+Llama-3-ELYZA-JP-8B shows three main weaknesses on these error cases. First, it often **copies the noisy input instead of performing robust correction**. Second, it struggles with **layout-sensitive lists and long passages**, especially when output length approaches the 300-character range. Third, it has **some model/output artifact risk**, as shown by `100241706_00028_1`. Future improvements should focus on stricter output cleaning, stronger correction behavior, layout-aware reading-order recovery, explicit long-output handling, and domain adaptation for classical culinary and menu texts.
