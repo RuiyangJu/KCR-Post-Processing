@@ -291,6 +291,14 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## Error Type Summary
 
+### Analysis basis
+
+The categories below are based on a three-way comparison among Input, Pred, and
+GT. Input is treated as the noisy OCR/string source, Pred as the model's
+correction attempt, and GT as the target diplomatic transcription. Therefore,
+an error is classified by how Pred changes, copies, omits, reorders, or
+modernizes the Input relative to GT, not by Pred-GT distance alone.
+
 ### 1. Input-copying without sufficient correction
 
 The dominant failure mode is copying the noisy Input almost verbatim. This is
