@@ -475,33 +475,30 @@ GT. Input is treated as the noisy OCR source, Pred as the model's correction
 attempt, and GT as the target correct transcription.
 
 ### 1. Repetition / runaway generation
-
 The clearest case is `100249376_00010_2`. After a mostly correct opening,
-Pred initially follows Input/GT, then repeatedly generates the phrase around
+Pred initially follows Input/GT, then **repeatedly generates the phrase** around
 `水にひやしうすくのはしはり...`, which expands Pred_Length from the GT length
 of 114 to 1223 and raises CER to 9.76. This is not a normal OCR character error;
 it is a decoding failure where the model falls into a generation loop.
 
 ### 2. Layout/order errors in list-like text
-
 This pattern is especially visible in `200021763_00006_2`,
 `200021763_00008_2`, `200021763_00009_1`, `200021763_00020_1`, and
 `200021763_00025_1`. These samples are mostly parallel lists of menu items,
-vessels, or dishes. The prediction often preserves many local tokens, but the
-order, grouping, and repetition structure are wrong. For example, in
+vessels, or dishes. The prediction often preserves many local texts, but **the
+order, grouping, and repetition structure are wrong**. For example, in
 `200021763_00008_2`, the Input/Pred follows a repeated pattern such as
 `飯鉢飯鉢 蓋台蓋台 ...`, while the GT consists of two complete ordered sequences.
 This suggests that the model follows the local input arrangement instead of
 recovering the correct reading order from the original layout.
 
 ### 3. Input-copying without correction
-
 In many cases, Pred is almost identical to Input even though GT differs
 substantially from Input. Examples include `100249416_00034_1`,
 `200017458_00008_1`, `200017458_00037_2`, `200021869_00007_1`,
 `200021869_00012_1`, `200022050_00006_1`, and `200022050_00010_2`.
-These cases indicate that under noisy or long inputs, the model tends to copy
-the input rather than actively correcting it with linguistic knowledge. This
+These cases indicate that under noisy or long inputs, the model tends to **copy
+the input rather than actively correcting it with linguistic knowledge**. This
 keeps the output length close to the input, but the CER remains high.
 
 ### 4. Long-context degradation / truncation-like behavior
