@@ -31,6 +31,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100241706_00020_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 売買を定めものなり則魚を角どとりてさすゆへに鯨さの名今も残れり其のちは量りにてまた〱うりかいをなし目方かへなりを右の鯨になひ何魚にても角どり並ぶを差身といひなら
@@ -50,6 +54,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100241706_00028_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 すもの干ぐわしといふへ仕んぢう又饅頭いづれの御代の御事なりか止事なき御かた米の御ことぶきを祝奉てあたらげをせいあぐへきよしを仰せ出されけりいりゞ致申べくと伺ひけ
@@ -69,6 +77,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00017_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 にてあけ申候十七さん幾もちうめ之し上白米を一粒つゝゑり粉にて絹ふるひにかけ粉一升に氷沙糖の粉三十目の積りにいれ水少入もみ合壱尺四方の箱に内に十又字にしきりをして
@@ -88,6 +100,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00018_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 右の粉をいれ箱の内にて右ののこきり目のとをりをうすき板のやうなるかねにて切めを付箱ともにむし一夜をきとり出しほし申候一八せんへい丸きかね二つくひちかへにしてはさ
@@ -107,6 +123,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00053_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 たき大麦のもやしの粉九合右の食少さましし一一粉を入水ひた〱に入候てあま酒に作り一夜置明朝あまく成申候其時いりきにあけ成程よくしほり其汁を布袋に入少しもかすなきや
@@ -127,6 +147,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249416_00034_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 糀を少入れおけば風味よき甘酒とゐなる也○上飴鍋心一歯餅米一升一糀た升七合一水七合此此水にて糀をあらひはあふのばり取かすを去は段米どあま酒につくりなれたる時布にて
@@ -146,6 +170,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249476_00007_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 し○大根飯大根飯は常たく組た中又は麦飯の中にても大根を鱠のごくきざきをの吹あがる時蓋をとり飯の上へ入塩をも程よくいれ蓋をて焚あげ扨暫く熟しおきうつす時かきまぶ食
@@ -166,6 +194,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200006663_00006_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 夜番たゞ出のぶツれえりレけかまさゞゑびす廻国ま重お
@@ -182,6 +214,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200017458_00003_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 十二ひちやうばうが事十三かはづの三郎きたれし事十四いとうがし白つけの事十五をんばうがむまるこし事十六女ばうにかへうつりし事
@@ -198,6 +234,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200017458_00008_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやら
@@ -224,6 +264,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00034_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 申ける若もさまのおほせにはかやう小ツかせば罷みをふしたるやうにおぼめさんもはづかしけれとども今われきふらひて又あひもたらんもかたいとのよりあふ事もさだめなかきり
@@ -249,6 +293,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00057_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 た見のくろやき十四五年のふるがみこのくろやきなりかやうのやくしゆはめづらしとゝしさいはいかにとらひけれは我リののばうずにかゝりし時此やまひをやみけれはわなゝきふ
@@ -273,6 +321,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00070_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 またこゆとおもふもはかなゆめめの世にさよの中山なか〱のましにらみのすけもさすかになかし千まあしりはとてねぶたや即さみのなかやまなか〱にあしはいたくていねもせれす
@@ -295,6 +347,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00077_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 かみ申也この御てらのさんがう寺ごうはかたじしけなくもぜんたう大しのしんゑんごんゑんそうじやうゑんのこくつなるべし竹さいも江戸てねをまふけ形ば家をもち女をむかへみ
@@ -319,6 +375,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00082_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 人にもよこさまならすしてこゝろにねいなる事もなしつねにかゝみのかけを見よゆかめはかけもゆか見ぬしかくおもひてこししゆくれ竹のすぐなるみよにうひぬすばやふくすしま
@@ -338,6 +398,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021086_00025_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 或時し王其廻へにくゐぜを立其難義に及ける時がなしミの余はすとりの辺に近付はすとる是をおそれて我ひすばをあたへてけりしゝ王羊ををかるず我足をはすとり六窮にもたくは
@@ -365,6 +429,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00006_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 平皿飯鉢七ツ目蓋台中合サ汁再進煎物島台土器飯鉢押肴二種蓋台箸汁再進銚子島台土器提子押肴二種箸杯台銚子平銚子台提子
@@ -381,6 +449,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00008_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 飯鉢飯鉢蓋台蓋台汁再進汁再進置杯置杯平銚子平銚子吸物吸物肴二種肴二種湯水湯水茶菓子茶菓子
@@ -397,6 +469,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00009_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 濃茶濃茶後菓子後菓子薄茶薄茶以上七詰五詰に次たる尊る々の御方の饗応御料理なり二汁七菜二汁五菜本膳本膳膾直汁膾汁黍香物箸煎物香物箸坪皿飯坪以皿飯
@@ -414,6 +490,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00042_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 桜貝椀貝の事も見知たる品なれとも此部内衣次に記す一三詳宝久高位の方に用る品也其用ゆるにふる下のある事は伝書ニて弁へ尤食事膳部には薄盤なり一客に出々用ゆるは熨計三
@@ -436,6 +516,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021802_00016_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 茶うこき右同前にら汁あへものおね汁さみなまく十もみそすいくち根深汁いり鳥さしみ杉やき恩汁あへ物すあへなますさしみあさつきなますさしみ野びるさみあへへもの竹子しゆ
@@ -455,6 +539,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00003_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ゝ右一は
@@ -471,6 +559,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00012_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 かまほこ拵方し事玉子そふめんの如にそれをほ竹のれ同比ほ二ツ割し両方て更ふししを付其中へ入さしそをうすてそきもよふなるにふに入へしそれをふゝかし外へ玉子をぬるへへ
@@ -489,6 +581,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00002_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ▲祝言引渡之次第一歌栗ほそきかたをむに也んレ一三ツかわらけ成やうに三かくにおゝ也也一のし二本寸すまひろきかたをきやくのひだりのぶかたへしておきてこかし昆布切かぶ
@@ -514,6 +610,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00006_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきてはおもミをも人入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの斗に
@@ -542,6 +642,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00010_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00028_1.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな〱まふきふななすを入すにあひり鱠あめのを三まおろ身ハすきてつ両のを打合かハめやききざ入たのい
