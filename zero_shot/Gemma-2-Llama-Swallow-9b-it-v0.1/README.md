@@ -474,10 +474,8 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ### Analysis basis
 
 The categories below are based on a three-way comparison among Input, Pred, and
-GT. Input is treated as the noisy OCR/string source, Pred as the model's
-correction attempt, and GT as the target diplomatic transcription. Therefore,
-an error is classified by how Pred changes, copies, omits, reorders, or
-modernizes the Input relative to GT, not by Pred-GT distance alone.
+GT. Input is treated as the noisy OCR source, Pred as the model's correction 
+attempt, and GT as the target correct transcription.
 
 ### 1. Repetition / runaway generation
 
