@@ -25,7 +25,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249416_00034_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100249416_00034_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -48,7 +48,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200006663_00006_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200006663_00006_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -68,7 +68,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200015843_00110_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200015843_00110_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -97,7 +97,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200017458_00003_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200017458_00003_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -117,7 +117,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200017458_00008_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200017458_00008_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -147,7 +147,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200017458_00037_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200017458_00037_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -177,7 +177,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00002_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00002_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -197,7 +197,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00006_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00006_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -217,7 +217,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00008_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00008_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -237,7 +237,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00009_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00009_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -257,7 +257,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00020_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00020_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -280,7 +280,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00025_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021763_00025_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -303,7 +303,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00003_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021869_00003_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -323,7 +323,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00007_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021869_00007_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -346,7 +346,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00012_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200021869_00012_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -368,7 +368,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00002_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200022050_00002_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -394,7 +394,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00006_1
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200022050_00006_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -426,7 +426,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00007_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200022050_00007_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -457,7 +457,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00010_2
   <p align="left">
-    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/100241706_00020_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/imgs/200022050_00010_2.jpg" width="512" title="details">
   </p>
   
 ### Input
