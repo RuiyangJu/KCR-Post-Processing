@@ -26,6 +26,9 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00010_2
+  <p align="left">
+    <img src="imgs/100249376_00010_2.jpg" width="512" title="details">
+  </p>
 ### Input
 ```
 古今名物御前菓子秘伝抄さた一あるへいたう上〻氷沙糖一返洗捨沙糖壱升に水二升入さたうのとけ申程せん絹にてこ其後せんしつめさじにてすこしすゝひ水にひやしうすくのはし
