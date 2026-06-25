@@ -293,12 +293,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
 
 ### 1. Input-copying without sufficient correction
-
-The dominant error pattern is copying the noisy Input with little correction. This is especially clear in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. Pred often matches Input almost exactly, while GT contains substantial corrections. This means the model preserves many OCR-like errors instead of reconstructing the intended transcription.
+The dominant error pattern is copying the noisy Input with little correction. This is especially clear in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. **Pred often matches Input almost exactly**, while GT contains substantial corrections. This means the model preserves many OCR-like errors instead of reconstructing the intended transcription.
 
 ### 2. Severe early stopping / truncation
-
-`200022050_00010_2` is the clearest truncation case. GT_Length is 468, but Pred_Length is only 49, and the prediction stops after the opening fragment. This is different from normal character confusion: the model fails to continue the transcription at all. It should be treated as a generation-length or early stopping failure rather than a simple OCR correction error.
+`200022050_00010_2` is the clearest **truncation** case. GT_Length is 468, but Pred_Length is only 49, and the prediction stops after the opening fragment. This is different from normal character confusion: the model fails to continue the transcription at all. It should be treated as a generation-length or early stopping failure rather than a simple OCR correction error.
 
 ### 3. Long-context degradation and output-length cap behavior
 
