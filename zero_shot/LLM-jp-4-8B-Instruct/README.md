@@ -299,8 +299,7 @@ The dominant error pattern is copying the noisy Input with little correction. Th
 `200022050_00010_2` is the clearest **truncation** case. GT_Length is 468, but Pred_Length is only 49, and the prediction stops after the opening fragment. This is different from normal character confusion: the model fails to continue the transcription at all. It should be treated as a generation-length or early stopping failure rather than a simple OCR correction error.
 
 ### 3. Long-context degradation and output-length cap behavior
-
-Several long samples have predictions around 300 characters, including `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. This suggests a length cap or truncation-like generation pattern. The initial part is often stable, but the later part is omitted, under-corrected, or copied directly from Input. Long recipe-like passages remain hard for the model to handle consistently.
+Several long samples have predictions around 300 characters, including `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. This suggests **a length cap or truncation-like generation pattern**. The initial part is often stable, but the later part is omitted, under-corrected, or copied directly from Input. Long recipe-like passages remain hard for the model to handle consistently.
 
 ### 4. Layout/order errors in list-like text
 
