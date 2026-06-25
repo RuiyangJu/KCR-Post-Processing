@@ -270,12 +270,11 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ### GT
 も有そうべつなますのかげんハなますをミなもりてあとにすのおほくあまり候ハぬかよく候このしろ鱠ふなのくやまぶきあへハふななますをからし入すにあへ申事也ひてり鱠あめのうを三まいにおろし身ハすきてつくり両のかハを打合かハめよりやきてきざミ入たうのいものくきをさゝがき入すしほかげんしてあへ候をいふ也かハもしらやき也かばやき鱠あゆにてもあめのうをのく仕候事也これも身ハすきてつくり候かハしらやきぬたなますからしをよくすりてさけのかすをよくすりあゆにてもいわしにてもなよしにてもまづすにていためそのすをすてのちにぬたをすにてのべすかげんしてあへ候也後のすおほきハ悪候たゞしあゆにてハあをまめのぬたにゆのはきざミ入あへ申事も有太郎助鱠一しほのたいあわひなどいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねなとやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
-## Error Type Summary
-The categories below are based on a three-way comparison among Input, Pred, and
-GT. Input is treated as the noisy OCR source, Pred as the model's correction 
-attempt, and GT as the target correct transcription.
-### 1. Modernization and explanatory rewriting
 
+## Error Type Summary
+The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
+
+### 1. Modernization and explanatory rewriting
 The most prominent failure mode is strong modernization or explanatory
 rewriting from Input. In `100249376_00022_2`, `100249376_00050_1`,
 `100249416_00034_1`, and `100249476_00007_2`, the model rewrites the original
