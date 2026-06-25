@@ -27,7 +27,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249376_00010_2
   <p align="left">
-    <img src="imgs/100249376_00010_2.jpg" width="512" title="details">
+    <img src="/zero_shot/Gemma-2-Llama-Swallow-9b-it-v0.1/imgs/100249376_00010_2.jpg" width="512" title="details">
   </p>
   
 ### Input
