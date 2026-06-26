@@ -53,17 +53,17 @@ Each model uses its native chat template. The following adaptations are required
 ### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
 #### Download & Run & Evaluate
 ```
-  hf download SakanaAI/Llama-3-Karamaru-v1 --local-dir ./SakanaAI/Llama-3-Karamaru-v1/model
-  python ./SakanaAI/Llama-3-Karamaru-v1/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./SakanaAI/Llama-3-Karamaru-v1/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./SakanaAI/Llama-3-Karamaru-v1/output_synthetic --out_csv ./SakanaAI/Llama-3-Karamaru-v1/output_syn_csv
+  hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
+  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Llama-3-ELYZA-JP-8B/output_synthetic
+  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn_csv
 ```
 
 ### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03/31)
 #### Download & Run & Evaluate
 ```
-  hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
-  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Llama-3-ELYZA-JP-8B/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn_csv
+  hf download SakanaAI/Llama-3-Karamaru-v1 --local-dir ./SakanaAI/Llama-3-Karamaru-v1/model
+  python ./SakanaAI/Llama-3-Karamaru-v1/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./SakanaAI/Llama-3-Karamaru-v1/output_synthetic
+  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./SakanaAI/Llama-3-Karamaru-v1/output_synthetic --out_csv ./SakanaAI/Llama-3-Karamaru-v1/output_syn_csv
 ```
 
 ### (3) [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) (Release: 2024/07/25)
