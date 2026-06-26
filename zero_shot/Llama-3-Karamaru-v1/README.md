@@ -23,7 +23,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100241706_00028_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100241706_00028_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -45,7 +45,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249376_00018_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00018_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -80,7 +80,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 100249376_00020_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00020_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -115,7 +115,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200006663_00006_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200006663_00006_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -135,7 +135,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200015843_00010_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200015843_00010_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -174,7 +174,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200015843_00012_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200015843_00012_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -213,7 +213,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200015843_00130_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200015843_00130_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -252,7 +252,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200017458_00003_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200017458_00003_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -273,7 +273,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200020019_00015_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200020019_00015_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -314,7 +314,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200020019_00050_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200020019_00050_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -354,7 +354,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200020019_00057_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200020019_00057_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -392,7 +392,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200020019_00064_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200020019_00064_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -419,7 +419,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021086_00016_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200021086_00016_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -457,7 +457,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021086_00025_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200021086_00025_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -495,7 +495,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021763_00002_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200021763_00002_2.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -525,7 +525,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200021869_00003_1
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200021869_00003_1.jpg" width="512" title="details">
   </p>
   
 ### Input
@@ -557,7 +557,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 
 ## 200022050_00007_2
   <p align="left">
-    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/200022050_00007_2.jpg" width="512" title="details">
   </p>
   
 ### Input
