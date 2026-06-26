@@ -22,6 +22,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100241706_00028_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 すもの干ぐわしといふへ仕んぢう又饅頭いづれの御代の御事なりか止事なき御かた米の御ことぶきを祝奉てあたらげをせいあぐへきよしを仰せ出されけりいりゞ致申べくと伺ひけ
@@ -40,6 +44,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00018_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 右の粉をいれ箱の内にて右ののこきり目のとをりをうすき板のやうなるかねにて切めを付箱ともにむし一夜をきとり出しほし申候一八せんへい丸きかね二つくひちかへにしてはさ
@@ -71,6 +79,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 100249376_00020_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 なるもとをしに之水共にこし又水共に袋に入しほり袋の内にとまり申候を水けをさりつかひけ此廿四あんのこしらへやう右小豆のにし粉一升に白沙糖五合いれ能ませ合其後こしつ
@@ -102,6 +114,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200006663_00006_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 夜番たゞ出のぶツれえりレけかまさゞゑびす廻国ま重お
@@ -118,6 +134,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200015843_00010_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 浪風静に神通丸諸大名にはいかなる種を前生に蒔給へる事にそ有ける万事の自由を見し時は目前の仏といふて又外になしさればとよ世に大名の御知行百弐拾万石を五百石どり釈廻
@@ -153,6 +173,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200015843_00012_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 けるさ物細工人有しに此職人にもちいさき弟子二人ありしが新屋天わ寺屋などの十貫目入の銀箱不断手に懸て寸法は覚えて其銀はつゐに手に取たる事咄し此弟子おとなくなりて一
@@ -188,6 +212,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200015843_00130_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 図になるぞかたとへば大しよくはんの系あるにしてから町屋住るの身は貧なれば種うはしの身にはおとりなりとかく大福をねかひ長しなる事肝要なり其心山のずくにて分限はよき
@@ -223,6 +251,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200017458_00003_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 十二ひちやうばうが事十三かはづの三郎きたれし事十四いとうがし白つけの事十五をんばうがむまるこし事十六女ばうにかへうつりし事
@@ -240,6 +272,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00015_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 けいしつせんはくさいこつゐぎをんじやうとてこれを六よく申候一つにめんせとはばをのつからなるかほばせにはくふんべにをつくるよくけいどつとは身にうつくしきい分やうを
@@ -277,6 +313,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00050_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 きゝ給一へ此一条のつちにてきたなばうのちくやの其名をとらふぞ我らはかねはひろはぬとてちまなこていひければあまりの事に人くもとつとわしひてのきにけりた人はちかくと
@@ -313,6 +353,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00057_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 た見のくろやき十四五年のふるがみこのくろやきなりかやうのやくしゆはめづらしとゝしさいはいかにとらひけれは我リののばうずにかゝりし時此やまひをやみけれはわなゝきふ
@@ -347,6 +391,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200020019_00064_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 の事也神のたけ給はぬやみん色々のむしつをおふ事はこつちおらきを中也又さる人のおさなきもの井井ゐしのもとへおちのけりとやせんかくやせんとひしめきけり折ふしちくさい
@@ -370,6 +418,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021086_00016_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 実もとぞ人〻申ける其どく悪人には力をそゆると雪に霜をそゆるがどしあたをば恩にて報ずるなれば悪人には其力をおとさするとかれがためにはよき助たはるべし第十六鶴とおほ
@@ -404,6 +456,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021086_00025_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 或時し王其廻へにくゐぜを立其難義に及ける時がなしミの余はすとりの辺に近付はすとる是をおそれて我ひすばをあたへてけりしゝ王羊ををかるず我足をはすとり六窮にもたくは
@@ -438,6 +494,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021763_00002_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 七詰膳並据様五詰膳並据様く
@@ -464,6 +524,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200021869_00003_1
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ゝ右一は
@@ -492,6 +556,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ```
 
 ## 200022050_00007_2
+  <p align="left">
+    <img src="/zero_shot/Llama-3-Karamaru-v1/imgs/100249376_00010_.jpg" width="512" title="details">
+  </p>
+  
 ### Input
 ```
 ほをつけうち書べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほかぬにして吉りきを
