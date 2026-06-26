@@ -2,9 +2,9 @@
 ### Overview
 
 #### Environment
-OS: Linux
-GPU: NVIDIA RTX PRO 6000 Blackwell
-CPU: Intel Core i5-12600K
+* OS: Linux
+* GPU: NVIDIA RTX PRO 6000 Blackwell
+* CPU: Intel Core i5-12600K
 
 | Model | Affiliation | Release Date | Base | Model Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
