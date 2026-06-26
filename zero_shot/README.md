@@ -32,7 +32,7 @@ All models use the same OCR correction instruction:
   修正後の本文のみを出力してください。
 ```
 
-### Results
+### Result
 | Model | Affiliation | Release Date | Base | Model Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | / | / | / | / | / | 11.98 | / | 13.68 |
