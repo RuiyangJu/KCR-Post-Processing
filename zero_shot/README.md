@@ -116,7 +116,7 @@ All models use the same OCR correction instruction:
 ### (9) [Olmo-3-7B-Instruct](https://huggingface.co/allenai/Olmo-3-7B-Instruct) (Release: 2025/12/15)
 #### Download & Run & Evaluate
 ```
-  hf download Olmo-3-7B-Instruct --local-dir ./Olmo-3-7B-Instruct/model
+  hf download allenai/Olmo-3-7B-Instruct --local-dir ./Olmo-3-7B-Instruct/model
   python ./Olmo-3-7B-Instruct/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Olmo-3-7B-Instruct/output_synthetic
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Olmo-3-7B-Instruct/output_synthetic --out_csv ./Olmo-3-7B-Instruct/output_syn_csv
 ```
