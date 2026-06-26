@@ -1,6 +1,6 @@
 # KCR Post-Processing
 
-### Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
+* Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
 
 ### 1. Zero-shot LLM Post-processing
 
