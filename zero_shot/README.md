@@ -1,11 +1,10 @@
 ## Zero-shot LLM Post-processing
-### Overview
-
-#### Environment
+### Environment
 * OS: Linux
 * GPU: NVIDIA RTX PRO 6000 Blackwell
 * CPU: Intel Core i5-12600K
 
+### Overview
 | Model | Affiliation | Release Date | Base | Model Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | / | / | / | / | / | 11.98 | / | 13.68 |
