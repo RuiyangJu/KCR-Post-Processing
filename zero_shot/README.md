@@ -114,7 +114,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./LLM-jp-4-8B-Instruct/output_synthetic --out_csv ./LLM-jp-4-8B-Instruct/output_syn_csv
 ```
 
-### (9) [NVIDIA-Nemotron-Nano-9B-v2-Japanese](https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese) (Release: 2025/12/15)
+### (9) [NVIDIA-Nemotron-Nano-9B-v2-Japanese](https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese) (Release: 2026/02/17)
 #### Download & Run & Evaluate
 ```
   hf download nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese --local-dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/model
