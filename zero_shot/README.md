@@ -37,6 +37,7 @@ All models use the same OCR correction instruction:
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | / | / | / | / | / | 11.98 | / | 13.68 |
 | [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | 株式会社ELYZA | 2024.06.26 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.305 | 13.72 | 2.329 | 15.19 |
+| [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | SakanaAI | 2025.03.31 | Llama-3-ELYZA-JP-8B | 16.1GB | 3.612 | 71.14 | 3.802 | 75.16 |
 | [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna株式会社 | 2024.07.25 | Meta-Llama-3-8B | 16.1GB | 2.342 | 25.98 | 2.350 | 28.23 |
 | [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) | 東京科学大学 | 2024.12.23 | Meta-Llama-3.1-8B-Instruct | 16.1GB | 2.345 | 12.26 | 2.361 | 13.93 |
 | [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | 楽天グループ株式会社 | 2024.03.21 | Mistral-7B-v0.1 | 29.5GB | 2.142 | 20.65 | 2.026 | 18.07 |
