@@ -33,17 +33,17 @@ All models use the same OCR correction instruction:
 ```
 
 ### Result
-| Model | Affiliation | Release Date | Base | Model Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
+| Model | Affiliation | Release Date | Base | Checkpoint Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | / | / | / | / | / | 11.98 | / | 13.68 |
-| [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | 株式会社ELYZA | 2024.06.26 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.305 | 13.72 (9.70%) | 2.329 | 15.19 (10.96%) |
-| [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | SakanaAI | 2025.03.31 | Llama-3-ELYZA-JP-8B | 16.1GB | 3.612 | 71.14 (10.22%) | 3.802 | 75.16 (11.31%) |
-| [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna株式会社 | 2024.07.25 | Meta-Llama-3-8B | 16.1GB | 2.342 | 25.98 (13.37%) | 2.350 | 28.23 (14.61%) |
-| [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) | 東京科学大学 | 2024.12.23 | Meta-Llama-3.1-8B-Instruct | 16.1GB | 2.345 | 12.26 (8.74%) | 2.361 | 13.93 (10.00%) |
-| [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | 楽天グループ株式会社 | 2024.03.21 | Mistral-7B-v0.1 | 29.5GB | 2.142 | 20.65 (10.10%) | 2.026 | 18.07 (11.08%) |
-| [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) | 東京科学大学 | 2025.05.19 | Gemma-2-9B | 18.5GB | 3.427 | 20.08 (9.51%) | 3.434 | 21.23 (10.69%) |
-| [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | 東京科学大学 | 2026.02.20 | Qwen3-8B | 16.4GB | 2.578 | 12.28 (9.01%) | 2.599 | 14.12 (10.21%) |
-| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | 國立情報學研究所 | 2026.04.03 | Llama 2 architecture | 17.2GB | 1.902 | 13.88 (8.81%) | 1.875 | 15.31 (10.01%) |
+| [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | 株式会社ELYZA | 2024.06 | Meta-Llama-3-8B-Instruct | 16.1GB | 2.305 | 13.72 (9.70%) | 2.329 | 15.19 (10.96%) |
+| [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | SakanaAI | 2025.03 | Llama-3-ELYZA-JP-8B | 16.1GB | 3.612 | 71.14 (10.22%) | 3.802 | 75.16 (11.31%) |
+| [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna株式会社 | 2024.07 | Meta-Llama-3-8B | 16.1GB | 2.342 | 25.98 (13.37%) | 2.350 | 28.23 (14.61%) |
+| [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) | 東京科学大学 | 2024.12 | Meta-Llama-3.1-8B-Instruct | 16.1GB | 2.345 | 12.26 (8.74%) | 2.361 | 13.93 (10.00%) |
+| [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | 楽天グループ株式会社 | 2024.03 | Mistral-7B-v0.1 | 29.5GB | 2.142 | 20.65 (10.10%) | 2.026 | 18.07 (11.08%) |
+| [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) | 東京科学大学 | 2025.05 | Gemma-2-9B | 18.5GB | 3.427 | 20.08 (9.51%) | 3.434 | 21.23 (10.69%) |
+| [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | 東京科学大学 | 2026.02 | Qwen3-8B | 16.4GB | 2.578 | 12.28 (9.01%) | 2.599 | 14.12 (10.21%) |
+| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | 国立情報学研究所 | 2026.04 | Llama 2 architecture | 17.2GB | 1.902 | 13.88 (8.81%) | 1.875 | 15.31 (10.01%) |
 
 * The values in parentheses are the results obtained after removing abnormal pages with a CER greater than 25%.
 
@@ -52,7 +52,7 @@ All models use the same OCR correction instruction:
   cd zero_shot
 ```
 
-### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06/26)
+### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 #### Download & Run & Evaluate
 ```
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
@@ -60,7 +60,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn_csv
 ```
 
-### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03/31)
+### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03)
 #### Download & Run & Evaluate
 ```
   hf download SakanaAI/Llama-3-Karamaru-v1 --local-dir ./Llama-3-Karamaru-v1/model
@@ -68,7 +68,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3-Karamaru-v1/output_synthetic --out_csv ./Llama-3-Karamaru-v1/output_syn_csv
 ```
 
-### (3) [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) (Release: 2024/07/25)
+### (3) [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) (Release: 2024/07)
 #### Download & Run & Evaluate
 ```
   hf download rinna/llama-3-youko-8b-instruct --local-dir ./Llama-3-Youko-8B-Instruct/model
@@ -76,7 +76,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3-Youko-8B-Instruct/output_synthetic --out_csv ./Llama-3-Youko-8B-Instruct/output_syn_csv
 ```
 
-### (4) [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) (Release: 2024/12/23)
+### (4) [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) (Release: 2024/12)
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3 --local-dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/model
@@ -84,7 +84,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_synthetic --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_syn_csv
 ```
 
-### (5) [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03/21)
+### (5) [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03)
 #### Download & Run & Evaluate
 ```
   hf download Rakuten/RakutenAI-7B-instruct --local-dir ./RakutenAI-7B-Instruct/model
@@ -92,7 +92,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./RakutenAI-7B-Instruct/output_synthetic --out_csv ./RakutenAI-7B-Instruct/output_syn_csv
 ```
 
-### (6) [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025/05/19)
+### (6) [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025/05)
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/model
@@ -100,7 +100,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_synthetic --out_csv ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_syn_csv
 ```
 
-### (7) [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02/20)
+### (7) [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02)
 #### Download & Run & Evaluate
 ```
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./Qwen3-Swallow-8B-RL-v0.2/model
@@ -108,7 +108,7 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output_synthetic --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_syn_csv
 ```
 
-### (8) [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04/03)
+### (8) [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04)
 #### Download & Run & Evaluate
 ```
   hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./LLM-jp-4-8B-Instruct/model
