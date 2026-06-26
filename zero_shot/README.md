@@ -15,9 +15,8 @@
 | `repetition_penalty` | `1.0` |
 | `batch_size` | `1` |
 | `torch_dtype` | `auto` |
-| `device` | `cuda:0` |
 | `device_map` | `{"": "cuda:0"}` |
-| `attention implementation` | `sdpa` |
+| `attn_implementation` | `sdpa` |
 | `add_special_tokens` | `False` |
 | `add_generation_prompt` | `True` |
 
