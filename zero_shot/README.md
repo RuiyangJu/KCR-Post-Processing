@@ -114,10 +114,10 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./LLM-jp-4-8B-Instruct/output_synthetic --out_csv ./LLM-jp-4-8B-Instruct/output_syn_csv
 ```
 
-### (9) [Olmo-3-7B-Instruct](https://huggingface.co/allenai/Olmo-3-7B-Instruct) (Release: 2025/12/15)
+### (9) [NVIDIA-Nemotron-Nano-9B-v2-Japanese](https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese) (Release: 2025/12/15)
 #### Download & Run & Evaluate
 ```
-  hf download allenai/Olmo-3-7B-Instruct --local-dir ./Olmo-3-7B-Instruct/model
-  python ./Olmo-3-7B-Instruct/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Olmo-3-7B-Instruct/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Olmo-3-7B-Instruct/output_synthetic --out_csv ./Olmo-3-7B-Instruct/output_syn_csv
+  hf download nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese --local-dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/model
+  python ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_synthetic
+  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_synthetic --out_csv ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_syn_csv
 ```
