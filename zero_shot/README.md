@@ -114,10 +114,10 @@ All models use the same OCR correction instruction:
   python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./LLM-jp-4-8B-Instruct/output_synthetic --out_csv ./LLM-jp-4-8B-Instruct/output_syn_csv
 ```
 
-### (9) [NVIDIA-Nemotron-Nano-9B-v2-Japanese](https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese) (Release: 2026/02/17)
+### (9) [Llama-3.1-Nemotron-Nano-8B-v1](https://huggingface.co/nvidia/Llama-3.1-Nemotron-Nano-8B-v1) (Release: 2025/03/18)
 #### Download & Run & Evaluate
 ```
-  hf download nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese --local-dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/model
-  python ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_synthetic --out_csv ./NVIDIA-Nemotron-Nano-9B-v2-Japanese/output_syn_csv
+  hf download nvidia/Llama-3.1-Nemotron-Nano-8B-v1 --local-dir ./Llama-3.1-Nemotron-Nano-8B-v1/model
+  python ./Llama-3.1-Nemotron-Nano-8B-v1/run.py --input-dir ../dataset/synthetic/input/ --output-dir ./Llama-3.1-Nemotron-Nano-8B-v1/output_synthetic
+  python ./evaluate.py --gt_dir ../dataset/synthetic/gt --pred_dir ./Llama-3.1-Nemotron-Nano-8B-v1/output_synthetic --out_csv ./Llama-3.1-Nemotron-Nano-8B-v1/output_syn_csv
 ```
