@@ -45,6 +45,8 @@ All models use the same OCR correction instruction:
 | [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | 東京科学大学 | 2026.02.20 | Qwen3-8B | 16.4GB | 2.578 | 12.28 (9.01%) | 2.599 | 14.12 (10.21%) |
 | [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | 國立情報學研究所 | 2026.04.03 | Llama 2 architecture | 17.2GB | 1.902 | 13.88 (8.81%) | 1.875 | 15.31 (10.01%) |
 
+* The values in parentheses are the results obtained after removing abnormal pages with a CER greater than 25%.
+
 ### Root
 ```
   cd zero_shot
