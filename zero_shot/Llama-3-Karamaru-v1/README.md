@@ -260,39 +260,28 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 ほをつけうちくべてやく也しぎやきなすびをゆでよき比に切くしにさしさんせうミそをつけてやく也やき竹の子竹の子のふしをぬき中へかまぼこたまごまろにして入かハともにやきて切かまぼこのしほからめにして吉いりやきかもを大きにつくりたまりかけをきてかハをいり身をはさミ入なべにて一まいならびにやく也あまりしるなくハかけをきたるたまりすこしいるべきなり第四すい物の部うの花いかのせのかたをすぢかい十文字にこまかに切かけ又大さよき此に切はなしゆにをしてつまにのりなど入だしにかけをおとしふかせすい合いたし候也みのにたまごをあげしやくしにてうけくだけしをにへゆへ入候是もつま色々汁同前このわたよき比に切うすミそにだしを入ふき立候時わたを入すい合其まゝ出し候也まつだけこしゆにてさハ〱といりさかけのなき時白水をさしだしたまりくハへふかせ候てすい口ゆを切其まゝ入てよし第五りやうり酒の部玉子酒玉子をあけひやざけを少ツヽ入よくときてしほを少入かんをして
 
 ## Error Type Summary
-
-### Analysis basis
-
-The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR/string source, Pred as the model's correction attempt, and GT as the target diplomatic transcription. Therefore, an error is classified by how Pred changes, copies, omits, reorders, or modernizes the Input relative to GT, not by Pred-GT distance alone.
+The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
 
 ### 1. Runaway repetition / over-generation
-
-The dominant failure mode is severe runaway generation after an initially reasonable copy or correction of Input. This is visible in `100249376_00018_1`, `100249376_00020_1`, `200015843_00010_2`, `200015843_00012_2`, `200015843_00130_2`, `200020019_00015_2`, `200020019_00050_2`, `200020019_00057_1`, `200021086_00016_1`, and `200021086_00025_2`. Pred often begins by following Input, but then invents and repeats a phrase such as `はさみの内に火付申候を水にて消申候`, `かねの内にあわのたゝぬやうに`, or other local fragments many times. This pushes Pred_Length to around 1000-1200 characters while GT is usually only 100-315 characters.
+The dominant failure mode is **severe runaway generation** after an initially reasonable copy or correction of Input. This is visible in `100249376_00018_1`, `100249376_00020_1`, `200015843_00010_2`, `200015843_00012_2`, `200015843_00130_2`, `200020019_00015_2`, `200020019_00050_2`, `200020019_00057_1`, `200021086_00016_1`, and `200021086_00025_2`. Pred often begins by following Input, but then invents and repeats a phrase such as `はさみの内に火付申候を水にて消申候`, `かねの内にあわのたゝぬやうに`, or other local fragments many times. This pushes Pred_Length to around 1000-1200 characters while GT is usually only 100-315 characters.
 
 ### 2. Catastrophic expansion on short inputs
-
-The worst CER cases are short inputs where Pred becomes extremely long. `200021763_00002_2` has GT_Length 17 but Pred_Length 804, and `200021869_00003_1` has GT_Length 3 but Pred_Length 1024. In both cases, the model does not simply misread a few characters; it turns a tiny Input into a long generated continuation. These cases should be treated as generation control failures rather than OCR transcription errors.
+The worst CER cases are short inputs where Pred becomes extremely long. `200021763_00002_2` has GT_Length 17 but Pred_Length 804, and `200021869_00003_1` has GT_Length 3 but Pred_Length 1024. In both cases, the model does not simply misread a few characters; it turns a tiny Input into a long generated continuation. These cases should be treated as **generation control failures** rather than OCR transcription errors.
 
 ### 3. Early stopping and replacement-character artifacts
-
-The model also has the opposite failure mode: stopping far too early. In `100241706_00028_1`, Pred is only `すもの干ぐわしといふへ�`, ending with a replacement character and omitting nearly all of the Input/GT content. In `200022050_00007_2`, GT_Length is 414 but Pred_Length is only 37. These are clear truncation or output-cleaning failures, not normal character-level confusions.
+The model also has the opposite failure mode: **stopping far too early**. In `100241706_00028_1`, Pred is only `すもの干ぐわしといふへ�`, ending with a replacement character and omitting nearly all of the Input/GT content. In `200022050_00007_2`, GT_Length is 414 but Pred_Length is only 37. These are clear truncation or output-cleaning failures, not normal character-level confusions.
 
 ### 4. Modernization and semantic rewriting before repetition
-
-Several long outputs begin with plausible modernization or semantic correction before entering repetition. For example, `200015843_00010_2` changes parts of Input into more regular forms such as `因果`, `尽くさじ`, and `日本第一`, then falls into repeated `大坂の町人`. This means the model is not only copying Input; it sometimes interprets or normalizes the text and then loses generation control.
+Several long outputs begin with plausible modernization or semantic correction before entering repetition. For example, `200015843_00010_2` changes parts of Input into more regular forms such as `因果`, `尽くさじ`, and `日本第一`, then falls into repeated `大坂の町人`. This means the model is not only copying Input; **it sometimes interprets or normalizes the text and then loses generation control**.
 
 ### 5. Input-copying mixed with local correction
-
-Before the runaway portion starts, many predictions copy large spans of Input with small local changes. This pattern appears in `100249376_00018_1`, `100249376_00020_1`, `200015843_00010_2`, `200020019_00064_1`, and `200022050_00007_2`. The model often preserves the noisy source for a while, then either modernizes a few words, omits material, or starts generating unsupported continuations. The output therefore fails both as faithful copying and as correction toward GT.
+Before the runaway portion starts, **many predictions copy large spans of Input with small local changes**. This pattern appears in `100249376_00018_1`, `100249376_00020_1`, `200015843_00010_2`, `200020019_00064_1`, and `200022050_00007_2`. The model often preserves the noisy source for a while, then either modernizes a few words, omits material, or starts generating unsupported continuations. The output therefore fails both as faithful copying and as correction toward GT.
 
 ### 6. Classical kana and short-text character confusions
-
-Short texts such as `200006663_00006_2`, `200017458_00003_1`, and `200021869_00003_1` still include ordinary fine-grained errors involving historical kana, voicing, small marks, and visually similar characters. However, for this model these character errors are often overshadowed by generation length failures: a small OCR correction problem can trigger an extremely long or malformed prediction.
+Short texts such as `200006663_00006_2`, `200017458_00003_1`, and `200021869_00003_1` still include **ordinary fine-grained errors involving historical kana, voicing, small marks, and visually similar characters**. However, for this model these character errors are often overshadowed by generation length failures: a small OCR correction problem can trigger an extremely long or malformed prediction.
 
 ### 7. Domain vocabulary errors
-
-Cooking and confectionery vocabulary remains a source of instability. The examples `100249376_00018_1`, `100249376_00020_1`, and `200022050_00007_2` contain recipe or sweet-making procedures. Pred often starts from a plausible recipe phrase but then repeats procedural language that is not present in GT. This suggests that domain knowledge is being used in an uncontrolled way rather than as a constraint for faithful transcription.
+Cooking and confectionery vocabulary remains a source of instability. The examples `100249376_00018_1`, `100249376_00020_1`, and `200022050_00007_2` contain recipe or sweet-making procedures. Pred often starts from a plausible recipe phrase but then repeats procedural language that is not present in GT. This suggests that **domain knowledge is being used in an uncontrolled way rather than as a constraint for faithful transcription**.
 
 ### Overall
-
-Llama-3-Karamaru-v1 has the most unstable error profile among these README files. Its major problem is not only OCR correction quality, but generation control: many outputs either stop almost immediately or expand into long repetitive continuations. The three-way comparison shows that Pred often starts from Input, partially normalizes it, and then diverges far beyond GT. Future improvements should prioritize repetition suppression, strict maximum-length and stopping controls, output-cleaning safeguards for replacement characters, and task framing that discourages free continuation or explanatory rewriting.
+Llama-3-Karamaru-v1 has the most unstable error profile among these README files. **Its major problem is not only OCR correction quality, but generation control**: many outputs either stop almost immediately or expand into long repetitive continuations. The three-way comparison shows that Pred often starts from Input, partially normalizes it, and then diverges far beyond GT. Future improvements should prioritize repetition suppression, strict maximum-length and stopping controls, output-cleaning safeguards for replacement characters, and task framing that discourages free continuation or explanatory rewriting.
