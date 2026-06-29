@@ -13,7 +13,6 @@
 | `top_p` | `None` |
 | `num_beams` | `1` |
 | `repetition_penalty` | `1.0` |
-| `batch_size` | `1` |
 | `torch_dtype` | `auto` |
 | `device_map` | `{"": "cuda:0"}` |
 | `attn_implementation` | `sdpa` |
