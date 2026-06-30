@@ -63,7 +63,6 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
 ### Run & Evaluate
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 ```
-  hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./Llama-3-ELYZA-JP-8B/model
   python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Llama-3-ELYZA-JP-8B/output_synthetic
   python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn.csv
 ```
