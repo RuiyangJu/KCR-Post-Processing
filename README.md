@@ -60,74 +60,125 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
     --local-dir ./model/LLM-jp-4-8B-Instruct
 ```
 ## 1. Zero-shot LLM Post-processing
-### Run & Evaluate （Synthetic Test Set as Example)
+### Run & Evaluate: Synthetic Test Set Example
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
-```
-  python run.py \
-    --model-name Llama-3-ELYZA-JP-8B \
-    --no-adapter \
-    --input-dir dataset/test/synthetic/input \
-    --output-dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth
 
-  python evaluate.py \
-    --gt_dir dataset/test/synthetic/gt \
-    --pred_dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth \
-    --out_csv zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth_cer.csv
-```
+```bash
+python run.py \
+  --model-name Llama-3-ELYZA-JP-8B \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth
 
-### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03)
-#### Download & Run & Evaluate
-```
-  hf download SakanaAI/Llama-3-Karamaru-v1 --local-dir ./Llama-3-Karamaru-v1/model
-  python ./Llama-3-Karamaru-v1/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Llama-3-Karamaru-v1/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Llama-3-Karamaru-v1/output_synthetic --out_csv ./Llama-3-Karamaru-v1/output_syn.csv
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth \
+  --out_csv zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth_cer.csv
 ```
 
-### (3) [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) (Release: 2024/07)
-#### Download & Run & Evaluate
-```
-  hf download rinna/llama-3-youko-8b-instruct --local-dir ./Llama-3-Youko-8B-Instruct/model
-  python ./Llama-3-Youko-8B-Instruct/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Llama-3-Youko-8B-Instruct/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Llama-3-Youko-8B-Instruct/output_synthetic --out_csv ./Llama-3-Youko-8B-Instruct/output_syn.csv
+#### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03)
+
+```bash
+python run.py \
+  --model-name Llama-3-Karamaru-v1 \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Llama-3-Karamaru-v1/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Llama-3-Karamaru-v1/output_base_synth \
+  --out_csv zero_shot/Llama-3-Karamaru-v1/output_base_synth_cer.csv
 ```
 
-### (4) [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) (Release: 2024/12)
-#### Download & Run & Evaluate
-```
-  hf download tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3 --local-dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/model
-  python ./Llama-3.1-Swallow-8B-Instruct-v0.3/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_synthetic --out_csv ./Llama-3.1-Swallow-8B-Instruct-v0.3/output_syn.csv
+#### (3) [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) (Release: 2024/07)
+
+```bash
+python run.py \
+  --model-name Llama-3-Youko-8B-Instruct \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Llama-3-Youko-8B-Instruct/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Llama-3-Youko-8B-Instruct/output_base_synth \
+  --out_csv zero_shot/Llama-3-Youko-8B-Instruct/output_base_synth_cer.csv
 ```
 
-### (5) [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03)
-#### Download & Run & Evaluate
-```
-  hf download Rakuten/RakutenAI-7B-instruct --local-dir ./RakutenAI-7B-Instruct/model
-  python ./RakutenAI-7B-Instruct/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./RakutenAI-7B-Instruct/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./RakutenAI-7B-Instruct/output_synthetic --out_csv ./RakutenAI-7B-Instruct/output_syn.csv
+#### (4) [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) (Release: 2024/12)
+
+```bash
+python run.py \
+  --model-name Llama-3.1-Swallow-8B-Instruct-v0.3 \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/output_base_synth \
+  --out_csv zero_shot/Llama-3.1-Swallow-8B-Instruct-v0.3/output_base_synth_cer.csv
 ```
 
-### (6) [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025/05)
-#### Download & Run & Evaluate
-```
-  hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/model
-  python ./Gemma-2-Llama-Swallow-9b-it-v0.1/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_synthetic --out_csv ./Gemma-2-Llama-Swallow-9b-it-v0.1/output_syn.csv
+#### (5) [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) (Release: 2024/03)
+
+```bash
+python run.py \
+  --model-name RakutenAI-7B-Instruct \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/RakutenAI-7B-Instruct/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/RakutenAI-7B-Instruct/output_base_synth \
+  --out_csv zero_shot/RakutenAI-7B-Instruct/output_base_synth_cer.csv
 ```
 
-### (7) [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02)
-#### Download & Run & Evaluate
-```
-  hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./Qwen3-Swallow-8B-RL-v0.2/model
-  python ./Qwen3-Swallow-8B-RL-v0.2/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Qwen3-Swallow-8B-RL-v0.2/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Qwen3-Swallow-8B-RL-v0.2/output_synthetic --out_csv ./Qwen3-Swallow-8B-RL-v0.2/output_syn.csv
+#### (6) [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) (Release: 2025/05)
+
+```bash
+python run.py \
+  --model-name Gemma-2-Llama-Swallow-9b-it-v0.1 \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Gemma-2-Llama-Swallow-9b-it-v0.1/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Gemma-2-Llama-Swallow-9b-it-v0.1/output_base_synth \
+  --out_csv zero_shot/Gemma-2-Llama-Swallow-9b-it-v0.1/output_base_synth_cer.csv
 ```
 
-### (8) [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04)
-#### Download & Run & Evaluate
+#### (7) [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) (Release: 2026/02)
+
+```bash
+python run.py \
+  --model-name Qwen3-Swallow-8B-RL-v0.2 \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/Qwen3-Swallow-8B-RL-v0.2/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/Qwen3-Swallow-8B-RL-v0.2/output_base_synth \
+  --out_csv zero_shot/Qwen3-Swallow-8B-RL-v0.2/output_base_synth_cer.csv
 ```
-  hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./LLM-jp-4-8B-Instruct/model
-  python ./LLM-jp-4-8B-Instruct/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./LLM-jp-4-8B-Instruct/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./LLM-jp-4-8B-Instruct/output_synthetic --out_csv ./LLM-jp-4-8B-Instruct/output_syn.csv
+
+#### (8) [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) (Release: 2026/04)
+
+```bash
+python run.py \
+  --model-name LLM-jp-4-8B-Instruct \
+  --no-adapter \
+  --input-dir dataset/test/synthetic/input \
+  --output-dir zero_shot/LLM-jp-4-8B-Instruct/output_base_synth
+
+python evaluate.py \
+  --gt_dir dataset/test/synthetic/gt \
+  --pred_dir zero_shot/LLM-jp-4-8B-Instruct/output_base_synth \
+  --out_csv zero_shot/LLM-jp-4-8B-Instruct/output_base_synth_cer.csv
 ```
+
 ## 2. LLM-based OCR Refiner Fine-tuning
