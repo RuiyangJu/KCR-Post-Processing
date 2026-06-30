@@ -33,6 +33,7 @@ All models use the same OCR correction instruction:
 
 ### Download Pre-trained Models
 ```
+  cd KCR-Post-Processing
   hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./model/Llama-3-ELYZA-JP-8B
 ```
 ### 1. Zero-shot LLM Post-processing
