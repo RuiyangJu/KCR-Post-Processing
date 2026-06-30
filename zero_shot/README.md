@@ -1,11 +1,13 @@
 ## Zero-shot LLM Post-processing
-* We evaluate several Japanese fine-tuned LLMs in the zero-shot OCR post-processing task.
+
+* We evaluate several Japanese-specific LLMs in a zero-shot OCR post-processing setting.
 * The model selection is based in part on the [Japanese LLM Leaderboard](https://swallow-llm.github.io/leaderboard).
 
 ### Results
+
 | Model | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | / | / | / | / | / | 11.98 | / | 13.68 |
+| [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 11.98 | – | 13.68 |
 | [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | ELYZA, Inc. | 2024.06 | Meta-Llama-3-8B-Instruct | 16.1 GB | 2.305 | 13.72 (9.70) | 2.329 | 15.19 (10.96) |
 | [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | Sakana AI | 2025.03 | Llama-3-ELYZA-JP-8B | 16.1 GB | 3.612 | 71.14 (10.22) | 3.802 | 75.16 (11.31) |
 | [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna Co., Ltd. | 2024.07 | Meta-Llama-3-8B | 16.1 GB | 2.342 | 25.98 (13.37) | 2.350 | 28.23 (14.61) |
@@ -15,4 +17,4 @@
 | [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | Institute of Science Tokyo | 2026.02 | Qwen3-8B | 16.4 GB | 2.578 | 12.28 (9.01) | 2.599 | 14.12 (10.21) |
 | [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | Llama 2 architecture | 17.2 GB | 1.902 | 13.88 (8.81) | 1.875 | 15.31 (10.01) |
 
-* The values in parentheses indicate CER results after removing abnormal pages with a CER greater than 25%.
+* The values in parentheses indicate CER results after removing outlier pages with a CER greater than 25%.
