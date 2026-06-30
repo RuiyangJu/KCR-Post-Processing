@@ -31,6 +31,10 @@ All models use the same OCR correction instruction:
   修正後の本文のみを出力してください。
 ```
 
+### Download Pre-trained Models
+```
+  hf download elyza/Llama-3-ELYZA-JP-8B --local-dir ./model/Llama-3-ELYZA-JP-8B
+```
 ### 1. Zero-shot LLM Post-processing
 * Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
 * 
