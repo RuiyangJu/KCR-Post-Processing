@@ -1,5 +1,18 @@
 # LLM-jp-4-8B-Instruct
-## Error Case Analysis on Synthetic Test Set (CER: 15.31%)
+## Error Case Analysis on Synthetic Test Set (Overall CER: 15.31%)
+
+This README summarizes the zero-shot OCR correction results of LLM-jp-4-8B-Instruct on the synthetic test set. The overall CER is 15.31%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
+
+### How to Read the Cases
+
+- `Input`: the raw OCR text given to the model. It may already contain recognition errors.
+- `Pred`: the model's corrected output based on `Input`.
+- `GT`: the human-corrected ground-truth transcription used as the evaluation target.
+- `GT_Length` / `Pred_Length`: the number of characters in `GT` and `Pred`.
+- `Edit_Distance`: the minimum number of character edits needed to transform `Pred` into `GT`.
+- `CER`: Character Error Rate, calculated as `Edit_Distance / GT_Length`. Lower is better.
+- Underlined spans in `Input` and `Pred` mark segments that differ from `GT` after alignment. `GT` is left unmarked as the reference text.
+
 ```
 File,GT_Length,Pred_Length,Edit_Distance,CER
 100249416_00027_1.txt,130,120,29,0.2230769230769231
@@ -29,10 +42,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-○かるめろう氷砂糖一斤水**ひたく**に入玉子少し入よくせんじ**ま**いのうにて**と**しそ**る**水を又せんじ手をはなさずねりつめあはだ**ぢ**たる時火をはな鍋のまにてよくさましのみにておろ切るなり○**美**寒赤**に**豆二升砂糖斤一葛の粉七合鍋ず少々こせう少**し**丁子少**し**肉桂少**し**
+○かるめろう氷砂糖一斤水<ins>ひたく</ins>に入玉子少し入よくせんじ<ins>ま</ins>いのうにて<ins>と</ins>しそ<ins>る</ins>水を又せんじ手をはなさずねりつめあはだ<ins>ぢ</ins>たる時火をはな鍋のまにてよくさましのみにておろ切るなり○<ins>美</ins>寒赤<ins>に</ins>豆二升砂糖斤一葛の粉七合鍋ず少々こせう少<ins>し</ins>丁子少<ins>し</ins>肉桂少<ins>し</ins>
 
 ### Pred
-かるめろう氷砂糖一斤水**ひたく**に入**れ**玉子少し入**れ**よくせんじ**ま**いのうにて**と**しそ**る**水を又せんじ手をはなさずねりつめあはだ**ぢ**たる時火をはな鍋のまにてよくさましのみにておろ切るなり**。美**寒赤**に**豆二升砂糖斤一葛の粉七合鍋ず少々こせう少**し**丁子少**し**肉桂少**し。**
+かるめろう氷砂糖一斤水<ins>ひたく</ins>に入<ins>れ</ins>玉子少し入<ins>れ</ins>よくせんじ<ins>ま</ins>いのうにて<ins>と</ins>しそ<ins>る</ins>水を又せんじ手をはなさずねりつめあはだ<ins>ぢ</ins>たる時火をはな鍋のまにてよくさましのみにておろ切るなり<ins>。美</ins>寒赤<ins>に</ins>豆二升砂糖斤一葛の粉七合鍋ず少々こせう少<ins>し</ins>丁子少<ins>し</ins>肉桂少<ins>し。</ins>
 
 ### GT
 ○かるめろう一氷砂糖一斤水すこしに入玉子少し入よくせんじすいのうにてこしその水を又せんじ手をはなさずねりつめあはだちたる時火をはなし鍋のまゝにてよくさましのみにておろし切るなり○羙寒一赤小豆二升一砂糖一斤一葛の粉七合一鍋ずみ少々一こせう少々一丁子少々一肉桂少々
@@ -43,10 +56,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-糀を少入れおけば風味よき甘酒と**ゐ**なる也○上飴**鍋心**一**歯**餅米一升一糀**た**升七合一水七合**此**此水にて糀をあらひは**あふの**ばり取かすを去**は段**米**ど**あま酒につくりなれたる時布にてしよく**練**り是へしるあめ少しかすをよくすりて入れ三**け**日置なり但し折**〱王こ**廻てよし**餅菓子手制衣集終候**
+糀を少入れおけば風味よき甘酒と<ins>ゐ</ins>なる也○上飴<ins>鍋心</ins>一<ins>歯</ins>餅米一升一糀<ins>た</ins>升七合一水七合<ins>此</ins>此水にて糀をあらひは<ins>あふの</ins>ばり取かすを去<ins>は段</ins>米<ins>ど</ins>あま酒につくりなれたる時布にてしよく<ins>練</ins>り是へしるあめ少しかすをよくすりて入れ三<ins>け</ins>日置なり但し折<ins>〱王こ</ins>廻てよし<ins>餅菓子手制衣集終候</ins>
 
 ### Pred
-糀を少入れおけば風味よき甘酒と**ゐ**なる也○上飴**鍋心**一**歯**餅米一升一糀**た**升七合一水七合**此**此水にて糀をあらひは**あふの**ばり取かすを去**は段**米**ど**あま酒につくりなれたる時布にてしよく**練**り是へしるあめ少しかすをよくすりて入れ三**け**日置なり但し折**〱王こ**廻てよし**餅菓子手制衣集終候**
+糀を少入れおけば風味よき甘酒と<ins>ゐ</ins>なる也○上飴<ins>鍋心</ins>一<ins>歯</ins>餅米一升一糀<ins>た</ins>升七合一水七合<ins>此</ins>此水にて糀をあらひは<ins>あふの</ins>ばり取かすを去<ins>は段</ins>米<ins>ど</ins>あま酒につくりなれたる時布にてしよく<ins>練</ins>り是へしるあめ少しかすをよくすりて入れ三<ins>け</ins>日置なり但し折<ins>〱王こ</ins>廻てよし<ins>餅菓子手制衣集終候</ins>
 
 ### GT
 糀を少し入れおけば風味よき甘酒ともなる也○上飴練やう一上白餅米一升一糀一升七合一水七合此水にて糀をあらひはなばかり取かすを去右餅米とあま酒につくりなれたる時布にてこしよくねり是へしるあめ少しかすをよくすりて入れ三日置なり但し折々かき廻してよし
@@ -57,10 +70,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-夜番たゞ**出**のぶ**ツれえりレけかまさゞ**ゑびす廻国**ま重お**
+夜番たゞ<ins>出</ins>のぶ<ins>ツれえりレけかまさゞ</ins>ゑびす廻国<ins>ま重お</ins>
 
 ### Pred
-夜番た**だ出**のぶ**つれえりレけかまさゞ**ゑびす廻国**ま重お**
+夜番た<ins>だ出</ins>のぶ<ins>つれえりレけかまさゞ</ins>ゑびす廻国<ins>ま重お</ins>
 
 ### GT
 夜番たゞのぶゑびす廻国
@@ -71,10 +84,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-着物は**もも**より**内多ろ**葉も**敷き**もしらず**てし也がししがは置吉**とい**つ**る家は蔵**ん長**九つ持て**其もぐに代すへ正**のか**さ**りぞか万屋はひそかなる手**ざて**独り**に**に吉太郎とて有しが十三**具**の時鼻**頭小**小杉**人**しを見て**初楽も衛間**の網干に姨有し**かは記**に遣は**か**置那**及**屋**ゑ**と云分限を見ならへと我子は捨て其**る味**が**は**子を**元**立二十五六迄も手代並にはたかせけるに其始末**は**たれ**か参**履迄も拾ひ集め瓜種の用に里へ**迄也**を見て気に**金**是**呼**子分にして家を渡し相**気**の娵を尋**年**けるに世**る**と替り成程悋気つよき女房ならば**元**娵にとり**さ随**と**しれ**ひ**ぜ**は広し思ふま**く**ゝなる娘有**か嫁き**をすまし夫婦は隠**器**をかまへ残らず**後**され**け**けるに此**仁**取金銀有に**ろ**て**分**取出手掛者を聞立旅子**住**ひを心
+着物は<ins>もも</ins>より<ins>内多ろ</ins>葉も<ins>敷き</ins>もしらず<ins>てし也がししがは置吉</ins>とい<ins>つ</ins>る家は蔵<ins>ん長</ins>九つ持て<ins>其もぐに代すへ正</ins>のか<ins>さ</ins>りぞか万屋はひそかなる手<ins>ざて</ins>独り<ins>に</ins>に吉太郎とて有しが十三<ins>具</ins>の時鼻<ins>頭小</ins>小杉<ins>人</ins>しを見て<ins>初楽も衛間</ins>の網干に姨有し<ins>かは記</ins>に遣は<ins>か</ins>置那<ins>及</ins>屋<ins>ゑ</ins>と云分限を見ならへと我子は捨て其<ins>る味</ins>が<ins>は</ins>子を<ins>元</ins>立二十五六迄も手代並にはたかせけるに其始末<ins>は</ins>たれ<ins>か参</ins>履迄も拾ひ集め瓜種の用に里へ<ins>迄也</ins>を見て気に<ins>金</ins>是<ins>呼</ins>子分にして家を渡し相<ins>気</ins>の娵を尋<ins>年</ins>けるに世<ins>る</ins>と替り成程悋気つよき女房ならば<ins>元</ins>娵にとり<ins>さ随</ins>と<ins>しれ</ins>ひ<ins>ぜ</ins>は広し思ふま<ins>く</ins>ゝなる娘有<ins>か嫁き</ins>をすまし夫婦は隠<ins>器</ins>をかまへ残らず<ins>後</ins>され<ins>け</ins>けるに此<ins>仁</ins>取金銀有に<ins>ろ</ins>て<ins>分</ins>取出手掛者を聞立旅子<ins>住</ins>ひを心
 
 ### Pred
-着物は**もも**より**内多ろ**葉も**敷き**もしらず**てし也がししがは置吉**とい**つ**る家は蔵**ん長**九つ持て**其もぐに代すへ正**のか**さ**りぞか万屋はひそかなる手**ざて**独り**に**に吉太郎とて有しが十三**具**の時鼻**頭小**小杉**人**しを見て**初楽も衛間**の網干に姨有し**かは記**に遣は**か**置那**及**屋**ゑ**と云分限を見ならへと我子は捨て其**る味**が**は**子を**元**立二十五六迄も手代並にはたかせけるに其始末**は**たれ**か参**履迄も拾ひ集め瓜種の用に里へ**迄也**を見て気に**金**是**呼**子分にして家を渡し相**気**の娵を尋**年**けるに世**る**と替り成程悋気つよき女房ならば**元**娵にとり**さ随**と**しれ**ひ**ぜ**は広し思ふま**く**ゝなる娘有**か嫁き**をすまし夫婦は隠**器**をかまへ残らず**後**され**け**けるに此**仁**取金銀有に**ろ**て**分**取出手掛者を聞立旅子**住**ひを心
+着物は<ins>もも</ins>より<ins>内多ろ</ins>葉も<ins>敷き</ins>もしらず<ins>てし也がししがは置吉</ins>とい<ins>つ</ins>る家は蔵<ins>ん長</ins>九つ持て<ins>其もぐに代すへ正</ins>のか<ins>さ</ins>りぞか万屋はひそかなる手<ins>ざて</ins>独り<ins>に</ins>に吉太郎とて有しが十三<ins>具</ins>の時鼻<ins>頭小</ins>小杉<ins>人</ins>しを見て<ins>初楽も衛間</ins>の網干に姨有し<ins>かは記</ins>に遣は<ins>か</ins>置那<ins>及</ins>屋<ins>ゑ</ins>と云分限を見ならへと我子は捨て其<ins>る味</ins>が<ins>は</ins>子を<ins>元</ins>立二十五六迄も手代並にはたかせけるに其始末<ins>は</ins>たれ<ins>か参</ins>履迄も拾ひ集め瓜種の用に里へ<ins>迄也</ins>を見て気に<ins>金</ins>是<ins>呼</ins>子分にして家を渡し相<ins>気</ins>の娵を尋<ins>年</ins>けるに世<ins>る</ins>と替り成程悋気つよき女房ならば<ins>元</ins>娵にとり<ins>さ随</ins>と<ins>しれ</ins>ひ<ins>ぜ</ins>は広し思ふま<ins>く</ins>ゝなる娘有<ins>か嫁き</ins>をすまし夫婦は隠<ins>器</ins>をかまへ残らず<ins>後</ins>され<ins>け</ins>けるに此<ins>仁</ins>取金銀有に<ins>ろ</ins>て<ins>分</ins>取出手掛者を聞立旅子<ins>住</ins>ひを心
 
 ### GT
 着物は花色より外は紅葉も藤色もしらず幾春をか送りぬ蔵合といへる家は蔵の数九つ持て富貴なれば是又国のかざりぞかし万屋はひそかなる手前者独り子に吉太郎とて有しが十三才の時鼻紙に小杉入しを見て勘当切幡州の網干に姨有しが此許に遣はし置那波屋殿と云分限を見ならへと我子は捨て其後妹が一子を見立二十五六迄も手代並にはたらかせけるに其始末すたれる草履迄も拾ひ集め瓜種の用に里へ送るを見て気に入是を子分にして家を渡し相応の娵を尋ねけるに世間と替り成程悋気つよき女房ならば我娵にとりたきとの願ひ世は広し思ふまゝなる娘有て縁組をすまし夫婦は隠居をかまへ残らず渡されけるに此跡取金銀有に任て少し取出手掛者を聞立旅子狂ひを心
@@ -85,10 +98,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやられてあはれなりこにさいちうじやうありはのなりひらはむの御なさけあさかざり人なりけれ〱たるゆきをふみけなく〱御あをたづねまいて**ん**らすれはまうとつりきたりてうえうあにたりゐんけんしやく〱たりおりにませ人めもくさもかれぬればいびきにみなしろたえのにはのおもあみつくる人なみはぢくいでさせ給ひてんでんの御かう三げんばりあげての山を御らんめぐしげにやははあをくなつはしげりあきはそめふゆはおつといふせめい太のおぼめつねろほのゆきをばすだれをかげてみん
+御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやられてあはれなりこにさいちうじやうありはのなりひらはむの御なさけあさかざり人なりけれ〱たるゆきをふみけなく〱御あをたづねまいて<ins>ん</ins>らすれはまうとつりきたりてうえうあにたりゐんけんしやく〱たりおりにませ人めもくさもかれぬればいびきにみなしろたえのにはのおもあみつくる人なみはぢくいでさせ給ひてんでんの御かう三げんばりあげての山を御らんめぐしげにやははあをくなつはしげりあきはそめふゆはおつといふせめい太のおぼめつねろほのゆきをばすだれをかげてみん
 
 ### Pred
-御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやられてあはれなりこにさいちうじやうありはのなりひらはむの御なさけあさかざり人なりけれ〱たるゆきをふみけなく〱御あをたづねまいて**ん**らすれはまうとつりきたりてうえうあにたりゐんけんしやく〱たりおりにませ人めもくさもかれぬればいびきにみなしろたえのにはのおもあみつくる人なみはぢくいでさせ給ひてんでんの御かう三げんばりあげての山を御らんめぐしげにやははあをくなつはしげりあきはそめふゆはおつといふせめい太のおぼめつねろほのゆきをばすだれをかげてみん
+御へりなくてひゑいんのふをのといふろにとぢこもせ給ひけりろかづきすゑゆきげのそのあらにさしぐるくものまなくやにゆきかふ人もまれなりりいはんやをの御すまゐ思ひやられてあはれなりこにさいちうじやうありはのなりひらはむの御なさけあさかざり人なりけれ〱たるゆきをふみけなく〱御あをたづねまいて<ins>ん</ins>らすれはまうとつりきたりてうえうあにたりゐんけんしやく〱たりおりにませ人めもくさもかれぬればいびきにみなしろたえのにはのおもあみつくる人なみはぢくいでさせ給ひてんでんの御かう三げんばりあげての山を御らんめぐしげにやははあをくなつはしげりあきはそめふゆはおつといふせめい太のおぼめつねろほのゆきをばすだれをかげてみん
 
 ### GT
 御かへりなくしてひゑいざんのふもとをのといふところにとぢこもらせ給ひけりころはかみなづきすゑゆきげのそらのあらしにさえしぐるゝくものたえまなくみやこにゆきかふ人もまれなりけりいはんやをのゝ御すまゐ思ひやられてあはれなりこゝにさいごちうじやうありはらのなりひらはむかしの御なさけあさからざりし人なりければふん〱たるゆきをふみわけなく〱御あとをたづねまいりて見まいらすれはまうとううつりきたりてこうえうあらしにたえりうゐんけんがとうしやく〱たりおりにまかせ人めもくさもかれぬれば山ざといとゞさびしきにみなしろたえのにはのおもあとふみつくる人もなしみこははしぢかくいでさせ給ひてなんでんの御かうし三げんばかりあげてよもの山を御らんじめぐらしげにやはるはあをくなつはしげりあきはそめふゆはおつるといふせうめい太しのおぼしめしつらねかうろほうのゆきをばすだれをかゝげてみるらんと
@@ -99,10 +112,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-**ば**へんるろにや五郎ひなくつつきち**ら**たをいてはなしろにおすたりいきほひたたきぐちあへなくまけしばしばらすまふなりけるや五郎はげんしつたきぐちにかちて百**干**ばんのまけもものなずれにつそれけれなにものなりともと思ふ**の**につら山の又七いで手にもたますまけてのちくつきやうのすふ五ばんまでかちてたつたるありさまはきほひあまりてぞ見けるにさのくにのぢ人やきしたの小六郎出てあひはのや五をはめてよきすまふ六ばんつるのくにのぢう人たけのしたのまご八いで**く**小六郎をめてきすまふ九**は**んつていんろにがしやまたの五郎いで**く**まご八をめてよきすふばんかちければいでとんいふのなするがのくにたのち六いざやとんいふそにありけるゑびなのひ
+<ins>ば</ins>へんるろにや五郎ひなくつつきち<ins>ら</ins>たをいてはなしろにおすたりいきほひたたきぐちあへなくまけしばしばらすまふなりけるや五郎はげんしつたきぐちにかちて百<ins>干</ins>ばんのまけもものなずれにつそれけれなにものなりともと思ふ<ins>の</ins>につら山の又七いで手にもたますまけてのちくつきやうのすふ五ばんまでかちてたつたるありさまはきほひあまりてぞ見けるにさのくにのぢ人やきしたの小六郎出てあひはのや五をはめてよきすまふ六ばんつるのくにのぢう人たけのしたのまご八いで<ins>く</ins>小六郎をめてきすまふ九<ins>は</ins>んつていんろにがしやまたの五郎いで<ins>く</ins>まご八をめてよきすふばんかちければいでとんいふのなするがのくにたのち六いざやとんいふそにありけるゑびなのひ
 
 ### Pred
-**ば**へんるろにや五郎ひなくつつきち**ら**たをいてはなしろにおすたりいきほひたたきぐちあへなくまけしばしばらすまふなりけるや五郎はげんしつたきぐちにかちて百**干**ばんのまけもものなずれにつそれけれなにものなりともと思ふ**の**につら山の又七いで手にもたますまけてのちくつきやうのすふ五ばんまでかちてたつたるありさまはきほひあまりてぞ見けるにさのくにのぢ人やきしたの小六郎出てあひはのや五をはめてよきすまふ六ばんつるのくにのぢう人たけのしたのまご八いで**く**小六郎をめてきすまふ九**は**んつていんろにがしやまたの五郎いで**く**まご八をめてよきすふばんかちければいでとんいふのなするがのくにたのち六いざやとんいふそにありけるゑびなのひ
+<ins>ば</ins>へんるろにや五郎ひなくつつきち<ins>ら</ins>たをいてはなしろにおすたりいきほひたたきぐちあへなくまけしばしばらすまふなりけるや五郎はげんしつたきぐちにかちて百<ins>干</ins>ばんのまけもものなずれにつそれけれなにものなりともと思ふ<ins>の</ins>につら山の又七いで手にもたますまけてのちくつきやうのすふ五ばんまでかちてたつたるありさまはきほひあまりてぞ見けるにさのくにのぢ人やきしたの小六郎出てあひはのや五をはめてよきすまふ六ばんつるのくにのぢう人たけのしたのまご八いで<ins>く</ins>小六郎をめてきすまふ九<ins>は</ins>んつていんろにがしやまたの五郎いで<ins>く</ins>まご八をめてよきすふばんかちければいでとんいふのなするがのくにたのち六いざやとんいふそにありけるゑびなのひ
 
 ### GT
 はうさへんとするところにや五郎ひまなくつつといりたきぐちがこまたをかいてはなしろにおしすへたりいきほひたるたきぐちあへなくまけしかばしばらくすまふぞなかりけるや五郎はかうげんしつるたきぐちにかちて百千ばんのまけもものならずこれにかつこそうれしけれなにものなりともと思ふところにがつら山の又七いでゝ手にもたまらすまけてのちくつきやうのすまふ五ばんまでかちてたつたるありさまはいきほひあまりてぞ見えけるこゝにさがみのくにのぢう人やきしたの小六郎出てあひざはのや五郎をはじめとしてよきすまふ六ばんかつするがのくにのぢう人たけのしたのまご八いでゝ小六郎をはじめとしてよきすまふ九ばんかつていらんとするところに大ばがしやていまたのゝ五郎いでゝまご八をはじめとしてよきすまふ十ばんかちければいでゝとらんといふものなしするがのくにたかはしのちう六いざやとらんといふそばにありけるゑびなのひ
@@ -113,10 +126,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-人にもよこさまならすしてこゝろにねいなる事もなしつねにかゝみのかけを見よゆかめはかけもゆか**見**ぬしかくおもひて**こし**しゆくれ竹のすぐなるみよに**う**ひぬ**す**ばやふくすしまてたのもしきかな新竹**歌讃し取**冊享保**芝**二年**拵こう外り四二十そ**
+人にもよこさまならすしてこゝろにねいなる事もなしつねにかゝみのかけを見よゆかめはかけもゆか<ins>見</ins>ぬしかくおもひて<ins>こし</ins>しゆくれ竹のすぐなるみよに<ins>う</ins>ひぬ<ins>す</ins>ばやふくすしまてたのもしきかな新竹<ins>歌讃し取</ins>冊享保<ins>芝</ins>二年<ins>拵こう外り四二十そ</ins>
 
 ### Pred
-人にも**横**さまならすし**、此処**にねいなる事もなし**、常**に**鏡**の**掛**けを見よ**、**ゆかめは**掛**けもゆか**見**ぬしかく**思**ひて**こし**しゆくれ**、**竹のすぐなるみよに**う**ひぬ**す**ばやふくすしまてたのもしきかな**、**新竹**歌讃し取**冊**、**享保**芝**二年**拵こう外り四二十**
+人にも<ins>横</ins>さまならすし<ins>、此処</ins>にねいなる事もなし<ins>、常</ins>に<ins>鏡</ins>の<ins>掛</ins>けを見よ<ins>、</ins>ゆかめは<ins>掛</ins>けもゆか<ins>見</ins>ぬしかく<ins>思</ins>ひて<ins>こし</ins>しゆくれ<ins>、</ins>竹のすぐなるみよに<ins>う</ins>ひぬ<ins>す</ins>ばやふくすしまてたのもしきかな<ins>、</ins>新竹<ins>歌讃し取</ins>冊<ins>、</ins>享保<ins>芝</ins>二年<ins>拵こう外り四二十</ins>
 
 ### GT
 人にもよこさまならすしてこゝろにねいなる事もなしつねにかゝみのかけを見よゆかめはかけもゆかみぬへしかくおもひて一しゆくれ竹のすぐなるみよにあひぬればやふくすしまてたのもしきかな新竹斉譚五冊享保十二年板アリ
@@ -127,7 +140,7 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-七詰膳並据様五詰膳並据様**く**
+七詰膳並据様五詰膳並据様<ins>く</ins>
 
 ### Pred
 七詰膳並据様五詰膳並据様
@@ -141,10 +154,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-平皿**飯鉢**七ツ目**蓋台**中合サ汁再進**煎物**島台土器**飯鉢押肴二種蓋台箸汁再進銚子島台土器提子**押肴二種箸杯台**銚子**平銚子台**提子**
+平皿<ins>飯鉢</ins>七ツ目<ins>蓋台</ins>中合サ汁再進<ins>煎物</ins>島台土器<ins>飯鉢押肴二種蓋台箸汁再進銚子島台土器提子</ins>押肴二種箸杯台<ins>銚子</ins>平銚子台<ins>提子</ins>
 
 ### Pred
-平皿**飯鉢**七ツ目**蓋台**中合サ汁再進**煎物**島台土器**飯鉢押肴二種蓋台箸汁再進銚子島台土器提子**押肴二種箸杯台**銚子**平銚子台**提子**
+平皿<ins>飯鉢</ins>七ツ目<ins>蓋台</ins>中合サ汁再進<ins>煎物</ins>島台土器<ins>飯鉢押肴二種蓋台箸汁再進銚子島台土器提子</ins>押肴二種箸杯台<ins>銚子</ins>平銚子台<ins>提子</ins>
 
 ### GT
 平皿七ツ目中合サ煎物飯鉢蓋台汁再進島台土器押肴二種箸銚子提子飯鉢蓋台汁再進島台土器押肴二種箸銚子提子杯台平銚子台
@@ -155,10 +168,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-飯鉢**飯鉢蓋台**蓋台汁再進汁再進置杯**置杯平銚子**平銚子吸物**吸物肴二種**肴二種湯水**湯水**茶菓子**茶菓子**
+飯鉢<ins>飯鉢蓋台</ins>蓋台汁再進汁再進置杯<ins>置杯平銚子</ins>平銚子吸物<ins>吸物肴二種</ins>肴二種湯水<ins>湯水</ins>茶菓子<ins>茶菓子</ins>
 
 ### Pred
-飯鉢**飯鉢蓋台**蓋台汁再進汁再進置杯**置杯平銚子**平銚子吸物**吸物肴二種**肴二種湯水**湯水**茶菓子**茶菓子**
+飯鉢<ins>飯鉢蓋台</ins>蓋台汁再進汁再進置杯<ins>置杯平銚子</ins>平銚子吸物<ins>吸物肴二種</ins>肴二種湯水<ins>湯水</ins>茶菓子<ins>茶菓子</ins>
 
 ### GT
 飯鉢蓋台汁再進置杯平銚子吸物肴二種湯水茶菓子飯鉢蓋台汁再進置杯平銚子吸物肴二種湯水茶菓子
@@ -169,10 +182,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-濃茶濃茶後菓子**後菓子薄茶**薄茶以上七詰五詰に次たる尊**る々**の御方の**饗**応御料理なり二汁七菜二汁五菜本膳**本膳膾直汁**膾汁**黍**香物箸煎物**香物箸**坪皿飯**坪以皿飯**
+濃茶濃茶後菓子<ins>後菓子薄茶</ins>薄茶以上七詰五詰に次たる尊<ins>る々</ins>の御方の<ins>饗</ins>応御料理なり二汁七菜二汁五菜本膳<ins>本膳膾直汁</ins>膾汁<ins>黍</ins>香物箸煎物<ins>香物箸</ins>坪皿飯<ins>坪以皿飯</ins>
 
 ### Pred
-濃茶濃茶後菓子**後菓子薄茶**薄茶以上七詰五詰に次たる尊**る々**の御方の**饗**応御料理なり二汁七菜二汁五菜本膳**本膳膾直汁**膾汁**黍**香物箸煎物**香物箸**坪皿飯**坪以皿飯**
+濃茶濃茶後菓子<ins>後菓子薄茶</ins>薄茶以上七詰五詰に次たる尊<ins>る々</ins>の御方の<ins>饗</ins>応御料理なり二汁七菜二汁五菜本膳<ins>本膳膾直汁</ins>膾汁<ins>黍</ins>香物箸煎物<ins>香物箸</ins>坪皿飯<ins>坪以皿飯</ins>
 
 ### GT
 濃茶後菓子薄茶濃茶後菓子薄茶以上七詰五詰に次たる尊貴の御方の餐応御料理なり二汁七菜本膳膾汁小皿香物箸煎物坪皿飯二汁五菜本膳膾汁香物箸煎物坪皿飯
@@ -183,10 +196,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-引向おま**半**鯛二玉子ふわ〱**長皿ふた物**薄鳥**平皿御所麩**猪口薄**モ**雪**主花かつ尾**ふ**くる之**焼物一しほかれゐ懸下け**肴一鳥鴨**銚子**すれんこん**吸物花**以**か**ぜらかし**こせ**銚子**肴**湯**鯖粧漬湯**石**する**州する**
+引向おま<ins>半</ins>鯛二玉子ふわ〱<ins>長皿ふた物</ins>薄鳥<ins>平皿御所麩</ins>猪口薄<ins>モ</ins>雪<ins>主花かつ尾</ins>ふ<ins>くる之</ins>焼物一しほかれゐ懸下け<ins>肴一鳥鴨</ins>銚子<ins>すれんこん</ins>吸物花<ins>以</ins>か<ins>ぜらかし</ins>こせ<ins>銚子</ins>肴<ins>湯</ins>鯖粧漬湯<ins>石</ins>する<ins>州する</ins>
 
 ### Pred
-引向おま**半**鯛二玉子ふわ〱**長皿ふた物**薄鳥**平皿御所麩**猪口薄**モ**雪**主花かつ尾**ふ**くる之**焼物一しほかれゐ懸下け**肴一鳥鴨**銚子**すれんこん**吸物花**以**か**ぜらかし**こせ**銚子**肴**湯**鯖粧漬湯**石**する**州する**
+引向おま<ins>半</ins>鯛二玉子ふわ〱<ins>長皿ふた物</ins>薄鳥<ins>平皿御所麩</ins>猪口薄<ins>モ</ins>雪<ins>主花かつ尾</ins>ふ<ins>くる之</ins>焼物一しほかれゐ懸下け<ins>肴一鳥鴨</ins>銚子<ins>すれんこん</ins>吸物花<ins>以</ins>か<ins>ぜらかし</ins>こせ<ins>銚子</ins>肴<ins>湯</ins>鯖粧漬湯<ins>石</ins>する<ins>州する</ins>
 
 ### GT
 引向長皿おまつ鯛平皿御所麩花かつおくるミ肴一鳥鴨一すれんこんせうか銚子湯する二ふた物玉子ふわ〱薄鳥猪口薄雪もミふし焼物一しほかれゐ懸下け銚子吸物花いかこせう肴一鯖粧漬湯する
@@ -197,10 +210,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-七詰五詰の組合**花**積立**ミ**略図本膳鯛作り身**も錦鱠**細作り魚**汁小かふ**く大根**しい茸**せか**皮牛房**房風**青な**杉小**金**角**此かん**なら漬瓜**香物**ミそ漬大根**之**もり口漬花塩山升杉曲物焼魚**煮物**花ゑひ**飯**くしこ敷葛
+七詰五詰の組合<ins>花</ins>積立<ins>ミ</ins>略図本膳鯛作り身<ins>も錦鱠</ins>細作り魚<ins>汁小かふ</ins>く大根<ins>しい茸</ins>せか<ins>皮牛房</ins>房風<ins>青な</ins>杉小<ins>金</ins>角<ins>此かん</ins>なら漬瓜<ins>香物</ins>ミそ漬大根<ins>之</ins>もり口漬花塩山升杉曲物焼魚<ins>煮物</ins>花ゑひ<ins>飯</ins>くしこ敷葛
 
 ### Pred
-七詰五詰の組合**花**積立**ミ**略図本膳鯛作り身**も錦鱠**細作り魚**汁小かふ**く大根**しい茸**せか**皮牛房**房風**青な**杉小**金**角**此かん**なら漬瓜**香物**ミそ漬大根**之**もり口漬花塩山升杉曲物焼魚**煮物**花ゑひ**飯**くしこ敷葛
+七詰五詰の組合<ins>花</ins>積立<ins>ミ</ins>略図本膳鯛作り身<ins>も錦鱠</ins>細作り魚<ins>汁小かふ</ins>く大根<ins>しい茸</ins>せか<ins>皮牛房</ins>房風<ins>青な</ins>杉小<ins>金</ins>角<ins>此かん</ins>なら漬瓜<ins>香物</ins>ミそ漬大根<ins>之</ins>もり口漬花塩山升杉曲物焼魚<ins>煮物</ins>花ゑひ<ins>飯</ins>くしこ敷葛
 
 ### GT
 七詰五詰の組合并積立之略図本膳膾煮物香物汁飯膾鯛作り身細作り魚くり大根せうか房風金かん杉小角香物なら漬瓜ミそ漬大根もり口漬花塩山升杉曲物煮物焼魚花ゑひくしこ敷葛汁鶴小かふしい茸皮牛房青な飯
@@ -211,10 +224,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-**ゝ**右一**は**
+<ins>ゝ</ins>右一<ins>は</ins>
 
 ### Pred
-右一**は**
+右一<ins>は</ins>
 
 ### GT
 右一水
@@ -225,10 +238,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-かまほこ拵方**し**事玉子そふめんの如にそれを**ほ**竹の**れ同比ほ**二ツ割し両方**て更**ふ**し**しを付其中へ入さ**しそ**をうす**て**そきもよふなる**に**ふに入へしそれをふ**ゝ**かし外へ玉子を**ぬ**るへ**へ**し**青意ケわしぞ**
+かまほこ拵方<ins>し</ins>事玉子そふめんの如にそれを<ins>ほ</ins>竹の<ins>れ同比ほ</ins>二ツ割し両方<ins>て更</ins>ふ<ins>し</ins>しを付其中へ入さ<ins>しそ</ins>をうす<ins>て</ins>そきもよふなる<ins>に</ins>ふに入へしそれをふ<ins>ゝ</ins>かし外へ玉子を<ins>ぬ</ins>るへ<ins>へ</ins>し<ins>青意ケわしぞ</ins>
 
 ### Pred
-かまほこ拵方**し**事玉子そふめんの如にそれを**ほ**竹の**れ同比ほ**二ツ割し両方**て更**ふ**し**しを付其中へ入さ**しそ**をうす**て**そきもよふなる**に**ふに入へしそれをふ**ゝ**かし外へ玉子を**ぬ**るへ**へ**し**青意ケわしぞ**
+かまほこ拵方<ins>し</ins>事玉子そふめんの如にそれを<ins>ほ</ins>竹の<ins>れ同比ほ</ins>二ツ割し両方<ins>て更</ins>ふ<ins>し</ins>しを付其中へ入さ<ins>しそ</ins>をうす<ins>て</ins>そきもよふなる<ins>に</ins>ふに入へしそれをふ<ins>ゝ</ins>かし外へ玉子を<ins>ぬ</ins>るへ<ins>へ</ins>し<ins>青意ケわしぞ</ins>
 
 ### GT
 かまほこ拵方之事玉子そふめんの如にそれを竹の筒を二ツ割し両方へふしを付其中へ入さかなをうすくそきもよふなるよふに入へしそれをふかし外へ玉子をふるへし
@@ -239,10 +252,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-▲祝言引渡之次第一**歌**栗ほそきかたをむ**に也んレ一三ツかわらけ**成やうに三かくにお**ゝ**也**也**一のし二本**寸すま**ひろきかたをきやくのひだりの**ぶ**かたへしておきて**こか**し昆布切かぶなて**りたに**也一てうしひさ**けきりお**一まきずるめ**のさ**か**なかレ事**すミ一か**かす**こしもちくしこむすびこんぶ**一むめぼし三ツざうに**いもひ**ら**かつうほくしあ**げひ**一たつくり三ツ一ぬりさかづき一吸物ひれの物をほんとす**ま**也一ねぶか二本しろに**ね**一か**かん**んざけ**とも**
+▲祝言引渡之次第一<ins>歌</ins>栗ほそきかたをむ<ins>に也んレ一三ツかわらけ</ins>成やうに三かくにお<ins>ゝ</ins>也<ins>也</ins>一のし二本<ins>寸すま</ins>ひろきかたをきやくのひだりの<ins>ぶ</ins>かたへしておきて<ins>こか</ins>し昆布切かぶなて<ins>りたに</ins>也一てうしひさ<ins>けきりお</ins>一まきずるめ<ins>のさ</ins>か<ins>なかレ事</ins>すミ一か<ins>かす</ins>こしもちくしこむすびこんぶ<ins>一むめぼし三ツざうに</ins>いもひ<ins>ら</ins>かつうほくしあ<ins>げひ</ins>一たつくり三ツ一ぬりさかづき一吸物ひれの物をほんとす<ins>ま</ins>也一ねぶか二本しろに<ins>ね</ins>一か<ins>かん</ins>んざけ<ins>とも</ins>
 
 ### Pred
-▲祝言引渡之次第一**歌**栗ほそきかたをむ**に也んレ一三ツかわらけ**成やうに三かくにお**ゝ**也**也**一のし二本**寸すま**ひろきかたをきやくのひだりの**ぶ**かたへしておきて**こか**し昆布切かぶなて**りたに**也一てうしひさ**けきりお**一まきずるめ**のさ**か**なかレ事**すミ一か**かす**こしもちくしこむすびこんぶ**一むめぼし三ツざうに**いもひ**ら**かつうほくしあ**げひ**一たつくり三ツ一ぬりさかづき一吸物ひれの物をほんとす**ま**也一ねぶか二本しろに**ね**一か**かん**んざけ**とも**
+▲祝言引渡之次第一<ins>歌</ins>栗ほそきかたをむ<ins>に也んレ一三ツかわらけ</ins>成やうに三かくにお<ins>ゝ</ins>也<ins>也</ins>一のし二本<ins>寸すま</ins>ひろきかたをきやくのひだりの<ins>ぶ</ins>かたへしておきて<ins>こか</ins>し昆布切かぶなて<ins>りたに</ins>也一てうしひさ<ins>けきりお</ins>一まきずるめ<ins>のさ</ins>か<ins>なかレ事</ins>すミ一か<ins>かす</ins>こしもちくしこむすびこんぶ<ins>一むめぼし三ツざうに</ins>いもひ<ins>ら</ins>かつうほくしあ<ins>げひ</ins>一たつくり三ツ一ぬりさかづき一吸物ひれの物をほんとす<ins>ま</ins>也一ねぶか二本しろに<ins>ね</ins>一か<ins>かん</ins>んざけ<ins>とも</ins>
 
 ### GT
 ▲祝言引渡之次第一栗ほそきかたをむふへ成やうに三かくにおく也一三ツかわらけ一のし二本ひろきかたをきやくのひだりのかたへしておきてよし一昆布二切かぶなりにきりておく也一てうしひさげ一さかな一まきずるめ一からすミ一かずのこ一むめぼし三ツざうにもちくしこむすびこんぶいもひゝかつうほくしあわび一たつくり三ツ一ぬりさかづき一吸物ひれの物をほんとする也一ねぶか二本しろねともに一かんざけ
@@ -253,10 +266,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきて**は**おもミをも**人**入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの**斗**にけ少候此時ハおきくしだい入せ中そにだをくに候どぶをさて吉**に**大ん外**入**但久くたきてハのあぢ悪候あきそをたきの也いつれもそをかうて久敷に候しるにハ此ちすい口さんせのこ同葉**鶉**の汁だにほねを入せんそにて仕立さん大也つまハその時のけい**ふ**つ吉きの**は**いほ数入吉何時もすぢをおびゆ又**し**めゟ中そにてしたてゟすに汁中て仕立候又につま時の物也り次入いんにてもかにてをいだを入ねを生たれ少てを入しほ**け**んすい合出是もつまハ時の物惣のこハ鳥汁にい入吉いびゆ吉あをちのたを
+をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきて<ins>は</ins>おもミをも<ins>人</ins>入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの<ins>斗</ins>にけ少候此時ハおきくしだい入せ中そにだをくに候どぶをさて吉<ins>に</ins>大ん外<ins>入</ins>但久くたきてハのあぢ悪候あきそをたきの也いつれもそをかうて久敷に候しるにハ此ちすい口さんせのこ同葉<ins>鶉</ins>の汁だにほねを入せんそにて仕立さん大也つまハその時のけい<ins>ふ</ins>つ吉きの<ins>は</ins>いほ数入吉何時もすぢをおびゆ又<ins>し</ins>めゟ中そにてしたてゟすに汁中て仕立候又につま時の物也り次入いんにてもかにてをいだを入ねを生たれ少てを入しほ<ins>け</ins>んすい合出是もつまハ時の物惣のこハ鳥汁にい入吉いびゆ吉あをちのたを
 
 ### Pred
-をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきて**は**おもミをも**人**入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの**斗**にけ少候此時ハおきくしだい入せ中そにだをくに候どぶをさて吉**に**大ん外**入**但久くたきてハのあぢ悪候あきそをたきの也いつれもそをかうて久敷に候しるにハ此ちすい口さんせのこ同葉**鶉**の汁だにほねを入せんそにて仕立さん大也つまハその時のけい**ふ**つ吉きの**は**いほ数入吉何時もすぢをおびゆ又**し**めゟ中そにてしたてゟすに汁中て仕立候又につま時の物也り次入いんにてもかにてをいだを入ねを生たれ少てを入しほ**け**んすい合出是もつまハ時の物惣のこハ鳥汁にい入吉いびゆ吉あをちのたを
+をなどふたどきてい候是すてひの入吉立ハふたのくあん汁ハかハをはぎおろきて<ins>は</ins>おもミをも<ins>人</ins>入した時あげて水にてひや酒をかけをく汁時入ぶをしほげんすい合出又すまの<ins>斗</ins>にけ少候此時ハおきくしだい入せ中そにだをくに候どぶをさて吉<ins>に</ins>大ん外<ins>入</ins>但久くたきてハのあぢ悪候あきそをたきの也いつれもそをかうて久敷に候しるにハ此ちすい口さんせのこ同葉<ins>鶉</ins>の汁だにほねを入せんそにて仕立さん大也つまハその時のけい<ins>ふ</ins>つ吉きの<ins>は</ins>いほ数入吉何時もすぢをおびゆ又<ins>し</ins>めゟ中そにてしたてゟすに汁中て仕立候又につま時の物也り次入いんにてもかにてをいだを入ねを生たれ少てを入しほ<ins>け</ins>んすい合出是もつまハ時の物惣のこハ鳥汁にい入吉いびゆ吉あをちのたを
 
 ### GT
 うをなどもふくたうもどきとていたし候是もかわをはぎすてひぶくのかわ入吉立やうハふくたうのくあんかう汁ハかハをはぎおろしきりてかハおもミをもにゑゆへ入しらミたる時あげて水にてひやし其後酒をかけをくミそ汁にへ立候時うをゝ入どぶをさししほかげんすい合出し候也又すましの時ハだし計にかけも少おとし候此時ハうハおきさくしだいに入どせう汁中ミそにだしをくハへよくに申候どぶをさして吉つまハごぼう大こん其外色々但久しくたき候てハミそのあぢ悪候左候へハあたらしきミそをたてさしニて出しよきもの也いつれもミそをかうして久敷に申候しるにハ此こゝろもち入る也すい口さんせうのこ同葉鶴の汁ハだしにほねを入せんじさしミそにて仕立候さしかげん大事也つまハその時のけいぶつ吉きのこハいかほど数入候ても吉何時もすぢをおくすい口わさびゆ又はじめゟ中ミそにてもしたてゟすましにも白鳥汁中ミそにて仕立候又すましにもつまハ時分の物也つくり次第入かハいりハがんにてもかもにてもかハをいりだしを入ほねをせんじ生たれ少さして身を入しほかげんすい合出し候是もつまハ時の物惣別木のこハ鳥汁にいつも入候て吉すい口わさびゆ吉あをかちハきじのわたを
@@ -267,10 +280,10 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-ほをつけうち**書**べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほか**ぬ**にして吉りきを大きにつくりりかけをきてかハをい身をはさ入なべてまいならびにやりしるなくハけをきたるたいべきなり第四すい物の部の花いのせのたをすぢい十文まに切け又大さよき**比**に切はゆにをしてつまにのりなにけをおふせすい合いたみのにたまごをあげしにけくをにゆ入候是もつま色汁同前のよき比に切すミそにだを入ふき時わたを入すい合出候也まだこしゆにてさ〱いりさかけのなき時白水をだたまくハふせてすい口ゆを切其入第五酒の部玉子酒玉子をあけひやざけを入てしほを少入んをて
+ほをつけうち<ins>書</ins>べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほか<ins>ぬ</ins>にして吉りきを大きにつくりりかけをきてかハをい身をはさ入なべてまいならびにやりしるなくハけをきたるたいべきなり第四すい物の部の花いのせのたをすぢい十文まに切け又大さよき<ins>比</ins>に切はゆにをしてつまにのりなにけをおふせすい合いたみのにたまごをあげしにけくをにゆ入候是もつま色汁同前のよき比に切すミそにだを入ふき時わたを入すい合出候也まだこしゆにてさ〱いりさかけのなき時白水をだたまくハふせてすい口ゆを切其入第五酒の部玉子酒玉子をあけひやざけを入てしほを少入んをて
 
 ### Pred
-ほをつけうち**書**べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほか**ぬ**にして吉りきを大きにつくりりかけをきてかハをい身をはさ入なべてまいならびにやりしるなくハけをきたるたいべきなり第四すい物の部の花いのせのたをすぢい十文まに切け又大さよき**比**に切はゆにをしてつまにのりなにけをおふせすい合いたみのにたまごをあげしにけくをにゆ入候是もつま色汁同前のよき比に切すミそにだを入ふき時わたを入すい合出候也まだこしゆにてさ〱いりさかけのなき時白水をだたまくハふせてすい口ゆを切其入第五酒の部玉子酒玉子をあけひやざけを入てしほを少入んをて
+ほをつけうち<ins>書</ins>べてや也しぎやきなすびゆでよき比ににさんせミそをけてや也やき竹の子竹の子のふをぬきへまぼこたまごまろにて入かハにやて切まぼこのほか<ins>ぬ</ins>にして吉りきを大きにつくりりかけをきてかハをい身をはさ入なべてまいならびにやりしるなくハけをきたるたいべきなり第四すい物の部の花いのせのたをすぢい十文まに切け又大さよき<ins>比</ins>に切はゆにをしてつまにのりなにけをおふせすい合いたみのにたまごをあげしにけくをにゆ入候是もつま色汁同前のよき比に切すミそにだを入ふき時わたを入すい合出候也まだこしゆにてさ〱いりさかけのなき時白水をだたまくハふせてすい口ゆを切其入第五酒の部玉子酒玉子をあけひやざけを入てしほを少入んをて
 
 ### GT
 ほをつけうちくべてやく也しぎやきなすびをゆでよき比に切くしにさしさんせうミそをつけてやく也やき竹の子竹の子のふしをぬき中へかまぼこたまごまろにして入かハともにやきて切かまぼこのしほからめにして吉いりやきかもを大きにつくりたまりかけをきてかハをいり身をはさミ入なべにて一まいならびにやく也あまりしるなくハかけをきたるたまりすこしいるべきなり第四すい物の部うの花いかのせのかたをすぢかい十文字にこまかに切かけ又大さよき此に切はなしゆにをしてつまにのりなど入だしにかけをおとしふかせすい合いたし候也みのにたまごをあげしやくしにてうけくだけしをにへゆへ入候是もつま色々汁同前このわたよき比に切うすミそにだしを入ふき立候時わたを入すい合其まゝ出し候也まつだけこしゆにてさハ〱といりさかけのなき時白水をさしだしたまりくハへふかせ候てすい口ゆを切其まゝ入てよし第五りやうり酒の部玉子酒玉子をあけひやざけを少ツヽ入よくときてしほを少入かんをして
@@ -281,37 +294,46 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
   </p>
   
 ### Input
-も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな**〱**ま**ふ**きふななすを入すにあひり鱠あめのを三まおろ身ハすきてつ両のを打合かハめやききざ入たのいのくきをさがき入すしほげんてあへ候い也ハもしきばきあゆにてもあめのをの**シ**く仕候れも身すきてつり候しやきぬなしをよてさけのくすりあ**にて**にても**出**にまづすにていそのすをすてのちにぬたをすにてのべすんてあへ後のすおほきハ悪候たしあゆにて**は**あをまのぬたにゆのはミ入あ鱠ほのいあいりいりざけすたにてあへ候たあのちに入**さ**けも吉花つほ三月大木くげなどきざ吉**酔**いのうすほねやきむ取て田つりいて川ゑひ木くりしお入てすしほげんしてあ候わびがんかも同けなどつすにて
+も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな<ins>〱</ins>ま<ins>ふ</ins>きふななすを入すにあひり鱠あめのを三まおろ身ハすきてつ両のを打合かハめやききざ入たのいのくきをさがき入すしほげんてあへ候い也ハもしきばきあゆにてもあめのをの<ins>シ</ins>く仕候れも身すきてつり候しやきぬなしをよてさけのくすりあ<ins>にて</ins>にても<ins>出</ins>にまづすにていそのすをすてのちにぬたをすにてのべすんてあへ後のすおほきハ悪候たしあゆにて<ins>は</ins>あをまのぬたにゆのはミ入あ鱠ほのいあいりいりざけすたにてあへ候たあのちに入<ins>さ</ins>けも吉花つほ三月大木くげなどきざ吉<ins>酔</ins>いのうすほねやきむ取て田つりいて川ゑひ木くりしお入てすしほげんしてあ候わびがんかも同けなどつすにて
 
 ### Pred
-も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな**〱**ま**ふ**きふななすを入すにあひり
+も有そべまのげんハなをなてあにすのおほくあまり候ハぬか候のしろ鱠ふな<ins>〱</ins>ま<ins>ふ</ins>きふななすを入すにあひり
 
 ### GT
 も有そうべつなますのかげんハなますをミなもりてあとにすのおほくあまり候ハぬかよく候このしろ鱠ふなのくやまぶきあへハふななますをからし入すにあへ申事也ひてり鱠あめのうを三まいにおろし身ハすきてつくり両のかハを打合かハめよりやきてきざミ入たうのいものくきをさゝがき入すしほかげんしてあへ候をいふ也かハもしらやき也かばやき鱠あゆにてもあめのうをのく仕候事也これも身ハすきてつくり候かハしらやきぬたなますからしをよくすりてさけのかすをよくすりあゆにてもいわしにてもなよしにてもまづすにていためそのすをすてのちにぬたをすにてのべすかげんしてあへ候也後のすおほきハ悪候たゞしあゆにてハあをまめのぬたにゆのはきざミ入あへ申事も有太郎助鱠一しほのたいあわひなどいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねなとやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 
 ## Error Type Summary
-The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
+
+The categories below are based on a three-way comparison among `Input`, `Pred`, and `GT`. In short, `Input` is the noisy OCR source, `Pred` is the model's attempted correction, and `GT` is the target transcription.
 
 ### 1. Input-copying without sufficient correction
-The dominant error pattern is copying the noisy Input with little correction. This is especially clear in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. **Pred often matches Input almost exactly**, while GT contains substantial corrections. This means the model preserves many OCR-like errors instead of reconstructing the intended transcription.
+
+The dominant error pattern is copying the noisy Input with little correction. This is especially clear in `100249416_00034_1`, `200015843_00110_1`, `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. Pred often matches Input almost exactly, while GT contains substantial corrections. This means the model preserves many OCR-like errors instead of reconstructing the intended transcription.
 
 ### 2. Severe early stopping / truncation
-`200022050_00010_2` is the clearest **truncation** case. GT_Length is 468, but Pred_Length is only 49, and the prediction stops after the opening fragment. This is different from normal character confusion: the model fails to continue the transcription at all. It should be treated as a generation-length or early stopping failure rather than a simple OCR correction error.
+
+`200022050_00010_2` is the clearest truncation case. GT_Length is 468, but Pred_Length is only 49, and the prediction stops after the opening fragment. This is different from normal character confusion: the model fails to continue the transcription at all. It should be treated as a generation-length or early stopping failure rather than a simple OCR correction error.
 
 ### 3. Long-context degradation and output-length cap behavior
-Several long samples have predictions around 300 characters, including `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. This suggests **a length cap or truncation-like generation pattern**. The initial part is often stable, but the later part is omitted, under-corrected, or copied directly from Input. Long recipe-like passages remain hard for the model to handle consistently.
+
+Several long samples have predictions around 300 characters, including `200017458_00008_1`, `200017458_00037_2`, `200022050_00006_1`, and `200022050_00007_2`. This suggests a length cap or truncation-like generation pattern. The initial part is often stable, but the later part is omitted, under-corrected, or copied directly from Input. Long recipe-like passages remain hard for the model to handle consistently.
 
 ### 4. Layout/order errors in list-like text
-The `200021763_*` samples show **strong layout and ordering issues**. These texts contain structured lists of dishes, vessels, and serving sequences. The model keeps many individual tokens but fails to restore the correct group boundaries and reading order. `200021763_00008_2`, `200021763_00020_1`, and `200021763_00025_1` are representative examples where local text accuracy does not translate into correct list structure.
+
+The `200021763_*` samples show strong layout and ordering issues. These texts contain structured lists of dishes, vessels, and serving sequences. The model keeps many individual tokens but fails to restore the correct group boundaries and reading order. `200021763_00008_2`, `200021763_00020_1`, and `200021763_00025_1` are representative examples where local text accuracy does not translate into correct list structure.
 
 ### 5. Classical kana and short-text character confusions
-Short samples such as `200006663_00006_2`, `200021763_00002_2`, and `200021869_00003_1` expose fine-grained character errors. These include **historical kana, small marks, voicing differences, and visually similar characters**. Because the strings are short, even one or two substitutions or omissions can produce a high CER.
+
+Short samples such as `200006663_00006_2`, `200021763_00002_2`, and `200021869_00003_1` expose fine-grained character errors. These include historical kana, small marks, voicing differences, and visually similar characters. Because the strings are short, even one or two substitutions or omissions can produce a high CER.
 
 ### 6. Modernization and punctuation artifacts
-Some predictions **move toward more modern Japanese or add punctuation**. For example, `100249416_00027_1` inserts modern-looking forms such as `入れ` and adds punctuation at sentence boundaries. These changes may improve readability, but GT expects a faithful transcription, so modernization and punctuation normalization are counted as errors.
+
+Some predictions move toward more modern Japanese or add punctuation. For example, `100249416_00027_1` inserts modern-looking forms such as `入れ` and adds punctuation at sentence boundaries. These changes may improve readability, but GT expects a faithful transcription, so modernization and punctuation normalization are counted as errors.
 
 ### 7. Domain vocabulary errors
-Cooking and confectionery vocabulary is a repeated source of failure. Cases such as `100249416_00027_1`, `100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` contain ingredients, utensils, procedures, measurements, and recipe-specific terms. The model often **copies noisy terminology or only partially corrects it**, suggesting that domain adaptation is needed for classical culinary texts.
+
+Cooking and confectionery vocabulary is a repeated source of failure. Cases such as `100249416_00027_1`, `100249416_00034_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` contain ingredients, utensils, procedures, measurements, and recipe-specific terms. The model often copies noisy terminology or only partially corrects it, suggesting that domain adaptation is needed for classical culinary texts.
 
 ### Overall
-LLM-jp-4-8B-Instruct mainly fails by **copying noisy input, struggling with layout-sensitive lists, and degrading on long passages**. Its most severe unique case is `200022050_00010_2`, where the output stops after only 49 characters. Compared with models that heavily paraphrase, this model is more conservative, but that conservatism often means under-correction. Future improvements should focus on stronger correction behavior, explicit long-output handling, prevention of early stopping, layout-aware reading-order recovery, and culinary-domain adaptation.
+
+LLM-jp-4-8B-Instruct mainly fails by copying noisy input, struggling with layout-sensitive lists, and degrading on long passages. Its most severe unique case is `200022050_00010_2`, where the output stops after only 49 characters. Compared with models that heavily paraphrase, this model is more conservative, but that conservatism often means under-correction. Future improvements should focus on stronger correction behavior, explicit long-output handling, prevention of early stopping, layout-aware reading-order recovery, and culinary-domain adaptation.
