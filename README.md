@@ -41,7 +41,7 @@ All models use the same OCR correction instruction:
   hf download Rakuten/RakutenAI-7B-instruct --local-dir ./model/RakutenAI-7B-Instruct
   hf download tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1 --local-dir ./model/Gemma-2-Llama-Swallow-9b-it-v0.1
   hf download tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2 --local-dir ./model/Qwen3-Swallow-8B-RL-v0.2
-hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./model/LLM-jp-4-8B-Instruct
+  hf download llm-jp/llm-jp-4-8b-instruct --local-dir ./model/LLM-jp-4-8B-Instruct
 ```
 ### 1. Zero-shot LLM Post-processing
 * Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
