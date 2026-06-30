@@ -68,6 +68,11 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
     --no-adapter \
     --input-dir dataset/test/synthetic/input \
     --output-dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth
+
+  python evaluate.py \
+    --gt_dir dataset/test/synthetic/gt \
+    --pred_dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth \
+    --out_csv zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth_cer.csv
 ```
 
 ### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03)
