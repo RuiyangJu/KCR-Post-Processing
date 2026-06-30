@@ -67,7 +67,7 @@ Run the following commands to download the base LLMs from Hugging Face:
 
 | Model | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | CER@Real (%) | Latency@Syn. (sec) | CER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 11.98 | – | 13.66 |
+| [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 11.98 | – | 13.67 |
 | [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | ELYZA, Inc. | 2024.06 | Meta-Llama-3-8B-Instruct | 16.1 GB | 2.305 | 13.72 (9.70) | 2.329 | 15.19 (10.96) |
 | [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | Sakana AI | 2025.03 | Llama-3-ELYZA-JP-8B | 16.1 GB | 3.612 | 71.14 (10.22) | 3.802 | 75.16 (11.31) |
 | [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna Co., Ltd. | 2024.07 | Meta-Llama-3-8B | 16.1 GB | 2.342 | 25.98 (13.37) | 2.350 | 28.23 (14.61) |
