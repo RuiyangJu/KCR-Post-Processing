@@ -4,4 +4,4 @@
 
 ### 1. Zero-shot LLM Post-processing
 
-### 2. Low-resource LLM Refiner
+### 2. OCR Refiner Fine-tuning
