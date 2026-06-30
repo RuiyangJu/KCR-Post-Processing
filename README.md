@@ -60,11 +60,14 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
     --local-dir ./model/LLM-jp-4-8B-Instruct
 ```
 ## 1. Zero-shot LLM Post-processing
-### Run & Evaluate
+### Run & Evaluate （Synthetic Test Set as Example)
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 ```
-  python ./Llama-3-ELYZA-JP-8B/run.py --input-dir ../dataset/test/synthetic/input/ --output-dir ./Llama-3-ELYZA-JP-8B/output_synthetic
-  python ./evaluate.py --gt_dir ../dataset/test/synthetic/gt --pred_dir ./Llama-3-ELYZA-JP-8B/output_synthetic --out_csv ./Llama-3-ELYZA-JP-8B/output_syn.csv
+  python run.py \
+    --model-name Llama-3-ELYZA-JP-8B \
+    --no-adapter \
+    --input-dir dataset/test/synthetic/input \
+    --output-dir zero_shot/Llama-3-ELYZA-JP-8B/output_base_synth
 ```
 
 ### (2) [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) (Release: 2025/03)
