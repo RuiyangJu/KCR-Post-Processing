@@ -59,7 +59,7 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
   hf download llm-jp/llm-jp-4-8b-instruct \
     --local-dir ./model/LLM-jp-4-8B-Instruct
 ```
-### 1. Zero-shot LLM Post-processing
+## 1. Zero-shot LLM Post-processing
 * Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
   
-### 2. LLM-based OCR Refiner Fine-tuning
+## 2. LLM-based OCR Refiner Fine-tuning
