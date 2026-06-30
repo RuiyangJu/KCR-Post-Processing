@@ -1,9 +1,10 @@
 ## Zero-shot LLM Post-processing
 ### Run & Evaluate: Synthetic Test Set Example
-#### Root
+First, move to the repository root:
 ```
-  cd KCR-Post-Processing 
+cd KCR-Post-Processing
 ```
+
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 
 ```bash
