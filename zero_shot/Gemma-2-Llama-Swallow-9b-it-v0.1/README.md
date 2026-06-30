@@ -1,5 +1,18 @@
 # Gemma-2-Llama-Swallow-9b-it-v0.1
 ## Error Case Analysis on Synthetic Test Set (Overall CER: 21.23%)
+
+This README summarizes the zero-shot OCR correction results of Gemma-2-Llama-Swallow-9b-it-v0.1 on the synthetic test set. The overall CER is 21.23%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
+
+### How to Read the Cases
+
+- `Input`: the raw OCR text given to the model. It may already contain recognition errors.
+- `Pred`: the model's corrected output based on `Input`.
+- `GT`: the human-corrected ground-truth transcription used as the evaluation target.
+- `GT_Length` / `Pred_Length`: the number of characters in `GT` and `Pred`.
+- `Edit_Distance`: the minimum number of character edits needed to transform `Pred` into `GT`.
+- `CER`: Character Error Rate, calculated as `Edit_Distance / GT_Length`. Lower is better.
+- Underlined spans in `Input` and `Pred` mark segments that differ from `GT` after alignment. `GT` is left unmarked as the reference text.
+
 ```
 File,GT_Length,Pred_Length,Edit_Distance,CER
 100249376_00010_2.txt,114,1223,1113,9.763157894736842
@@ -320,28 +333,37 @@ File,GT_Length,Pred_Length,Edit_Distance,CER
 も有そうべつなますのかげんハなますをミなもりてあとにすのおほくあまり候ハぬかよく候このしろ鱠ふなのくやまぶきあへハふななますをからし入すにあへ申事也ひてり鱠あめのうを三まいにおろし身ハすきてつくり両のかハを打合かハめよりやきてきざミ入たうのいものくきをさゝがき入すしほかげんしてあへ候をいふ也かハもしらやき也かばやき鱠あゆにてもあめのうをのく仕候事也これも身ハすきてつくり候かハしらやきぬたなますからしをよくすりてさけのかすをよくすりあゆにてもいわしにてもなよしにてもまづすにていためそのすをすてのちにぬたをすにてのべすかげんしてあへ候也後のすおほきハ悪候たゞしあゆにてハあをまめのぬたにゆのはきざミ入あへ申事も有太郎助鱠一しほのたいあわひなどいかにもうすくつくりいりざけすたうぶんにしてあへ候たゞしあわひハのちに入吉ますざけも吉花がつほ三月大こん木くらげなどきざミ入て吉やきほね鱠たいのうすミほねなとやきむしり取て田つくりいりて川ゑひ木くらげくりしやうがおろしなと入てすしほかげんしてあへ申候わさびあへがんかも同もゝけなどつくりすにて
 
 ## Error Type Summary
-The categories below are based on a three-way comparison among Input, Pred, and GT. Input is treated as the noisy OCR source, Pred as the model's correction attempt, and GT as the target correct transcription.
 
-### 1. Repetition / runaway generation
-The clearest case is `100249376_00010_2`. After a mostly correct opening, Pred initially follows Input/GT, then <ins>repeatedly generates the phrase</ins> around `水にひやしうすくのはしはり...`, which results in a Pred_Length of 1223, far longer than the GT_Length of 114, and raises CER to 9.76.. This is not a normal OCR character error; it is a decoding failure where the model falls into a generation loop.
+The categories below are based on a three-way comparison among `Input`, `Pred`, and `GT`. In short, `Input` is the noisy OCR source, `Pred` is the model's attempted correction, and `GT` is the target transcription.
 
-### 2. Layout/order errors in list-like text
-This pattern is especially visible in `200021763_00006_2`, `200021763_00008_2`, `200021763_00009_1`, `200021763_00020_1`, and `200021763_00025_1`. These samples are mostly parallel lists of menu items, vessels, or dishes. The prediction often preserves many local texts, but <ins>the order, grouping, and repetition structure are wrong</ins>. For example, in `200021763_00008_2`, the Input/Pred follows a repeated pattern such as `飯鉢飯鉢 蓋台蓋台 ...`, while the GT consists of two complete ordered sequences. This suggests that the model follows the local input arrangement instead of recovering the correct reading order from the original layout.
+### 1. Repetition / Runaway Generation
 
-### 3. Input-copying without correction
-In many cases, Pred is almost identical to Input even though GT differs substantially from Input. Examples include `100249416_00034_1`, `200017458_00008_1`, `200017458_00037_2`, `200021869_00007_1`, `200021869_00012_1`, `200022050_00006_1`, and `200022050_00010_2`. These cases indicate that under noisy or long inputs, the model tends to <ins>copy the input rather than actively correcting it with linguistic knowledge</ins>. This keeps the output length close to the input, but the CER remains high.
+The clearest example is `100249376_00010_2`. The prediction follows the beginning of the text reasonably well, but then repeatedly generates content around `水にひやしうすくのはしはり...`. As a result, `Pred_Length` grows to 1223 while `GT_Length` is only 114, and CER rises to 9.76. This is not a normal single-character OCR error; it is a generation failure where the model falls into a repetition loop.
 
-### 4. Long-context degradation / truncation-like behavior
-`200017458_00008_1`, `200017458_00037_2`, `200020019_00077_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` are all relatively long texts. In these examples, some predictions are capped or shortened to around 300 characters, while later sections often contain uncorrected fragments, omissions, or semantic drift. The model appears less globally consistent on long passages: <ins>the beginning is often more stable, while later sections increasingly copy Input, miss corrections, or accumulate local misreadings</ins>.
+### 2. List and Reading-Order Errors
 
-### 5. Classical kana and premodern Japanese character confusions
-Short and medium-length samples <ins>contain many fine-grained character confusions</ins>, for example `100249376_00041_2`, `200006663_00006_2`, and `200021869_00003_1`. Common patterns include misreading small marks such as `ゝ`, voicing-mark differences, confusion among functional characters such as `候`, `申`, and `入`, and substitutions among visually similar kana or kanji such as `粉`, `こ`, `し`, and `す`. Each individual error is small, but in short texts these errors can raise CER sharply.
+This pattern is especially visible in `200021763_00006_2`, `200021763_00008_2`, `200021763_00009_1`, `200021763_00020_1`, and `200021763_00025_1`. These samples mostly contain lists of dishes, vessels, or menu items. The model often preserves many local terms, but the overall order, grouping, and repetition structure are wrong. For example, in `200021763_00008_2`, `Input` and `Pred` look like adjacent items have been repeated locally, while `GT` contains two complete ordered sequences. This suggests that the model is still weak at recovering the correct reading order from layout-sensitive text.
 
-### 6. Modernization or normalization artifacts
-Some predictions <ins>shift the text toward modern spelling, punctuation, or more common kanji</ins>. For example, `100249476_00004_1` adds punctuation and normalizes some expressions, while `200020019_00077_1` contains semantic or modernized substitutions such as `上申也`, `三号寺号`, and `天下の武士`. These outputs may be more readable, but they do not match the diplomatic transcription target in GT, so they increase edit distance.
+### 3. Over-Copying the Input
 
-### 7. Domain vocabulary errors
-Vocabulary related to cooking, sweets, menus, vessels, ingredients, procedures, and units is a frequent source of errors. This appears in `100249416_00027_1`, `100249416_00034_1`, `100249476_00004_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. The model often <ins>misreads or skips specialized terms, ingredient names, cooking steps, and measurements</ins>. Classical culinary texts contain many specialized terms, while OCR errors often introduce visually similar character confusions or linguistically plausible substitutions.
+In many cases, `Pred` is almost identical to `Input` even though both differ substantially from `GT`. Typical examples include `100249416_00034_1`, `200017458_00008_1`, `200017458_00037_2`, `200021869_00007_1`, `200021869_00012_1`, `200022050_00006_1`, and `200022050_00010_2`. This indicates that when the input is long or noisy, the model tends to copy the OCR text conservatively instead of actively correcting it from context. The output length may look reasonable, but the CER remains high.
+
+### 4. Degradation on Long Texts
+
+`200017458_00008_1`, `200017458_00037_2`, `200020019_00077_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2` are relatively long samples. In these cases, the first part of the prediction is usually more stable, while later sections are more likely to contain missed corrections, wrong substitutions, semantic drift, or direct copying from `Input`. Some outputs also stop around 300 characters, which looks like truncation-like behavior.
+
+### 5. Classical Kana and Premodern Japanese Character Confusions
+
+Short and medium-length samples also contain many fine-grained character errors, such as `100249376_00041_2`, `200006663_00006_2`, and `200021869_00003_1`. Common issues include mistakes around repetition marks such as `ゝ`, voicing-mark differences, confusion among functional characters such as `候`, `申`, and `入`, and substitutions among visually similar kana or kanji such as `粉`, `こ`, `し`, and `す`. Each individual error may be small, but in short texts these errors can raise CER sharply.
+
+### 6. Modernization or Normalization
+
+Some predictions shift the text toward modern Japanese, modern punctuation, or more common kanji. For example, `100249476_00004_1` adds Japanese periods, while `200020019_00077_1` includes modernized or semantic substitutions such as `上申也`, `三号寺号`, and `天下の武士`. These outputs may be easier to read, but the target is a faithful transcription matching `GT`, so these plausible-looking rewrites still increase edit distance.
+
+### 7. Domain Vocabulary Errors
+
+Vocabulary related to cooking, confectionery, menus, vessels, ingredients, procedures, and measurement units is a frequent source of errors. Relevant samples include `100249416_00027_1`, `100249416_00034_1`, `100249476_00004_1`, `200022050_00002_2`, `200022050_00006_1`, `200022050_00007_2`, and `200022050_00010_2`. Classical culinary texts contain many specialized terms, and OCR noise often creates visually similar or linguistically plausible alternatives. As a result, the model may misread, omit, or normalize domain-specific words.
 
 ### Overall
-The main failure modes of Gemma-2-Llama-Swallow-9b-it-v0.1 can be summarized in three layers. First, there are catastrophic repetition failures, most notably `100249376_00010_2`. Second, for list-like, long, or layout-sensitive texts, the model often copies Input or disrupts the correct reading order. Third, fine-grained classical kana, culinary terminology, vessel names, and measurement units are still not corrected reliably. Future improvements should <ins>prioritize repetition suppression, layout-aware reading-order modeling, and stronger domain adaptation for classical cooking and confectionery texts</ins>.
+
+Overall, the main failure modes of Gemma-2-Llama-Swallow-9b-it-v0.1 can be summarized in three points. First, some samples show severe repetition failures. Second, for list-like, long, or layout-sensitive texts, the model often copies `Input` or disrupts the correct reading order. Third, fine-grained details such as classical kana, culinary terminology, vessel names, and measurement units are still not corrected reliably. Future improvements should focus on repetition suppression, layout-aware reading-order modeling, and stronger domain adaptation for classical cooking and confectionery texts.
