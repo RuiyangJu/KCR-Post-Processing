@@ -60,7 +60,8 @@ Run the following commands to download the pre-trained LLMs from Hugging Face:
     --local-dir ./model/LLM-jp-4-8B-Instruct
 ```
 ## 1. Zero-shot LLM Post-processing
-Detailed result tables and error analysis are provided in `zero_shot/README.md`.
+Detailed result tables and error analysis are provided in [zero_shot/README.md](zero_shot/README.md).
+
 ### Run & Evaluate: Synthetic Test Set Example
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 
