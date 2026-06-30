@@ -1,11 +1,10 @@
 # KCR Post-Processing
-
-### Environment
+## Environment
 * OS: Linux
 * GPU: NVIDIA RTX PRO 6000 Blackwell
 * CPU: Intel Core i5-12600K
 
-### Parameter
+## Inference Parameters
 | Parameter | Setting |
 |:--:|:--:|
 | `max_new_tokens` | `1024` |
@@ -45,5 +44,5 @@ All models use the same OCR correction instruction:
 ```
 ### 1. Zero-shot LLM Post-processing
 * Japanese LLM Leaderboard [here](https://swallow-llm.github.io/leaderboard).
-* 
+  
 ### 2. LLM-based OCR Refiner Fine-tuning
