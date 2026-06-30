@@ -20,16 +20,15 @@
 | `add_generation_prompt` | `True` |
 
 ## Prompt
-
 All models use the same OCR correction instruction:
-
-```text
+```
 あなたは日本古典籍OCRの誤り訂正システムです。
 
 OCRによる明らかな誤字・脱字・衍字だけを、原文の文脈に基づいて訂正してください。
 歴史的仮名遣い、旧字体、異体字、漢文調の表現は現代語に変更しないでください。
 根拠のない補完、要約、説明、注釈を加えず、原文の内容と順序を維持してください。
 修正後の本文のみを出力してください。
+```
 
 ### Download Pre-trained Models
 ```
