@@ -75,7 +75,7 @@ Run the following commands to download the base LLMs from Hugging Face:
 | [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | Rakuten Group, Inc. | 2024.03 | Mistral-7B-v0.1 | 29.5 GB | 2.142 | 20.64 (10.08) | 2.026 | 18.07 (11.08) |
 | [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) | Institute of Science Tokyo | 2025.05 | Gemma-2-9B | 18.5 GB | 3.427 | 20.07 (9.49) | 3.434 | 21.23 (10.69) |
 | [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | Institute of Science Tokyo | 2026.02 | Qwen3-8B | 16.4 GB | 2.578 | 12.27 (9.00) | 2.599 | 14.12 (10.21) |
-| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | Llama 2 architecture | 17.2 GB | 1.902 | 16.24 (8.81) | 1.875 | 17.82 (10.01) |
+| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | Llama 2 architecture | 17.2 GB | 1.902 | 16.24 (11.44) | 1.875 | 17.82 (12.39) |
 
 * The values in parentheses indicate CER results after removing outlier pages with a CER greater than 25%.
 * Implementation commands are provided in [zero_shot/](zero_shot/), with detailed error analyses available in each model-specific folder.
