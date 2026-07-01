@@ -6,7 +6,8 @@ cd KCR-Post-Processing
 ```
 
 #### Batch Run
-Run and evaluate all eight LLM models on real and synthetic test sets, respectively.
+Run and evaluate all eight LLM models on both the real and synthetic test sets:
+
 ```
   bash run_zero_shot.sh
 ```
