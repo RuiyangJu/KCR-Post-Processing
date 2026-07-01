@@ -69,7 +69,7 @@ Run the following commands to download the base LLMs from Hugging Face:
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 11.98 | – | 13.67 |
 | [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | ELYZA, Inc. | 2024.06 | Meta-Llama-3-8B-Instruct | 16.1 GB | 2.305 | 13.71 (9.70) | 2.329 | 15.19 (10.96) |
-| [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | Sakana AI | 2025.03 | Llama-3-ELYZA-JP-8B | 16.1 GB | 3.612 | 71.14 (10.22) | 3.802 | 75.16 (11.31) |
+| [Llama-3-Karamaru-v1](https://huggingface.co/SakanaAI/Llama-3-Karamaru-v1) | Sakana AI | 2025.03 | Llama-3-ELYZA-JP-8B | 16.1 GB | 3.612 | 72.04 (10.22) | 3.802 | 75.16 (11.31) |
 | [Llama-3-Youko-8B-Instruct](https://huggingface.co/rinna/llama-3-youko-8b-instruct) | rinna Co., Ltd. | 2024.07 | Meta-Llama-3-8B | 16.1 GB | 2.342 | 25.98 (13.37) | 2.350 | 28.23 (14.61) |
 | [Llama-3.1-Swallow-8B-Instruct-v0.3](https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3) | Institute of Science Tokyo | 2024.12 | Meta-Llama-3.1-8B-Instruct | 16.1 GB | 2.345 | 12.26 (8.74) | 2.361 | 13.93 (10.00) |
 | [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | Rakuten Group, Inc. | 2024.03 | Mistral-7B-v0.1 | 29.5 GB | 2.142 | 20.65 (10.10) | 2.026 | 18.07 (11.08) |
