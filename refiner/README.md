@@ -5,11 +5,11 @@ First, move to the repository root:
 cd KCR-Post-Processing
 ```
 
-#### Batch Run
-Run and evaluate all eight LLM models on both the real and synthetic test sets:
+#### Batch Fine-tune & Run & Evaluate
+Fine-tune all eight LLM models on the training and validation sets, then run inference and evaluate them on both the real and synthetic test sets:
 
 ```
-  bash run_zero_shot.sh
+  bash run_refiner.sh
 ```
 
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
