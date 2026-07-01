@@ -5,6 +5,12 @@ First, move to the repository root:
 cd KCR-Post-Processing
 ```
 
+#### Batch Run
+Run and evaluate all eight LLM models on real and synthetic test sets, respectively.
+```
+  bash run_zero_shot.sh
+```
+
 #### (1) [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) (Release: 2024/06)
 
 ```bash
