@@ -5,7 +5,7 @@ First, move to the repository root:
 cd KCR-Post-Processing
 ```
 
-#### Batch Run
+#### Batch Run & Evaluate
 Run and evaluate all eight LLM models on both the real and synthetic test sets:
 
 ```
