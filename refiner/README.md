@@ -1,5 +1,5 @@
-## Zero-shot LLM Post-processing
-### Run & Evaluate: Synthetic Test Set Example
+## LLM-based OCR Refiner Fine-tuning
+### Fine-tune & Run & Evaluate: Synthetic Test Set Example
 First, move to the repository root:
 ```
 cd KCR-Post-Processing
