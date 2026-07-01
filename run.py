@@ -8,6 +8,8 @@ import time
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = BASE_DIR
 MODEL_ROOT_DIR = os.path.join(PROJECT_DIR, "model")
+ZERO_SHOT_DIR = os.path.join(PROJECT_DIR, "zero_shot")
+REFINER_DIR = os.path.join(PROJECT_DIR, "refiner")
 DEFAULT_INPUT_DIR = os.path.join(PROJECT_DIR, "dataset", "valid", "input")
 
 DEFAULT_SYSTEM_PROMPT = """\
@@ -37,7 +39,7 @@ def parse_args() -> argparse.Namespace:
     model_group.add_argument("--model-name")
     model_group.add_argument("--model-dir")
     parser.add_argument("--adapter-dir")
-    parser.add_argument("--no-adapter", action="store_true", help="Run the base model only. Use this for zero-shot comparison.")
+    parser.add_argument("--no-adapter", action="store_true")
     parser.add_argument("--input-dir", default=DEFAULT_INPUT_DIR)
     parser.add_argument("--output-dir")
     parser.add_argument("--max-new-tokens", type=int, default=1024)
@@ -70,11 +72,43 @@ def model_family_name(model_dir: str) -> str:
 
 def resolve_model_dir(args: argparse.Namespace) -> str:
     if args.model_name:
-        return os.path.abspath(
-            os.path.join(MODEL_ROOT_DIR, args.model_name)
+        model_candidates = (
+            os.path.join(MODEL_ROOT_DIR, args.model_name),
+            os.path.join(ZERO_SHOT_DIR, args.model_name, "model"),
         )
 
+        model_dir = next(
+            (candidate for candidate in model_candidates if os.path.isdir(candidate)),
+            model_candidates[0],
+        )
+        return os.path.abspath(model_dir)
+
     return os.path.abspath(args.model_dir)
+
+
+def adapter_dir_candidates(args: argparse.Namespace, model_dir: str) -> list[str]:
+    candidates = []
+
+    if args.model_name:
+        candidates.extend(
+            [
+                os.path.join(REFINER_DIR, args.model_name),
+                os.path.join(REFINER_DIR, args.model_name, "refiner_lora"),
+            ]
+        )
+
+    if os.path.basename(os.path.normpath(model_dir)) == "model":
+        candidates.append(os.path.join(os.path.dirname(model_dir), "refiner_lora"))
+    else:
+        candidates.append(os.path.join(model_dir, "refiner_lora"))
+
+    return candidates
+
+
+def is_adapter_dir(path: str) -> bool:
+    return os.path.isdir(path) and os.path.isfile(
+        os.path.join(path, "adapter_config.json")
+    )
 
 
 def resolve_adapter_dir(
@@ -87,10 +121,19 @@ def resolve_adapter_dir(
     if args.adapter_dir:
         return os.path.abspath(args.adapter_dir)
 
-    if os.path.basename(os.path.normpath(model_dir)) == "model":
-        return os.path.join(os.path.dirname(model_dir), "refiner_lora")
+    adapter_dir = next(
+        (
+            candidate
+            for candidate in adapter_dir_candidates(args, model_dir)
+            if is_adapter_dir(candidate)
+        ),
+        None,
+    )
 
-    return os.path.join(model_dir, "refiner_lora")
+    if adapter_dir:
+        return os.path.abspath(adapter_dir)
+
+    return os.path.abspath(adapter_dir_candidates(args, model_dir)[0])
 
 
 def resolve_output_dir(
