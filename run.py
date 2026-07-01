@@ -31,10 +31,7 @@ RAKUTEN_CHAT_TEMPLATE = (
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Run a base or LoRA-refined OCR model on txt files."
-    )
-
+    parser = argparse.ArgumentParser(description="Run a base or LoRA-refined OCR model on txt files.")
     model_group = parser.add_mutually_exclusive_group(required=True)
     model_group.add_argument("--model-name")
     model_group.add_argument("--model-dir")
