@@ -1,7 +1,7 @@
 # LLM-jp-4-8B-Instruct
-## Error Case Analysis on Synthetic Test Set (Overall CER: 15.31%)
+## Error Case Analysis on Synthetic Test Set (Overall CER: 17.82%)
 
-This README summarizes the zero-shot OCR correction results of LLM-jp-4-8B-Instruct on the synthetic test set. The overall CER is 15.31%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
+This README summarizes the zero-shot OCR correction results of LLM-jp-4-8B-Instruct on the synthetic test set. The overall CER is 17.82%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
 
 ### How to Read the Cases
 
