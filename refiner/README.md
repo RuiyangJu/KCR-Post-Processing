@@ -1,6 +1,21 @@
 ## LLM-based OCR Refiner Fine-tuning
-###
-
+### Fine-tuning Parameters
+| Parameter | Setting |
+| :--: | :--: |
+| `max_length` | `1024` |
+| `num_train_epochs` | `5` |
+| `per_device_train_batch_size` | `4` |
+| `per_device_eval_batch_size` | `2` |
+| `gradient_accumulation_steps` | `8` |
+| `learning_rate` | `5e-5` |
+| `warmup_ratio` | `0.03` |
+| `eval_steps` | `25` |
+| `save_steps` | `25` |
+| `logging_steps` | `10` |
+| `save_total_limit` | `5` |
+| `lora_r` | `16` |
+| `lora_alpha` | `32` |
+| `lora_dropout` | `0.1` |
 
 ### Fine-tune & Run & Evaluate: Synthetic Test Set Example
 First, move to the repository root:
