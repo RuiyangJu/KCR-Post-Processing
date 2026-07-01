@@ -2,7 +2,7 @@
 ### Run & Evaluate: Synthetic Test Set Example
 First, move to the repository root:
 ```
-cd KCR-Post-Processing
+  cd KCR-Post-Processing
 ```
 
 #### Batch Run & Evaluate
