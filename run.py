@@ -89,23 +89,59 @@ def adapter_dir_candidates(args: argparse.Namespace, model_dir: str) -> list[str
     if args.model_name:
         candidates.extend(
             [
-                os.path.join(REFINER_DIR, args.model_name),
+                # Common training output layout:
+                # refiner/<model-name>/model/adapter_config.json
+                os.path.join(REFINER_DIR, args.model_name, "model"),
                 os.path.join(REFINER_DIR, args.model_name, "refiner_lora"),
+                os.path.join(REFINER_DIR, args.model_name),
             ]
         )
 
     if os.path.basename(os.path.normpath(model_dir)) == "model":
-        candidates.append(os.path.join(os.path.dirname(model_dir), "refiner_lora"))
+        model_root = os.path.dirname(model_dir)
     else:
-        candidates.append(os.path.join(model_dir, "refiner_lora"))
+        model_root = model_dir
 
-    return candidates
+    candidates.extend(
+        [
+            os.path.join(model_root, "model"),
+            os.path.join(model_root, "refiner_lora"),
+        ]
+    )
+
+    # Keep order while removing duplicate paths.
+    unique_candidates = []
+    seen = set()
+    for candidate in candidates:
+        candidate = os.path.abspath(candidate)
+        if candidate not in seen:
+            unique_candidates.append(candidate)
+            seen.add(candidate)
+
+    return unique_candidates
 
 
 def is_adapter_dir(path: str) -> bool:
     return os.path.isdir(path) and os.path.isfile(
         os.path.join(path, "adapter_config.json")
     )
+
+
+def resolve_explicit_adapter_dir(adapter_dir: str) -> str:
+    adapter_dir = os.path.abspath(adapter_dir)
+
+    candidates = [
+        adapter_dir,
+        os.path.join(adapter_dir, "model"),
+        os.path.join(adapter_dir, "refiner_lora"),
+    ]
+
+    adapter_dir = next(
+        (candidate for candidate in candidates if is_adapter_dir(candidate)),
+        adapter_dir,
+    )
+
+    return os.path.abspath(adapter_dir)
 
 
 def resolve_adapter_dir(
@@ -116,7 +152,7 @@ def resolve_adapter_dir(
         return None
 
     if args.adapter_dir:
-        return os.path.abspath(args.adapter_dir)
+        return resolve_explicit_adapter_dir(args.adapter_dir)
 
     adapter_dir = next(
         (
@@ -240,8 +276,18 @@ def main() -> None:
     if not os.path.isdir(model_dir):
         raise FileNotFoundError(f"Model directory not found: {model_dir}")
 
-    if adapter_dir and not os.path.isdir(adapter_dir):
-        raise FileNotFoundError(f"Adapter directory not found: {adapter_dir}")
+    if adapter_dir and not is_adapter_dir(adapter_dir):
+        checked_paths = (
+            [resolve_explicit_adapter_dir(args.adapter_dir)]
+            if args.adapter_dir
+            else adapter_dir_candidates(args, model_dir)
+        )
+        checked_paths_text = "\n  - ".join(checked_paths)
+        raise FileNotFoundError(
+            "Adapter directory is invalid or missing adapter_config.json.\n"
+            f"Resolved adapter directory: {adapter_dir}\n"
+            f"Checked candidates:\n  - {checked_paths_text}"
+        )
 
     if not os.path.isdir(args.input_dir):
         raise FileNotFoundError(f"Input directory not found: {args.input_dir}")
