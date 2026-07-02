@@ -87,7 +87,7 @@ After downloading, unzip the dataset and place it under the repository root as f
 * Implementation commands are provided in [zero_shot/](zero_shot/), with detailed error analyses available in each model-specific folder.
 
 ### Results
-| Model | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | Macro CER@Real (%) | Micro CER@Real (%) | Micro cMER@Real (%) | Latency@Syn. (sec) | Macro CER@Syn. (%) | Micro CER@Syn. (%) | Micro cMER@Syn. (%) |
+| Method | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | Macro CER@Real (%) | Micro CER@Real (%) | Micro cMER@Real (%) | Latency@Syn. (sec) | Macro CER@Syn. (%) | Micro CER@Syn. (%) | Micro cMER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 13.35 | 11.98 | 11.74 | – | 16.13 | 13.67 | 13.35 |
 | [Llama-3-ELYZA-JP-8B](https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B) | ELYZA, Inc. | 2024.06 | Meta-Llama-3-8B-Instruct | 16.1 GB | 2.305 | 14.63 | 13.71 | 13.43 | 2.329 | 17.44 | 15.19 | 14.82 |
