@@ -278,9 +278,5 @@ if __name__ == "__main__":
     parser.add_argument("--gt_dir", type=str, required=True, help="Directory containing ground-truth txt files")
     parser.add_argument("--pred_dir", type=str, required=True, help="Directory containing predicted txt files")
     parser.add_argument("--out_csv", type=str, required=True, help="Path to save output CSV file")
-    parser.add_argument(
-        "--baseline_dir",
-        type=str,
-        help="Optional baseline txt directory for refiner CER reduction and preference score",
-    )
+    parser.add_argument("--baseline_dir", type=str, help="Optional baseline txt directory for refiner CER reduction and preference score")
     main(parser.parse_args())
