@@ -97,7 +97,7 @@ After downloading, unzip the dataset and place it under the repository root as f
 | [RakutenAI-7B-Instruct](https://huggingface.co/Rakuten/RakutenAI-7B-instruct) | Rakuten Group, Inc. | 2024.03 | Mistral-7B-v0.1 | 29.5 GB | 2.142 | 22.35 | 20.64 | 19.24 | 2.026 | 21.13 | 18.07 | 17.52 |
 | [Gemma-2-Llama-Swallow-9b-it-v0.1](https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1) | Institute of Science Tokyo | 2025.05 | Gemma-2-9B | 18.5 GB | 3.427 | 24.85 | 20.07 | 18.51 | 3.434 | 27.19 | 21.23 | 19.55 |
 | [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | Institute of Science Tokyo | 2026.02 | Qwen3-8B | 16.4 GB | 2.578 | 13.78 | 12.27 | 12.01 | 2.599 | 16.65 | 14.12 | 13.76 |
-| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | Llama 2 architecture | 17.2 GB | 1.902 | 19.70 | 16.24 | 15.53 | 1.875 | 22.42 | 17.82 | 16.99 |
+| [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | – | 17.2 GB | 1.902 | 19.70 | 16.24 | 15.53 | 1.875 | 22.42 | 17.82 | 16.99 |
 
 * **Micro cMER** denotes the micro-averaged character-level Match Error Rate, following the [HIPE-OCRepair-scorer](https://github.com/hipe-eval/HIPE-OCRepair-scorer).
 
