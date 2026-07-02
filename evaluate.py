@@ -128,7 +128,6 @@ def main(args: argparse.Namespace) -> None:
     total_mer_denominator = 0
     total_baseline_edit_distance = 0
     total_baseline_mer_denominator = 0
-    total_refiner_cer_reduction = 0.0
     preference_points = 0.0
 
     for fname in common_files:
@@ -179,7 +178,6 @@ def main(args: argparse.Namespace) -> None:
             else:
                 preference = -1.0
 
-            total_refiner_cer_reduction += cer_reduction
             total_baseline_edit_distance += baseline_stats.edit_distance
             total_baseline_mer_denominator += baseline_stats.mer_denominator
             preference_points += preference
@@ -235,7 +233,11 @@ def main(args: argparse.Namespace) -> None:
             if baseline_macro_cer > 0
             else 0.0
         )
-        mean_per_file_cer_reduction = total_refiner_cer_reduction / len(rows)
+        micro_cmer_reduction = (
+            rate(baseline_micro_cmer - micro_cmer, baseline_micro_cmer)
+            if baseline_micro_cmer > 0
+            else 0.0
+        )
         preference_score = preference_points / len(rows)
         summary_rows.extend(
             [
@@ -244,7 +246,7 @@ def main(args: argparse.Namespace) -> None:
                 {"Metric": "Baseline Micro cMER", "Value": baseline_micro_cmer},
                 {"Metric": "Micro CER Reduction", "Value": micro_cer_reduction},
                 {"Metric": "Macro CER Reduction", "Value": macro_cer_reduction},
-                {"Metric": "Mean Per-file CER Reduction", "Value": mean_per_file_cer_reduction},
+                {"Metric": "Micro cMER Reduction", "Value": micro_cmer_reduction},
                 {"Metric": "Preference Score", "Value": preference_score},
             ]
         )
@@ -253,7 +255,7 @@ def main(args: argparse.Namespace) -> None:
         print(f"Baseline Micro cMER: {baseline_micro_cmer:.4f}")
         print(f"Micro CER Reduction: {micro_cer_reduction:.4f}")
         print(f"Macro CER Reduction: {macro_cer_reduction:.4f}")
-        print(f"Mean Per-file CER Reduction: {mean_per_file_cer_reduction:.4f}")
+        print(f"Micro cMER Reduction: {micro_cmer_reduction:.4f}")
         print(f"Preference Score: {preference_score:.4f}")
 
     out_csv_path.parent.mkdir(parents=True, exist_ok=True)
