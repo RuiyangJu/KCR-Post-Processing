@@ -2,7 +2,7 @@
 ### Fine-tuning Parameters
 | Parameter | Setting |
 | :--: | :--: |
-| `max_length` | `1024` |
+| `max_length` | `2048` |
 | `num_train_epochs` | `5` |
 | `per_device_train_batch_size` | `4` |
 | `per_device_eval_batch_size` | `2` |
