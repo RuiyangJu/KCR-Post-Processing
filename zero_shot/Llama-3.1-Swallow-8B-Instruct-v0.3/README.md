@@ -1,8 +1,5 @@
 # Llama-3.1-Swallow-8B-Instruct-v0.3
-## Error Case Analysis on Synthetic Test Set (Overall CER: 13.93%)
-
-This README summarizes the zero-shot OCR correction results of Llama-3.1-Swallow-8B-Instruct-v0.3 on the synthetic test set. The overall CER is 13.93%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
-
+## Error Case Analysis on Synthetic Test Set 
 ### How to Read the Cases
 
 - `Input`: the raw OCR text given to the model. It may already contain recognition errors.
