@@ -33,8 +33,15 @@ RAKUTEN_CHAT_TEMPLATE = (
     "A chat between a curious user and an artificial intelligence assistant. "
     "The assistant gives helpful, detailed, and polite answers to the user's "
     "questions. USER: "
+    "{% if messages[0]['role'] == 'system' %}"
     "{{ messages[0]['content'] | trim }}\n\n"
-    "{{ messages[1]['content'] | trim }} ASSISTANT:"
+    "{{ messages[1]['content'] | trim }}"
+    "{% else %}"
+    "{{ messages[0]['content'] | trim }}"
+    "{% endif %} ASSISTANT:"
+    "{% for message in messages %}"
+    "{% if message['role'] == 'assistant' %} {{ message['content'] | trim }}{% endif %}"
+    "{% endfor %}"
 )
 
 
