@@ -1,8 +1,5 @@
 # Llama-3-Karamaru-v1
-## Error Case Analysis on Synthetic Test Set (Overall CER: 75.16%)
-
-This README summarizes the zero-shot OCR correction results of Llama-3-Karamaru-v1 on the synthetic test set. The overall CER is 75.16%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
-
+## Error Case Analysis on Synthetic Test Set
 ### How to Read the Cases
 
 - `Input`: the raw OCR text given to the model. It may already contain recognition errors.
