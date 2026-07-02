@@ -101,5 +101,4 @@ After downloading, unzip the dataset and place it under the repository root as f
 
 * **Micro cMER** denotes the micro-averaged character-level Match Error Rate, following the [HIPE-OCRepair-scorer](https://github.com/hipe-eval/HIPE-OCRepair-scorer).
 
-
 ## 2. LLM-based OCR Refiner Fine-tuning
