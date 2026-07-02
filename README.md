@@ -84,7 +84,7 @@ After downloading, unzip the dataset and place it under the repository root as f
 ```
 ## 1. Zero-shot LLM Post-processing
 * We evaluate several Japanese-specific LLMs in a zero-shot OCR post-processing setting.
-
+* Implementation commands are provided in [zero_shot/](zero_shot/), with detailed error analyses available in each model-specific folder.
 
 ### Results
 | Model | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | Macro CER@Real (%) | Micro CER@Real (%) | Micro cMER@Real (%) | Latency@Syn. (sec) | Macro CER@Syn. (%) | Micro CER@Syn. (%) | Micro cMER@Syn. (%) |
@@ -100,6 +100,6 @@ After downloading, unzip the dataset and place it under the repository root as f
 | [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | Llama 2 architecture | 17.2 GB | 1.902 | 19.70 | 16.24 | 15.53 | 1.875 | 22.42 | 17.82 | 16.99 |
 
 * The values in parentheses indicate CER results after removing outlier pages with a CER greater than 25%.
-* Implementation commands are provided in [zero_shot/](zero_shot/), with detailed error analyses available in each model-specific folder.
+
 
 ## 2. LLM-based OCR Refiner Fine-tuning
