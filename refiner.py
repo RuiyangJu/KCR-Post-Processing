@@ -68,7 +68,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--valid-target-dir", "--valid-gt-dir", dest="valid_target_dir", default=DEFAULT_VALID_TARGET_DIR)
     parser.add_argument("--output-dir", "--refiner-output-dir", "--lora-output-dir", dest="output_dir")
     parser.add_argument("--prompt-style", choices=("auto", "system-user", "user-only"), default="auto")
-    parser.add_argument("--max-length", type=int, default=1024)
+    parser.add_argument("--max-length", type=int, default=2048)
     parser.add_argument("--num-train-epochs", type=float, default=5)
     parser.add_argument("--per-device-train-batch-size", type=int, default=4)
     parser.add_argument("--per-device-eval-batch-size", type=int, default=2)
