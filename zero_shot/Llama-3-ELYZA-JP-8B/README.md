@@ -1,8 +1,5 @@
 # Llama-3-ELYZA-JP-8B
-## Error Case Analysis on Synthetic Test Set (Overall CER: 15.19%)
-
-This README summarizes the zero-shot OCR correction results of Llama-3-ELYZA-JP-8B on the synthetic test set. The overall CER is 15.19%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
-
+## Error Case Analysis on Synthetic Test Set
 ### How to Read the Cases
 
 - `Input`: the raw OCR text given to the model. It may already contain recognition errors.
