@@ -1,8 +1,5 @@
 # Qwen3-Swallow-8B-RL-v0.2
-## Error Case Analysis on Synthetic Test Set (Overall CER: 14.12%)
-
-This README summarizes the zero-shot OCR correction results of Qwen3-Swallow-8B-RL-v0.2 on the synthetic test set. The overall CER is 14.12%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
-
+## Error Case Analysis on Synthetic Test Set
 ### How to Read the Cases
 
 - `Input`: the raw OCR text given to the model. It may already contain recognition errors.
