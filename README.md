@@ -53,7 +53,8 @@ After downloading, unzip the dataset and place it under the repository root as f
 ```
 
 ## Download Base Models
-Run the following commands to download the base LLMs from Hugging Face:
+* The model selection is based in part on the [Japanese LLM Leaderboard](https://swallow-llm.github.io/leaderboard).
+* Run the following commands to download the base LLMs from Hugging Face:
 ```
   cd KCR-Post-Processing
   
@@ -83,10 +84,9 @@ Run the following commands to download the base LLMs from Hugging Face:
 ```
 ## 1. Zero-shot LLM Post-processing
 * We evaluate several Japanese-specific LLMs in a zero-shot OCR post-processing setting.
-* The model selection is based in part on the [Japanese LLM Leaderboard](https://swallow-llm.github.io/leaderboard).
+
 
 ### Results
-
 | Model | Affiliation | Release Date | Base Model | Checkpoint Size | Latency@Real (sec) | Macro CER@Real (%) | Micro CER@Real (%) | Micro cMER@Real (%) | Latency@Syn. (sec) | Macro CER@Syn. (%) | Micro CER@Syn. (%) | Micro cMER@Syn. (%) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Baseline](https://github.com/RuiyangJu/Seal-Robust-KCR) | – | – | – | – | – | 13.35 | 11.98 | 11.74 | – | 16.13 | 13.67 | 13.35 |
