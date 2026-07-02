@@ -1,8 +1,5 @@
 # Gemma-2-Llama-Swallow-9b-it-v0.1
-## Error Case Analysis on Synthetic Test Set (Overall CER: 21.23%)
-
-This README summarizes the zero-shot OCR correction results of Gemma-2-Llama-Swallow-9b-it-v0.1 on the synthetic test set. The overall CER is 21.23%. Each case shows the source image, the OCR input, the model prediction, and the ground-truth transcription so that the main errors can be inspected directly.
-
+## Error Case Analysis on Synthetic Test Set
 ### How to Read the Cases
 
 - `Input`: the raw OCR text given to the model. It may already contain recognition errors.
