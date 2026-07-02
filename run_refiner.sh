@@ -18,7 +18,17 @@ SETS=(
 )
 
 for MODEL in "${MODELS[@]}"; do
+  REFINER_DIR="refiner/${MODEL}"
   REFINER_MODEL_DIR="refiner/${MODEL}/model"
+  LOG_FILE="${REFINER_DIR}/logs.txt"
+
+  mkdir -p "${REFINER_DIR}"
+
+  {
+  echo "=========================================="
+  echo "Log file: ${LOG_FILE}"
+  echo "Started at: $(date '+%Y-%m-%d %H:%M:%S')"
+  echo "=========================================="
 
   echo "=========================================="
   echo "Training refiner: ${MODEL}"
@@ -52,11 +62,18 @@ for MODEL in "${MODELS[@]}"; do
     python evaluate.py \
       --gt_dir "${GT_DIR}" \
       --pred_dir "${OUTPUT_DIR}" \
-      --out_csv "${OUT_CSV}"
+      --out_csv "${OUT_CSV}" \
+      --baseline_dir "${INPUT_DIR}"
 
     echo "Finished refiner evaluation: ${MODEL} on ${DATASET}"
     echo
   done
+
+  echo "=========================================="
+  echo "Finished model: ${MODEL}"
+  echo "Finished at: $(date '+%Y-%m-%d %H:%M:%S')"
+  echo "=========================================="
+  } 2>&1 | tee "${LOG_FILE}"
 done
 
 echo "All refiner training, runs, and evaluations finished."
