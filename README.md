@@ -99,6 +99,7 @@ After downloading, unzip the dataset and place it under the repository root as f
 | [Qwen3-Swallow-8B-RL-v0.2](https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2) | Institute of Science Tokyo | 2026.02 | Qwen3-8B | 16.4 GB | 2.578 | 13.78 | 12.27 | 12.01 | 2.599 | 16.65 | 14.12 | 13.76 |
 | [LLM-jp-4-8B-Instruct](https://huggingface.co/llm-jp/llm-jp-4-8b-instruct) | National Institute of Informatics | 2026.04 | – | 17.2 GB | 1.902 | 19.70 | 16.24 | 15.53 | 1.875 | 22.42 | 17.82 | 16.99 |
 
+* **Base Model** refers to the source model on which each LLM was further trained, fine-tuned, or instruction-tuned.
 * **Micro cMER** denotes the micro-averaged character-level Match Error Rate, following the [HIPE-OCRepair-scorer](https://github.com/hipe-eval/HIPE-OCRepair-scorer).
 
 ## 2. LLM-based OCR Refiner Fine-tuning
